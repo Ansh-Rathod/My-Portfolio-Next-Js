@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("/sf_pro_text_regular.ttf");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  src: url("/Proxima Nova.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("/Poppins-Bold.ttf");
+}
+
+.musive {
+  @apply from-[#6ac88e] to-[#45b875] shadow-[#45b875e1];
+}
+
+.photoarc {
+  @apply to-[#4b6cb7] from-[#5b86e5] shadow-[#5b87e5d2];
+}
+.moviedb {
+  @apply from-[#4dabc3] to-[#358293] shadow-[#4dabc3df];
+}
+.quizer {
+  @apply from-[#9d68a6] to-[#923a8b] shadow-[#923a8bde];
+}
+.animalia {
+  @apply from-[#63c648] to-[#3aa148] shadow-[#63c648d7];
+}
+.sponacular {
+  @apply to-[#4e549b] from-[#6f6f87] shadow-[#6f6f87db];
+}
+.marvel {
+  @apply from-[#ec6f66] to-[#FC354C] shadow-[#ec6f66db];
+}
+
+.cineast {
+  @apply to-[#da3a55] from-[#ed7658] shadow-[#da3a55e3];
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
