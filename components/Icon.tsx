@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Icon(props: any) {
-  const { classes, url, iscopy } = props;
+  const { classes, url } = props;
   return (
     <div className="scale-100 hover:scale-[1.1]">
       <a

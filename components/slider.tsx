@@ -23,6 +23,9 @@ const Slider = (props: SliderProps) => {
           src={`/imgs/` + images[i]}
           alt="image"
           objectFit="contain"
+          loader={({ src }) => {
+            return src;
+          }}
           width={250}
           height={500}
           placeholder="blur"
