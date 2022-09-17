@@ -7,6 +7,7 @@ import AllProjects from "@/components/AllProjects";
 import ModelContext, { ModelProvider } from "../contexts/showModelContext";
 import { useContext } from "react";
 import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 
 const Home: NextPage = () => {
   const { isOpen } = useContext(ModelContext);
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
         <About />
         <Skills />
         <AllProjects />
+        <Contact />
       </div>
     </div>
   );
