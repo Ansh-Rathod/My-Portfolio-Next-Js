@@ -7,7 +7,7 @@ const Intro = () => (
     <div
       id="home"
       className="box-border  desktop:container bg-no-repeat 
-      border-b-[0.6px] border-slate-200
+      border-t-[0.6px] border-slate-200
       bg-cover bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.jpg')]"
     >
       <div className="flex backdrop-blur-3xl bg-white/70 ">
@@ -17,15 +17,14 @@ const Intro = () => (
           mobile:w-full
         "
         >
-          {/* <div className="py-4 ">
+          <div className="py-4 ">
             <ul className="flex flex-row justify-between px-14 tablet:px-8 mobile:px-4">
               <NavbarItem name="home" />
               <NavbarItem name="About" />
               <NavbarItem name="projects" />
               <NavbarItem name="contact" />
             </ul>
-          </div> */}
-          <div></div>
+          </div>
           <div className="px-16 tablet:px-10 mobile:px-8">
             <p className="font-proxima text-xl leading-10 mobile:text-[18px] mobile:py-2 ">
               HELLO👋, I AM
@@ -38,7 +37,7 @@ const Intro = () => (
               applications.
             </p>
           </div>
-          {/* <div className="px-14 tablet:px-10 py-12 flex flex-row mobile:px-8">
+          <div className="px-14 tablet:px-10 py-12 flex flex-row mobile:px-8">
             <Icon
               url="https://www.instagram.com/anshrathodd"
               classes="fa-brands fa-instagram"
@@ -59,9 +58,7 @@ const Intro = () => (
               url="mailto:anshrathod29@gmail.com"
               classes="fa-solid fa-envelope"
             />
-          </div> */}
-
-          <div></div>
+          </div>
         </div>
         <div className="w-[45%] h-screen max-h-[808px] tablet:hidden mobile:hidden ">
           <div className=" w-full h-full relative">
