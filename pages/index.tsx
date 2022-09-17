@@ -22,7 +22,34 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <title>Ansh Rathod</title>
+        <meta
+          property="og:title"
+          content="Ansh Rathod's Portfolio as app developer"
+        />
+
+        <meta property="og:url" content="https://anshrathod1.vercel.app" />
+
+        <meta
+          property="og:description"
+          content="A full-stack developer, Building Seamless mobile & web applications."
+        />
+
+        <meta property="og:image" content="/into_image_meta.png" />
+
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@AnshhRathod" />
+        <meta name="twitter:creator" content="@AnshhRathod" />
+        <meta
+          name="twitter:title"
+          content="Ansh Rathod's Portfolio as app developer"
+        />
+        <meta
+          name="twitter:description"
+          content="A full-stack developer, Building Seamless mobile & web applications."
+        />
+        <meta name="twitter:image" content="/into_image_meta.png" />
+        <title>Ansh Rathod | Portfolio</title>
       </Head>
 
       <div className={isOpen ? "h-screen overflow-y-hidden" : "h-full"}>
