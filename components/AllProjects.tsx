@@ -6,7 +6,7 @@ function AllProjects() {
   return (
     <div
       id="projects"
-      className="bg-no-repeat bg-fill bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.jpg')] desktop:container"
+      className="bg-no-repeat border-t-[0.6px] border-slate-200 bg-fill bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.jpg')] desktop:container"
     >
       <div className="backdrop-blur-[100px] bg-white/60 pb-24">
         <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">

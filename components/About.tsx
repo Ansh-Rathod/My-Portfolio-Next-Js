@@ -32,7 +32,6 @@ const About = () => {
             months with flutter, nodejs and postgreSQL.
           </p>
           <br />
-
           <p>
             What&apos;s next? Well, Planing to build new Platform for
             developers/designers (desktop, web and mobile) it will take a while.
