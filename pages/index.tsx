@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           referrerPolicy="no-referrer"
         />
         <meta property="og:title" content="Ansh Rathod | Portfolio" />
-
+        <meta property="og:site_name" content="Ansh Rathod | Portfolio" />
         <meta property="og:url" content="https://anshrathod1.vercel.app" />
 
         <meta
@@ -33,15 +33,7 @@ const Home: NextPage = () => {
 
         <meta
           property="og:image"
-          content="https://anshrathod1.vercel.app/intro_image_meta.png"
-        />
-
-        <meta
-          property="og:image:secure"
-          content="https://anshrathod1.vercel.app/intro_image_meta.png"
-        />
-        <meta
-          property="og:image:secure_url"
+          itemProp="image"
           content="https://anshrathod1.vercel.app/intro_image_meta.png"
         />
 
