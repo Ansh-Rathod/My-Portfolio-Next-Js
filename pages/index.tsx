@@ -36,6 +36,15 @@ const Home: NextPage = () => {
           content="https://anshrathod1.vercel.app/intro_image_meta.png"
         />
 
+        <meta
+          property="og:image:secure"
+          content="https://anshrathod1.vercel.app/intro_image_meta.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://anshrathod1.vercel.app/intro_image_meta.png"
+        />
+
         <meta property="og:type" content="article" />
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@AnshhRathod" />
