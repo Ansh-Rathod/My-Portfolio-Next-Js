@@ -4,7 +4,7 @@ import Icon from "@/components/Icon";
 function Contact() {
   return (
     <div id="contact">
-      <div className="bg-white pt-[60px] pb-[40px] border-t-[0.6px] border-slate-200 m-auto max-w-[1000px] desktop:container">
+      <div className="bg-white pt-[60px] pb-[40px] tablet:px-8 mini-laptop:px-8 laptop:px-8 border-t-[0.6px] mobile:px-4 border-slate-200 m-auto max-w-[1000px] desktop:container">
         <div className="px-2">
           <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase">
             Contact
@@ -38,8 +38,8 @@ function Contact() {
         </div>
       </div>
 
-      <div className="py-6 border-t-[0.6px] border-slate-200 text-center text-[14px]">
-        <p>© Septenmber 2022 Ansh Rathod. All rights reserved.</p>
+      <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 border-slate-200 text-center text-[14px] text-slate-500">
+        <p>© September 2022 Ansh Rathod. All rights reserved.</p>
       </div>
     </div>
   );
