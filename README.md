@@ -2,15 +2,13 @@
 
 My portfoilo website as app  developer. 
 
-<br/>
-
 
 ### Tech used
 - Nextjs
 - Typescript
 - Tailwind css
 
-<br/>
+
 
 #### Last-updated: _September 2022_
 <br/>
