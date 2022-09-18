@@ -1,6 +1,10 @@
 # Ansh Rathod | Portfolio
 
-My portfoilo website as app  developer. build with nextjs, tailwind css and typescript.
+My portfoilo website as app  developer. 
+### Tech used
+- Nextjs
+- Typescript
+- Tailwind css
 
 <br/>
 
