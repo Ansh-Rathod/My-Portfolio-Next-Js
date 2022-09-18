@@ -21,8 +21,8 @@ const Intro = () => (
             <ul className="flex flex-row justify-between px-14 tablet:px-8 mobile:px-4">
               <NavbarItem name="home" />
               <NavbarItem name="About" />
+              <NavbarItem name="skills" />
               <NavbarItem name="projects" />
-              <NavbarItem name="contact" />
             </ul>
           </div>
           <div className="px-16 tablet:px-10 mobile:px-8">

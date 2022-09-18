@@ -3,7 +3,10 @@ import ListItem from "./ListItem";
 
 function Skills() {
   return (
-    <div className="bg-white border-t-[0.6px] border-slate-200 py-[100px] w-screen max-w-full desktop:container">
+    <div
+      id="skills"
+      className="bg-white border-t-[0.6px] border-slate-200 py-[100px] w-screen max-w-full desktop:container"
+    >
       <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">
           <h1 className="font-poppins uppercase text-3xl font-bold mobile:text-center">
