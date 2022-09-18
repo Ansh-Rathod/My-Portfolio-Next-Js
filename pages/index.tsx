@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathod1.vercel.app/intro_image_meta.png"
+          content="https://anshrathod.vercel.app/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathod1.vercel.app/intro_image_meta.png"
+          content="https://anshrathod.vercel.app/intro_image_meta.png"
         />
         <title>Ansh Rathod | Portfolio</title>
       </Head>
