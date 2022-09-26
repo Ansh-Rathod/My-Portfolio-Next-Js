@@ -9,8 +9,8 @@ function ProjectComponent(props: any) {
   return (
     <div
       onClick={() => openModel(project)}
-      className={`select-none cursor-pointer items-center scale-100 hover:scale-[1.02]
-       font-apple rounded-md flex flex-row shadow transition-all
+      className={`select-none cursor-pointer items-center scale-100 hover:scale-105
+       font-apple rounded-md flex flex-row shadow transition-all easy-in 
        p-2 bg-gradient-to-r ${project.name.toLowerCase()}`}
     >
       <div className="w-[100px] ">
@@ -27,24 +27,6 @@ function ProjectComponent(props: any) {
           <h1 className="font-poppins text-[18px] uppercase text-white">
             {project.name}
           </h1>
-          {/* <Image
-            src={
-              project.name != "Cineast"
-                ? `https://img.shields.io/github/stars/${project.url.replace(
-                    "https://github.com/",
-                    ""
-                  )}?style=social`
-                : "https://img.shields.io/static/v1?label=Downloads&message=1k&color=%3CCOLOR%3E"
-            }
-            alt="stars"
-            height={17}
-            width={100}
-            objectFit="contain"
-            unoptimized
-          /> */}
-          {/* <b className="px-4 text-slate-100 uppercase font-thin text-[12px] font-apple">
-              {project.date}
-            </b> */}
         </div>
 
         <p className="font-proxima text-white font-normal">

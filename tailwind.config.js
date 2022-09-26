@@ -21,7 +21,7 @@ module.exports = {
       'mobile': { 'min': '100px', 'max': '500px' },
       'tablet': { 'min': '500px', 'max': '750px' },
       'mini-laptop': { 'min': '750px', 'max': '874px' },
-      'laptop': { 'min': '874px', 'max': '1500px' },
+      'laptop': { 'min': '874px', 'max': '1900px' },
       'desktop': { 'min': '1500px' },
     },
     borderWidth: {
