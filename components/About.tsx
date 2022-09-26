@@ -22,13 +22,13 @@ const About = () => {
           <br />
           <p>
             Fast-Forward to today. i have been working on mobile applications
-            for almost 2 years now. And recently i have build a new project
+            for almost 2 years now. And recently i have build an application
             called
             <a href="https://app.cineast.in">
               <b> Cineast </b>
             </a>
             which is a social media application for movie enthusiasts. it was
-            quite jurney to build this app because i coded it all alone in 2
+            quite journey to build this app because i coded it all alone in 2
             months with flutter, nodejs and postgreSQL.
           </p>
           <br />

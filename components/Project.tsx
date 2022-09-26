@@ -50,7 +50,7 @@ function ProjectComponent(props: any) {
         <p className="font-proxima text-white font-normal">
           {project.description}
         </p>
-        <p className="text-gray-100  uppercase pt-2 text-[14px] tracking-wide">
+        <p className="text-gray-100  uppercase pt-2 text-[12px]">
           {project.date}
         </p>
       </div>
