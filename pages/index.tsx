@@ -24,8 +24,28 @@ const Home: NextPage = () => {
         />
         <meta property="og:title" content="Ansh Rathod | Portfolio" />
         <meta property="og:site_name" content="Ansh Rathod | Portfolio" />
-        <meta property="og:url" content="https://anshrathod1.vercel.app" />
-
+        <meta property="og:url" content="https://www.anshrathod.com" />
+        <link
+          rel="preload"
+          href="/sf_pro_text_regular.ttf"
+          as="font"
+          crossOrigin=""
+          type="font/ttf"
+        />
+        <link
+          rel="preload"
+          href="/Proxima Nova.ttf"
+          as="font"
+          crossOrigin=""
+          type="font/ttf"
+        />
+        <link
+          rel="preload"
+          href="/Poppins-Bold.ttf"
+          as="font"
+          crossOrigin=""
+          type="font/ttf"
+        />
         <meta
           property="og:description"
           content="A full-stack developer, Building Seamless mobile & web applications."
@@ -34,7 +54,7 @@ const Home: NextPage = () => {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathod.vercel.app/intro_image_meta.png"
+          content="https://anshrathod.com/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -49,7 +69,7 @@ const Home: NextPage = () => {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathod.vercel.app/intro_image_meta.png"
+          content="https://anshrathod.com/intro_image_meta.png"
         />
         <title>Ansh Rathod | Portfolio</title>
       </Head>
