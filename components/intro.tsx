@@ -40,15 +40,11 @@ const Intro = () => (
             </div>
             <div className="px-14 tablet:px-10 py-12 flex flex-row mobile:px-8">
               <Icon
-                url="https://www.instagram.com/anshrathodd"
-                name="Instagram"
-                classes="fa-brands fa-instagram"
-              />
-              <Icon
                 url="https://github.in/Ansh-Rathod"
                 name="Github"
                 classes="fa-brands fa-github"
               />
+
               <Icon
                 url="https://twitter.com/AnshhRathod"
                 classes="fa-brands fa-twitter"
@@ -60,9 +56,18 @@ const Intro = () => (
                 name="Linkedin"
               />
               <Icon
+                url="https://discordapp.com/users/768376622243119114"
+                classes="fa-brands fa-discord"
+              />
+              <Icon
                 url="mailto:anshrathod29@gmail.com"
                 classes="fa-solid fa-envelope"
                 name="Email"
+              />
+              <Icon
+                url="https://www.instagram.com/anshrathodd"
+                name="Instagram"
+                classes="fa-brands fa-instagram"
               />
             </div>
           </div>

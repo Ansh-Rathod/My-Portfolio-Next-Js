@@ -8,7 +8,8 @@ export default function Icon(props: any) {
         target="_blank"
         rel="noreferrer"
         href={url}
-        className=" rounded-full p-2 m-2 border-[0.6px] transition-all ease-in-out border-slate-400 group
+        className=" rounded-full p-2 m-2 border-[0.6px] transition-all 
+        ease-in-out border-slate-400 group
           hover:bg-blue-100 hover:border-blue-300"
       >
         <i

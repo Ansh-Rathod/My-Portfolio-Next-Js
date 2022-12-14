@@ -8,6 +8,7 @@ import ModelContext, { ModelProvider } from "../contexts/showModelContext";
 import { useContext } from "react";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import GithubCard from "@/components/GithubCard";
 
 const Home: NextPage = () => {
   const { isOpen } = useContext(ModelContext);
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
       <div className={isOpen ? "h-screen overflow-y-hidden" : "h-full"}>
         <Intro />
         <About />
+        {/* <GithubCard /> */}
         <Skills />
         <AllProjects />
         <Contact />

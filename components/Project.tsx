@@ -30,11 +30,17 @@ function ProjectComponent(props: any) {
         </div>
 
         <p className="font-proxima text-white font-normal">
-          {project.description}
+          {project.description}{" "}
         </p>
-        <p className="text-gray-100  uppercase pt-2 text-[12px]">
-          {project.date}
-        </p>
+        <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
+          <p
+            className="uppercase text-[12px] mobile:text-[10px]
+           text-gray-100 border-b-[1px] border-gray-200 hover:text-white hover:border-white"
+          >
+            Read More
+          </p>
+          {/* <p className="text-gray-100  uppercase text-[12px]">{project.date}</p> */}
+        </div>
       </div>
     </div>
   );

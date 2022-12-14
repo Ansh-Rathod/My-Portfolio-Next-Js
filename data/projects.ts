@@ -2,7 +2,7 @@ export const projects: any = [
   {
     name: "Cineast",
     madeWith: "Flutter, Node.js, PostgreSQL",
-    date: "22 February 2022",
+    date: "22 Feb 2022",
     long_description:
       "Social media platform for movie enthusiasts. Share thoughts, reviews, and ratings about movies/tv-shows with your social network. <br/><br/>Scroll through reviews and thoughts about movies from the people you follow on your personalized home feed. Explore top trending movies & tv shows and get details about them. Find them by a specific genre or from actor/actresses or crew members and filter by any desired language.<br/><br/>Browse popular, highly rated, and most anticipated films, including trailers, member ratings, artwork, cast + crew details, studios, genres, and popular reviews.<br/><br/>Follow Other people on the platform & get reviews about what they are watching.",
     description:
@@ -25,7 +25,7 @@ export const projects: any = [
   {
     name: "Photoarc",
     madeWith: "Flutter, Node.js  PostgreSQL and Heroku",
-    date: "24 november 2021",
+    date: "24 nov 2021",
     long_description:
       "(Full-stack) Fully functional social media app (Instagram clone) written in flutter and dart with backend node.js and Postgres SQL.",
     description:
@@ -104,7 +104,7 @@ export const projects: any = [
   {
     name: "Marvel",
     madeWith: "Flutter",
-    date: "12 march 2021",
+    date: "12 mar 2021",
 
     description:
       "Simple Superheros information app with animations and local database.",
