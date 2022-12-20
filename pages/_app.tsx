@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+
         <link
           rel="preload"
           href="/sf_pro_text_regular.ttf"
