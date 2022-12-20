@@ -8,7 +8,7 @@ function AllProjects() {
       id="projects"
       className="bg-no-repeat border-t-[0.6px] border-slate-200 bg-fill bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.jpg')] bg-cover"
     >
-      <div className="backdrop-blur-[100px] bg-white/60 pb-24">
+      <div className="backdrop-blur-[200px] bg-white/60 pb-24">
         <div className="desktop:container">
           <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
             <div className="py-20 px-4">

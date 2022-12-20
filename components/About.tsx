@@ -13,28 +13,29 @@ const About = () => {
 
         <div className=" font-proxima text-[18px] w-[65%] px-6 py-2 tablet:w-full mobile:w-full mobile:px-2">
           <p>
-            Hello! My name is <b>Ansh Rathod</b>, i love to build mobile
-            applications to hang on internet. My intrest in app development
-            started back in <b>2020</b> when lockdown and covid was effected --
-            Turns out i was very curious to know about it and passionate about
-            the Building apps with new technology.
+            Hello! My name is <b>Ansh Rathod</b>, I have been interested in app
+            development for many years and have been actively working on
+            building mobile applications for the past two years. I am constantly
+            seeking out new technologies and techniques to enhance my skills and
+            stay up-to-date in this field.
           </p>
           <br />
           <p>
-            Fast-Forward to today. i have been working on mobile applications
-            for almost 2 years now. And recently i have build an application
-            called
+            Fast-Forward to today. recently I have build an application called
             <a href="https://app.cineast.in">
-              <b> Cineast </b>
+              <b> &quot;Cineast&quot; </b>
             </a>
-            which is a social media application for movie enthusiasts. it was
-            quite journey to build this app because i coded it all alone in 2
-            months with flutter, nodejs and postgreSQL.
+            Which is a social media platform that I built specifically for movie
+            enthusiasts. It allows users to connect with other movie fans, share
+            their favorite films and recommendations. I put a lot of thoughts
+            and effort into the building functionality of the app.
           </p>
           <br />
           <p>
-            What&apos;s next? Well, Planing to build new Platform for
-            developers/designers (desktop, web and mobile) it will take a while.
+            It was a lot of hard work to build full-stack applications and I was
+            able to learn and grow as a developer through the building process.
+            I am excited to continue improving and expanding the app in the
+            future.
           </p>
         </div>
       </div>

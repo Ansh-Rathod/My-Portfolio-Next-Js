@@ -9,8 +9,9 @@ import { useContext } from "react";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import GithubCard from "@/components/GithubCard";
+import redis from "lib/redis";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ data }: any) => {
   const { isOpen } = useContext(ModelContext);
 
   return (
@@ -51,7 +52,7 @@ const Home: NextPage = () => {
       <div className={isOpen ? "h-screen overflow-y-hidden" : "h-full"}>
         <Intro />
         <About />
-        {/* <GithubCard /> */}
+        {/* <GithubCard data={data} /> */}
         <Skills />
         <AllProjects />
         <Contact />
@@ -59,5 +60,54 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  try {
+    const cache = await redis.get("Ansh-Rathod");
+    if (cache == null) {
+      const res = await fetch(`https://api.github.com/users/Ansh-Rathod`);
+      const repos = await fetch(
+        `https://api.github.com/users/Ansh-Rathod/repos`
+      );
+      const repoData = await repos.json();
+      const data = await res.json();
+      var totalStars = 0;
+      repoData.forEach((repo: any) => {
+        totalStars += repo.stargazers_count;
+      });
+      const cache = {
+        username: data.login,
+        avatar: data.avatar_url,
+        repos: data.public_repos,
+        followers: data.followers,
+        stars: totalStars,
+      };
+      await redis.setex("Ansh-Rathod", 86400, JSON.stringify(cache));
+      return {
+        props: {
+          data: cache,
+        },
+      };
+    } else {
+      return {
+        props: {
+          data: JSON.parse(cache),
+        },
+      };
+    }
+  } catch (error) {
+    return {
+      props: {
+        data: {
+          username: "Ansh-Rathod",
+          avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
+          repos: 28,
+          followers: 109,
+          stars: 360,
+        },
+      },
+    };
+  }
+}
 
 export default Home;

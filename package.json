@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "ioredis": "^5.2.4",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
-    "@types/node": "18.7.15",
+    "@types/node": "^18.7.15",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
