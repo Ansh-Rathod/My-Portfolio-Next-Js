@@ -28,7 +28,6 @@ export function ModelProvider(props: ModelProviderProps) {
   const router = useRouter();
   const closeModel = () => {
     toggleModel(false);
-    router.push("#projects");
   };
 
   const openModel = (newProject: any) => {

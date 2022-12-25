@@ -10,6 +10,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import GithubCard from "@/components/GithubCard";
 import redis from "lib/redis";
+import MusiveCard from "@/components/MusiveCard";
 
 const Home: NextPage = ({ data }: any) => {
   const { isOpen } = useContext(ModelContext);
@@ -49,11 +50,21 @@ const Home: NextPage = ({ data }: any) => {
         <title>Ansh Rathod | Portfolio</title>
       </Head>
 
-      <div className={isOpen ? "h-screen overflow-y-hidden" : "h-full"}>
+      <div>
         <Intro />
         <About />
-        {/* <GithubCard data={data} /> */}
+        <div className="border-t-[1px] border-t-slate-300"></div>
+        <div className=" pt-24 max-w-[1200px] mx-auto flex flex-col items-center px-2">
+          <GithubCard data={data} />
+        </div>
+
         <Skills />
+        <div className="border-t-[1px] border-t-slate-300"></div>
+
+        <div className="py-24 max-w-[1200px] mx-auto flex flex-col items-center px-4">
+          <MusiveCard />
+        </div>
+
         <AllProjects />
         <Contact />
       </div>

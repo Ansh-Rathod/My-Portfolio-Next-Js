@@ -5,7 +5,7 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="py-[100px] w-screen max-w-full desktop:container"
+      className="border-t-[1px] border-t-slate-300 mt-24 py-[100px] w-screen max-w-full desktop:container"
     >
       <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">
