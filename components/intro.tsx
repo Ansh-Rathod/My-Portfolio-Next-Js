@@ -79,8 +79,6 @@ const Intro = () => (
                 objectFit="cover"
                 className="object-left h-screen "
                 alt="intro"
-                placeholder="blur"
-                blurDataURL="/intro (1123 × 1123 px).png"
               />
             </div>
           </div>
