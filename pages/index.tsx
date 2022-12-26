@@ -4,16 +4,19 @@ import Head from "next/head";
 import Intro from "@/components/intro";
 import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
-import ModelContext, { ModelProvider } from "../contexts/showModelContext";
+
 import { useContext } from "react";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import GithubCard from "@/components/GithubCard";
 import redis from "lib/redis";
 import MusiveCard from "@/components/MusiveCard";
+import { useRouter } from "next/router";
+import { projects } from "../data/projects";
+import Model from "../components/Model";
 
 const Home: NextPage = ({ data }: any) => {
-  const { isOpen } = useContext(ModelContext);
+  const router = useRouter();
 
   return (
     <div className="font-apple">
@@ -67,6 +70,12 @@ const Home: NextPage = ({ data }: any) => {
 
         <AllProjects />
         <Contact />
+        <Model
+          isOpen={!!router.query.slug}
+          project={projects.find(
+            (project: any) => project.name.toLowerCase() == router.query.slug
+          )}
+        />
       </div>
     </div>
   );

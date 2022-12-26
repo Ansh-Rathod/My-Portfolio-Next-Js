@@ -1,42 +1,13 @@
-import { createContext, ReactNode, useState } from "react";
-import { projects } from "../data/projects";
-import { useRouter } from "next/router";
-import Slider from "@/components/slider";
+import React from "react";
 import Image from "next/image";
+import Slider from "./slider";
 import Icon from "@/components/Icon";
-import Link from "next/link";
-export type ModelContextProps = {
-  isOpen: boolean;
-  openModel: ({}) => void;
-  closeModel: () => void;
-};
+import { Router, useRouter } from "next/router";
 
-const initalState = {
-  isOpen: false,
-  openModel: ({}) => {},
-  closeModel: () => {},
-};
-const ModelContext = createContext<ModelContextProps>(initalState);
-
-type ModelProviderProps = {
-  children: ReactNode;
-};
-export function ModelProvider(props: ModelProviderProps) {
-  const [isOpen, toggleModel] = useState(false);
-  const [project, setProject] = useState<any>(projects[0]);
-
+function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
   const router = useRouter();
-  const closeModel = () => {
-    toggleModel(false);
-  };
-
-  const openModel = (newProject: any) => {
-    setProject(newProject);
-    toggleModel(true);
-  };
-
   return (
-    <ModelContext.Provider value={{ isOpen, closeModel, openModel }}>
+    <div>
       {isOpen && (
         <div
           className="fixed inset-0 bg-gray-500 bg-opacity-60 
@@ -61,7 +32,7 @@ export function ModelProvider(props: ModelProviderProps) {
                 <div
                   className="cursor-pointer hover:bg-blue-100 px-2 
                 rounded-md text-gray-400 hover:text-gray-700"
-                  onClick={closeModel}
+                  onClick={() => router.push("/", "/", { shallow: true })}
                 >
                   <i className="fa-sharp fa-solid fa-xmark fa-sm"></i>
                 </div>
@@ -176,9 +147,8 @@ export function ModelProvider(props: ModelProviderProps) {
           </div>
         </div>
       )}
-      {props.children}
-    </ModelContext.Provider>
+    </div>
   );
 }
 
-export default ModelContext;
+export default Model;

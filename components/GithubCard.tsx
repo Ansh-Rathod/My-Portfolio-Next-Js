@@ -8,17 +8,8 @@ function GithubCard({ data }: { data: any }) {
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full  rounded-3xl 
   bg-gradient-to-t to-[#253142fd] from-[#010409]  mobile:rounded-xl
-  pt-7 pb-4 px-6"
+  pt-10 pb-4 px-6"
       >
-        <div className="px-6 py-5 text-center justify-center items-center flex">
-          <h1
-            className="text-2xl tracking-wider font-poppins text-center 
-            text-gray-100 mb-2 w-fit"
-          >
-            MY GITHUB PROFILE
-          </h1>
-        </div>
-
         {/* <div className="border-[1px] border-white opacity-20 max-w-[1000px] mx-auto"></div> */}
         <div
           className="flex flex-row max-w-[900px] mx-auto mt-4 justify-center
@@ -29,8 +20,10 @@ function GithubCard({ data }: { data: any }) {
               <div
                 className="border-b-[4px] border-l-[6px] 
                 border-l-blue-300
+                bg-gradient-to-b from-[#3c7f9b] to-[#9f6464]
+
                 border-red-400 rounded-full shadow-md
-                shadow-[#9f6b64] relative w-[280px] h-[280px] 
+                shadow-[#9f6b64] relative w-[250px] h-[250px] 
                 mini-laptop:w-[250px] mini-laptop:h-[250px] 
                 mobile:w-[150px] mobile:h-[150px]
                 tablet:w-[150px] tablet:h-[150px]
@@ -69,13 +62,12 @@ function GithubCard({ data }: { data: any }) {
            laptop:pl-24 mini-laptop:pl-10"
           >
             <div className="max-w-[400px]">
-              <p
-                className=" text-white opacity-90 mb-8 text-[17px]
-               leading-[25px] tracking-wide mobile:text-center font-semibold font-proxima"
+              <h1
+                className="text-xl tracking-wider font-poppins mobile:text-center 
+            text-gray-100 mb-6 "
               >
-                I consistently contributing to open-source with my full-stack
-                projects since 2020.
-              </p>
+                MY GITHUB PROFILE
+              </h1>
             </div>
             <div className="flex flex-row items-center mb-4 ">
               <div className="mr-3 bg-[#d19d0d] w-fit rounded-full p-2 text-center flex justify-center items-center text-white">
@@ -102,7 +94,7 @@ function GithubCard({ data }: { data: any }) {
               {[1, 2, 3, 4, 5].map((item) => {
                 return (
                   <div
-                    className={`cursor-pointer ml-1 relative w-[40px] h-[40px] mobile:w-[40px] mobile:h-[40px]`}
+                    className={`cursor-pointer ml-1 relative w-[35px] h-[35px] mobile:w-[40px] mobile:h-[40px]`}
                     key={item}
                   >
                     <Image
@@ -119,7 +111,7 @@ function GithubCard({ data }: { data: any }) {
             <div className="flex w-full mobile:justify-center">
               <Link href="https://github.com/Ansh-Rathod" target={"_blank"}>
                 <button
-                  className="border px-4 text-white mt-10 rounded-md font-semibold tracking-wider
+                  className="border px-4 text-white mt-8 rounded-md font-semibold tracking-wider
              hover:bg-white  hover:text-black py-2
                bg-[#1e252e] text-proxima text-sm"
                 >
@@ -129,7 +121,7 @@ function GithubCard({ data }: { data: any }) {
             </div>
           </div>
         </div>
-        <div className="mt-14"></div>
+        <div className="mt-8"></div>
       </div>
     </div>
   );

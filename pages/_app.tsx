@@ -1,11 +1,10 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { ModelProvider } from "@/contexts/showModelContext";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ModelProvider>
+    <div>
       <Head>
         <link
           rel="stylesheet"
@@ -38,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-    </ModelProvider>
+    </div>
   );
 }
 

@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectComponent from "@/components/Project";
 import { projects } from "data/projects";
+import Model from "./Model";
+import { useRouter } from "next/router";
 
 function AllProjects() {
   return (

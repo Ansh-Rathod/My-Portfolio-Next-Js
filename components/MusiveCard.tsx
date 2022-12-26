@@ -7,7 +7,7 @@ function MusiveCard() {
       <div
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full rounded-3xl
-  bg-gradient-to-tr to-[#2bb540] via-[#1c6a3a] from-[#164e2b]  pt-4 pb-6 px-6 mobile:rounded-xl"
+  bg-gradient-to-br to-[#2bb540] via-[#228046] from-[#228347]  pt-4 pb-6 px-6 mobile:rounded-xl"
       >
         {/* <div className="px-6 py-5 text-center justify-center items-center flex">
           <h1
@@ -61,7 +61,7 @@ function MusiveCard() {
               </p>
             </div>
             <div className="flex flex-row items-center mb-4 ">
-              <div className="mr-4 bg-[#238a0f] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
+              <div className="mr-4 bg-[#29a111] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
                 <i className="fa-solid fa-window-restore text-[16px]"></i>
               </div>
               <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
@@ -69,7 +69,7 @@ function MusiveCard() {
               </p>
             </div>
             <div className="flex flex-row items-center">
-              <div className="mr-4 bg-[#238a0f] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
+              <div className="mr-4 bg-[#279811] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
                 <i className="fa-brands fa-app-store-ios text-[16px]"></i>
               </div>
               <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
@@ -88,7 +88,7 @@ function MusiveCard() {
                 <button
                   className="border px-4 text-white mt-10 rounded-md font-semibold tracking-wider
              hover:bg-white  hover:text-black py-2
-               bg-[#1f472c] text-proxima text-sm"
+               bg-[#26623a] text-proxima text-sm"
                 >
                   VISIT WEB APP
                 </button>

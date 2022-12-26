@@ -5,7 +5,7 @@ const NavbarItem = (props: any) => {
     <Link href={`#${props.name.toLowerCase()}`} scroll={true}>
       <li
         className="uppercase cursor-pointer mobile:text-[14px] tablet:text-[14px]
-       hover:text-blue-700 px-3 tablet:px-1 py-1 rounded "
+       hover:text-blue-700 mx-3 tablet:px-1 my-1  hover:border-b-blue-700 hover:border-b"
       >
         {props.name}
       </li>
