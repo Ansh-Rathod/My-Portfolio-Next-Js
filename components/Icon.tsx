@@ -1,9 +1,17 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import Link from "next/link";
 export default function Icon(props: any) {
-  const { classes, url } = props;
+  const { classes, url, i } = props;
   return (
-    <div className="scale-100 hover:scale-[1.1]">
+    <motion.div
+      initial={{ scale: 0, y: 10 * 0.5 * i ?? 1 }}
+      animate={{ scale: 1, y: 0 }}
+      whileHover={{ scale: 1.2 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5, delay: i * 0.2 }}
+      className="scale-100"
+    >
       <a
         target="_blank"
         rel="noreferrer"
@@ -12,12 +20,12 @@ export default function Icon(props: any) {
         ease-in-out border-slate-400 group
           hover:bg-blue-100 hover:border-blue-300"
       >
-        <i
+        <motion.i
           className={
             classes + ` group-hover:text-blue-700 group-hover:scale-110`
           }
-        ></i>
+        ></motion.i>
       </a>
-    </div>
+    </motion.div>
   );
 }

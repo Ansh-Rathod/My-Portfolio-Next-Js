@@ -1,10 +1,24 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const textUpAnimate = {
+  offscreen: { y: 20, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
 function GithubCard({ data }: { data: any }) {
   return (
     <div className="select-none">
-      <div
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        viewport={{ once: true, amount: 1 }}
+        whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.3 } }}
+        transition={{ staggerChildren: 0.5 }}
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full  rounded-3xl 
   bg-gradient-to-t to-[#253142fd] from-[#010409]  mobile:rounded-xl
@@ -122,7 +136,7 @@ function GithubCard({ data }: { data: any }) {
           </div>
         </div>
         <div className="mt-8"></div>
-      </div>
+      </motion.div>
     </div>
   );
 }

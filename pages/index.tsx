@@ -103,12 +103,14 @@ export async function getStaticProps() {
         stars: totalStars,
       };
       await redis.setex("Ansh-Rathod", 86400, JSON.stringify(cache));
+      redis.disconnect();
       return {
         props: {
           data: cache,
         },
       };
     } else {
+      redis.disconnect();
       return {
         props: {
           data: JSON.parse(cache),
@@ -122,8 +124,8 @@ export async function getStaticProps() {
           username: "Ansh-Rathod",
           avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
           repos: 28,
-          followers: 109,
-          stars: 360,
+          followers: 114,
+          stars: 361,
         },
       },
     };

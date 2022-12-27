@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
+
 const ListItem = (props: any) => {
-  const { name, star } = props;
+  const { name, i } = props;
   return (
     <div className="my-1 flex flex-row justify-between items-center w-[130px] ">
       <p className="capitalize text-[15px] font-apple h-[24px]">{name}</p>

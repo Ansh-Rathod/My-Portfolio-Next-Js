@@ -3,13 +3,13 @@ import Image from "next/image";
 import Slider from "./slider";
 import Icon from "@/components/Icon";
 import { Router, useRouter } from "next/router";
-
+import { motion } from "framer-motion";
 function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
   const router = useRouter();
   return (
     <div>
       {isOpen && (
-        <div
+        <motion.div
           className="fixed inset-0 bg-gray-500 bg-opacity-60 
             backdrop-blur-sm z-10"
         >
@@ -17,7 +17,10 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
             className="w-screen h-screen max-w-full 
           flex justify-center items-start pt-4 tablet:pt-0 mobile:pt-0 "
           >
-            <div
+            <motion.div
+              initial={{ scale: 0.7, opacity: 0.9, y: 100 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
               className={`items-center
                     font-proxima rounded-lg flex flex-col bg-white 
                      w-[700px] max-w-[700px] shadow-xl 
@@ -143,9 +146,9 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
                 </div>
                 <div className="mb-[200px]"></div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );

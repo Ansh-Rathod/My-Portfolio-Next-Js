@@ -1,24 +1,26 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 function MusiveCard() {
   return (
     <div className="select-none">
-      <div
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        viewport={{ once: true, amount: 1 }}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+          transition: { duration: 0.3 },
+          autoReverse: false,
+        }}
+        transition={{ staggerChildren: 0.5 }}
+        exit={{ scale: 0, opacity: 0 }}
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full rounded-3xl
   bg-gradient-to-br to-[#2bb540] via-[#228046] from-[#228347]  pt-4 pb-6 px-6 mobile:rounded-xl"
       >
-        {/* <div className="px-6 py-5 text-center justify-center items-center flex">
-          <h1
-            className="text-2xl tracking-wider font-poppins text-center 
-            text-gray-100 mb-2 w-fit"
-          >
-            MUSIVE
-          </h1>
-        </div> */}
-
-        {/* <div className="border-[1px] border-white opacity-20 max-w-[1000px] mx-auto"></div> */}
         <div
           className="flex flex-row-reverse max-w-[900px] mx-auto mt-4 justify-center
          items-center px-6 tablet:flex-col mobile:flex-col  "
@@ -97,7 +99,7 @@ function MusiveCard() {
           </div>
         </div>
         <div className="mt-14"></div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,8 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+const textUpAnimate = {
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 0.6 },
+  },
+};
 function ProjectComponent(props: any) {
-  const { project } = props;
+  const { project, i } = props;
 
   return (
     <Link
@@ -10,8 +18,16 @@ function ProjectComponent(props: any) {
       href={`/?slug=${project.name.toLowerCase()}`}
       as={`/projects/${project.name.toLowerCase()}`}
     >
-      <div
-        className={`select-none cursor-pointer items-center scale-100 hover:scale-105
+      <motion.div
+        variants={textUpAnimate}
+        initial={{ y: 50 * (i * 0.7), opacity: 0 }}
+        whileInView={{ y: 0, transition: { delay: i * 0.4 } }}
+        viewport={{ once: true, amount: 0.7 }}
+        whileHover={{
+          scale: 1.05,
+          transition: { type: "spring", bounce: 0.4, duration: 0.2 },
+        }}
+        className={`select-none cursor-pointer items-center 
        font-apple rounded-md flex flex-row shadow transition-all easy-in 
        p-2 bg-gradient-to-r ${project.name.toLowerCase()}`}
       >
@@ -44,7 +60,7 @@ function ProjectComponent(props: any) {
             {/* <p className="text-gray-100  uppercase text-[12px]">{project.date}</p> */}
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }
