@@ -31,7 +31,7 @@ const About = () => {
             opacity: 1,
             transition: { type: "spring", bounce: 0.2, duration: 1 },
           }}
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
           transition={{ staggerChildren: 1 }}
           className="flex-grow my-auto text-right uppercase px-6 tablet:text-center mobile:text-center"
         >
@@ -48,7 +48,7 @@ const About = () => {
             opacity: 1,
             transition: { type: "spring", bounce: 0.2, duration: 1 },
           }}
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
           transition={{ staggerChildren: 1 }}
           className=" font-proxima text-[18px] w-[65%] px-6 py-2 tablet:w-full mobile:w-full mobile:px-2"
         >

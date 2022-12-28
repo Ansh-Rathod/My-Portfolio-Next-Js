@@ -8,7 +8,7 @@ function MusiveCard() {
     <div className="select-none">
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.7 }}
         whileInView={{
           scale: 1,
           opacity: 1,

@@ -3,20 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const textUpAnimate = {
-  offscreen: { y: 20, opacity: 0 },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
 function GithubCard({ data }: { data: any }) {
   return (
     <div className="select-none">
       <motion.div
         initial={{ scale: 0.95, opacity: 0 }}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.7 }}
         whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.3 } }}
         transition={{ staggerChildren: 0.5 }}
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 

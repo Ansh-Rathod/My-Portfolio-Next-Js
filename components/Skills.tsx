@@ -6,7 +6,7 @@ function Skills() {
     <motion.div
       initial={{ y: 10, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
-      viewport={{ once: false, amount: 0.6 }}
+      viewport={{ once: true, amount: 0.6 }}
       id="skills"
       className="border-t-[1px] border-t-slate-300 mt-24 py-[100px] w-screen max-w-full desktop:container"
     >
