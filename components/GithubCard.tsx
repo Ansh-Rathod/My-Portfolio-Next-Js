@@ -19,7 +19,7 @@ function GithubCard({ data }: { data: any }) {
         >
           <motion.div
             initial={{ y: 20, opacity: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 1 }}
             whileInView={{
               y: 0,
               opacity: 1,
@@ -31,7 +31,7 @@ function GithubCard({ data }: { data: any }) {
             <div className="flex justify-center items-center">
               <motion.div
                 initial={{ scale: 0.98, opacity: 0 }}
-                viewport={{ once: true, amount: 0.7 }}
+                viewport={{ once: true, amount: 1 }}
                 whileInView={{
                   scale: 1,
                   opacity: 1,
@@ -80,7 +80,7 @@ function GithubCard({ data }: { data: any }) {
           </motion.div>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 1 }}
             whileInView={{
               y: 0,
               opacity: 1,
@@ -124,10 +124,10 @@ function GithubCard({ data }: { data: any }) {
               {[1, 2, 3, 4, 5].map((item, i) => {
                 return (
                   <motion.div
-                    initial={{ y: 20 * i * 0.6, opacity: 0 }}
+                    initial={{ x: 20 * i * 0.6, opacity: 0 }}
                     viewport={{ once: true, amount: 1 }}
                     whileInView={{
-                      y: 0,
+                      x: 0,
                       opacity: 1,
                       transition: { duration: 0.3, delay: 0.2 * i },
                       autoReverse: false,

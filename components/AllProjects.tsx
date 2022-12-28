@@ -17,7 +17,7 @@ function AllProjects() {
       variants={textUpAnimate}
       initial={"offscreen"}
       whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ staggerChildren: 0.5 }}
       id="projects"
       className="bg-no-repeat  bg-fill bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.webp')] bg-cover"
