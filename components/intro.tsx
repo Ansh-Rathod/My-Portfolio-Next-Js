@@ -17,7 +17,6 @@ const Intro = () => (
     <div
       id="home"
       className="box-border  bg-no-repeat 
-      border-t-[0.6px] border-slate-200
       bg-cover bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.webp')]"
     >
       <div className=" backdrop-blur-3xl bg-white/70  ">

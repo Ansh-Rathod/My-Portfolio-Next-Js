@@ -6,17 +6,7 @@ import { motion } from "framer-motion";
 function MusiveCard() {
   return (
     <div className="select-none">
-      <motion.div
-        initial={{ scale: 0.95, opacity: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
-        whileInView={{
-          scale: 1,
-          opacity: 1,
-          transition: { duration: 0.3 },
-          autoReverse: false,
-        }}
-        transition={{ staggerChildren: 0.5 }}
-        exit={{ scale: 0, opacity: 0 }}
+      <div
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full rounded-3xl
   bg-gradient-to-br to-[#2bb540] via-[#228046] from-[#228347]  pt-4 pb-6 px-6 mobile:rounded-xl"
@@ -26,7 +16,18 @@ function MusiveCard() {
          items-center px-6 tablet:flex-col mobile:flex-col  "
         >
           <div>
-            <div className="flex justify-center items-center">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.3 },
+                autoReverse: false,
+              }}
+              transition={{ staggerChildren: 0.5 }}
+              className="flex justify-center items-center"
+            >
               <div
                 className="w-[380px] h-[300px] relative
                mobile:w-[280px] mobile:h-[280px] tablet:w-[300px] tablet:h-[200px]
@@ -40,9 +41,18 @@ function MusiveCard() {
                   alt="intro"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.3 },
+              autoReverse: false,
+            }}
+            transition={{ staggerChildren: 0.5 }}
             className="tablet:mt-10 mobile:mt-10 desktop:pr-16
            laptop:pr-16 mini-laptop:pr-10"
           >
@@ -96,10 +106,10 @@ function MusiveCard() {
                 </button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="mt-14"></div>
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -21,10 +21,10 @@ function ProjectComponent(props: any) {
       <motion.div
         variants={textUpAnimate}
         initial={{ y: 50 * (i * 0.7), opacity: 0 }}
-        whileInView={{ y: 0, transition: { delay: i * 0.4 } }}
+        whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
         viewport={{ once: true, amount: 0.7 }}
         whileHover={{
-          scale: 1.05,
+          scale: 0.98,
           transition: { type: "spring", bounce: 0.4, duration: 0.2 },
         }}
         className={`select-none cursor-pointer items-center 
@@ -51,12 +51,13 @@ function ProjectComponent(props: any) {
             {project.description}{" "}
           </p>
           <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
-            <p
+            <motion.p
+              whileHover={{}}
               className="uppercase text-[12px] mobile:text-[10px]
            text-gray-100 border-b-[1px] border-gray-200 hover:text-white hover:border-white"
             >
               Read More
-            </p>
+            </motion.p>
             {/* <p className="text-gray-100  uppercase text-[12px]">{project.date}</p> */}
           </div>
         </div>

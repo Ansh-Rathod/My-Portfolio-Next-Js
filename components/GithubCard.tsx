@@ -6,11 +6,7 @@ import { motion } from "framer-motion";
 function GithubCard({ data }: { data: any }) {
   return (
     <div className="select-none">
-      <motion.div
-        initial={{ scale: 0.95, opacity: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
-        whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.3 } }}
-        transition={{ staggerChildren: 0.5 }}
+      <div
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full  rounded-3xl 
   bg-gradient-to-t to-[#253142fd] from-[#010409]  mobile:rounded-xl
@@ -21,9 +17,28 @@ function GithubCard({ data }: { data: any }) {
           className="flex flex-row max-w-[900px] mx-auto mt-4 justify-center
          items-center px-6 tablet:flex-col mobile:flex-col  "
         >
-          <div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.3 },
+              autoReverse: false,
+            }}
+            transition={{ staggerChildren: 0.5 }}
+          >
             <div className="flex justify-center items-center">
-              <div
+              <motion.div
+                initial={{ scale: 0.98, opacity: 0 }}
+                viewport={{ once: true, amount: 0.7 }}
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                  transition: { duration: 0.3 },
+                  autoReverse: false,
+                }}
+                transition={{ staggerChildren: 0.5 }}
                 className="border-b-[4px] border-l-[6px] 
                 border-l-blue-300
                 bg-gradient-to-b from-[#3c7f9b] to-[#9f6464]
@@ -43,7 +58,7 @@ function GithubCard({ data }: { data: any }) {
                   alt="profile"
                   unoptimized
                 />
-              </div>
+              </motion.div>
             </div>
             <h1 className="font-poppins text-white mt-5 mb-2 text-center opacity-80 tracking-wider">
               @Ansh-Rathod
@@ -62,8 +77,17 @@ function GithubCard({ data }: { data: any }) {
                 Repositories
               </p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.3 },
+              autoReverse: false,
+            }}
+            transition={{ staggerChildren: 0.5 }}
             className="tablet:mt-10 mobile:mt-10 desktop:pl-24
            laptop:pl-24 mini-laptop:pl-10"
           >
@@ -97,9 +121,18 @@ function GithubCard({ data }: { data: any }) {
               Achievements
             </h1>
             <div className="flex flex-wrap mobile:items-center mobile:justify-center">
-              {[1, 2, 3, 4, 5].map((item) => {
+              {[1, 2, 3, 4, 5].map((item, i) => {
                 return (
-                  <div
+                  <motion.div
+                    initial={{ y: 20 * i * 0.6, opacity: 0 }}
+                    viewport={{ once: true, amount: 1 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: { duration: 0.3, delay: 0.2 * i },
+                      autoReverse: false,
+                    }}
+                    transition={{ staggerChildren: 0.5 }}
                     className={`cursor-pointer ml-1 relative w-[35px] h-[35px] mobile:w-[40px] mobile:h-[40px]`}
                     key={item}
                   >
@@ -110,7 +143,7 @@ function GithubCard({ data }: { data: any }) {
                       alt="profile"
                       unoptimized
                     />
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -125,10 +158,10 @@ function GithubCard({ data }: { data: any }) {
                 </button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="mt-8"></div>
-      </motion.div>
+      </div>
     </div>
   );
 }

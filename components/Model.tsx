@@ -18,9 +18,9 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
           flex justify-center items-start pt-4 tablet:pt-0 mobile:pt-0 "
           >
             <motion.div
-              initial={{ scale: 0.7, opacity: 0.9, y: 100 }}
+              initial={{ scale: 0.9, opacity: 0.9, y: 100 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.1 }}
               className={`items-center
                     font-proxima rounded-lg flex flex-col bg-white 
                      w-[700px] max-w-[700px] shadow-xl 

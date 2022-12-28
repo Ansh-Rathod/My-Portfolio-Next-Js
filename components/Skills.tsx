@@ -6,9 +6,9 @@ function Skills() {
     <motion.div
       initial={{ y: 10, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
-      viewport={{ once: true, amount: 0.6 }}
+      viewport={{ once: true, amount: 0.4 }}
       id="skills"
-      className="border-t-[1px] border-t-slate-300 mt-24 py-[100px] w-screen max-w-full desktop:container"
+      className="py-[100px] w-screen max-w-full desktop:container"
     >
       <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">

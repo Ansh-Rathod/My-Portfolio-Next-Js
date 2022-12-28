@@ -8,7 +8,7 @@ export default function Icon(props: any) {
       initial={{ scale: 0, y: 10 * 0.5 * i ?? 1 }}
       animate={{ scale: 1, y: 0 }}
       whileHover={{ scale: 1.2 }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{ staggerChildren: 0.5, delay: i * 0.2 }}
       className="scale-100"
     >
