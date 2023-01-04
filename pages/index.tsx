@@ -1,19 +1,18 @@
 import type { NextPage } from "next";
 
-import Head from "next/head";
-import Intro from "@/components/intro";
 import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
+import Intro from "@/components/intro";
+import Head from "next/head";
 
-import { useContext } from "react";
-import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import GithubCard from "@/components/GithubCard";
-import redis from "lib/redis";
 import MusiveCard from "@/components/MusiveCard";
+import Skills from "@/components/Skills";
+import redis from "lib/redis";
 import { useRouter } from "next/router";
-import { projects } from "../data/projects";
 import Model from "../components/Model";
+import { projects } from "../data/projects";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -91,6 +90,9 @@ const Home: NextPage = ({ data }: any) => {
 
 export async function getStaticProps() {
   try {
+    if (redis.status == "end") {
+      await redis.connect();
+    }
     const cache = await redis.get("Ansh-Rathod");
     if (cache == null) {
       const res = await fetch(`https://api.github.com/users/Ansh-Rathod`);
@@ -132,8 +134,8 @@ export async function getStaticProps() {
           username: "Ansh-Rathod",
           avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
           repos: 28,
-          followers: 114,
-          stars: 361,
+          followers: 122,
+          stars: 370,
         },
       },
     };
