@@ -71,7 +71,7 @@ const Intro = () => (
 
               <Icon
                 i={2}
-                url="https://twitter.com/AnshhRathod"
+                url="https://twitter.com/anshrathodfr"
                 classes="fa-brands fa-twitter"
                 name="Twitter"
               />
@@ -94,7 +94,7 @@ const Intro = () => (
               />
               <Icon
                 i={6}
-                url="https://www.instagram.com/anshrathod.fr"
+                url="https://www.instagram.com/anshrathodfr"
                 name="Instagram"
                 classes="fa-brands fa-instagram"
               />
