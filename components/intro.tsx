@@ -94,7 +94,7 @@ const Intro = () => (
               />
               <Icon
                 i={6}
-                url="https://www.instagram.com/anshrathodd"
+                url="https://www.instagram.com/anshrathod.fr"
                 name="Instagram"
                 classes="fa-brands fa-instagram"
               />
