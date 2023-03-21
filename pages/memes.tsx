@@ -6,7 +6,7 @@ function Memes() {
       <p className="font-bold text-[20px] mb-4">Coming soon</p>
       <p>
         Follow{" "}
-        <a className="text-blue-400" href="https://twitter.com/@anshrathodfr">
+        <a className="text-blue-400" href="https://twitter.com/anshrathodfr">
           @anshrathodfr
         </a>{" "}
         on twitter for the programming memes created by me.
