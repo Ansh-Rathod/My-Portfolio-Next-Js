@@ -51,7 +51,7 @@ function MemesComponent() {
       });
       setSelectedMemes(sel);
     } else {
-      if (selectedTag !== "latest") {
+      if (selectedTag == "latest") {
         setSelectedMemes(memes);
       } else {
         const sel = memes.filter((meme) => meme.tags.includes(selectedTag));
@@ -62,9 +62,9 @@ function MemesComponent() {
   return (
     <div
       id="projects"
-      className="bg-no-repeat  bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center"
+      className="bg-no-repeat border-b bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center"
     >
-      <div className="backdrop-blur-3xl bg-white/70 pb-24 ">
+      <div className="backdrop-blur-3xll bg-white/70 pb-24 ">
         <div className="desktop:container ">
           <div className="pt-20 px-4 pb-10">
             <motion.h1
@@ -89,7 +89,7 @@ function MemesComponent() {
               Enjoy the 30+ memes I made over the last few months.
             </motion.p>
           </div>
-          <div className="max-w-[1100px] m-auto p-2 tablet:max-w-[550px] sticky top-5 z-50  ">
+          <div className="max-w-[1100px] m-auto p-2 bg-white tablet:max-w-full sticky top-0 z-50  ">
             <div className=" bg-white w-full flex flex-col items-center  rounded-lg border border-gray-400 py-2 ">
               <div className="flex flex-row px-4 items-center w-full">
                 <i className="fa-solid fa-magnifying-glass"></i>

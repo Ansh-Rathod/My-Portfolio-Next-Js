@@ -15,17 +15,14 @@ function Meme({ i, meme, onTag }: any) {
       // whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
       // viewport={{ once: true, amount: 0.7 }}
       className={` items-center
-       font-apple rounded-2xl flex flex-col border-[1px] border-gray-400 
+       font-apple rounded-2xl flex flex-col border-[1px] border-gray-200 
        `}
     >
       <div className="bg-white w-full border-b rounded-tl-2xl rounded-tr-2xl py-6 items-center flex justify-center">
         <div className="w-[400px] relative h-[400px] mobile:h-[300px] mobile:w-[280px]">
           {meme.type !== "image" ? (
-            <video controls>
-              <source
-                src="/memes/content/client-with-low-budget.mp4"
-                type="video/mp4"
-              />
+            <video autoPlay muted controlsList="play" controls>
+              <source src={meme.path} type="video/mp4" />
             </video>
           ) : (
             <Image
