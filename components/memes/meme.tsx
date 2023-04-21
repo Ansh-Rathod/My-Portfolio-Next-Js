@@ -37,7 +37,7 @@ function Meme({ i, meme, onTag }: any) {
           )}
         </div>
       </div>
-      <div className="bg-slate-50 bg-opacity-30 border-t  rounded-bl-2xl rounded-br-2xl   p-4 flex flex-col items-start justify-start">
+      <div className="bg-slate-50 bg-opacity-30 border-t  rounded-bl-2xl rounded-br-2xl w-full   p-4 flex flex-col items-start justify-start">
         <h1 className="font-apple mt-2 text-base font-bold">{meme.title}</h1>
         <div className="flex flex-wrap mt-3">
           {meme.tags.map((tag: string, i: number) => (
@@ -50,8 +50,8 @@ function Meme({ i, meme, onTag }: any) {
             </div>
           ))}
         </div>
-        <div className="flex flex-row items-center justify-between w-full">
-          <h1 className="text-gray-500 text-sm mt-2">{meme.created_on}</h1>
+        <div className="flex flex-row items-center justify-between w-full mt-3">
+          <h1 className="text-gray-500 text-sm ">{meme.created_on}</h1>
           <a href={meme.link} target="_blank" rel="noreferrer">
             <div className="bg-blue-500 cursor-pointer first-line:hover:shadow-lg po bg-opacity-70 px-3 text-white rounded">
               View on
