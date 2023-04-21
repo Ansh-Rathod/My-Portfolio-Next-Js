@@ -51,17 +51,16 @@ function MemesComponent() {
       });
       setSelectedMemes(sel);
     } else {
-      const sel = memes.filter((meme) => meme.tags.includes(selectedTag));
-      setSelectedMemes(sel);
+      if (selectedTag !== "latest") {
+        setSelectedMemes(memes);
+      } else {
+        const sel = memes.filter((meme) => meme.tags.includes(selectedTag));
+        setSelectedMemes(sel);
+      }
     }
   }, [selectedTag]);
   return (
-    <motion.div
-      variants={textUpAnimate}
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ staggerChildren: 0.5 }}
+    <div
       id="projects"
       className="bg-no-repeat  bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center"
     >
@@ -137,7 +136,7 @@ function MemesComponent() {
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
               {selectedMemes.map((meme: any, i: number) => (
                 <Meme
-                  key={meme.name}
+                  key={meme.title}
                   meme={meme}
                   i={i}
                   onTag={(tag: string) => {
@@ -150,7 +149,7 @@ function MemesComponent() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

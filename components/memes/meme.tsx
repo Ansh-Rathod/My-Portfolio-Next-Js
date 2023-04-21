@@ -10,10 +10,10 @@ const textUpAnimate = {
 function Meme({ i, meme, onTag }: any) {
   return (
     <motion.div
-      variants={textUpAnimate}
-      initial={{ y: 50 * (i * 0.7), opacity: 0 }}
-      whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
-      viewport={{ once: true, amount: 0.7 }}
+      // variants={textUpAnimate}
+      // initial={{ y: 50 * (i * 0.7), opacity: 0 }}
+      // whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
+      // viewport={{ once: true, amount: 0.7 }}
       className={` items-center
        font-apple rounded-2xl flex flex-col border-[1px] border-gray-400 
        `}
