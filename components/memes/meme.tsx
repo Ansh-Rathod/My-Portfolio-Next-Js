@@ -21,7 +21,7 @@ function Meme({ i, meme, onTag }: any) {
       <div className="bg-white w-full border-b rounded-tl-2xl rounded-tr-2xl py-6 items-center flex justify-center">
         <div className="w-[400px] relative h-[400px] mobile:h-[300px] mobile:w-[280px]">
           {meme.type !== "image" ? (
-            <video autoPlay muted controlsList="play" controls>
+            <video autoPlay muted controlsList="play" controls loop>
               <source src={meme.path} type="video/mp4" />
             </video>
           ) : (
