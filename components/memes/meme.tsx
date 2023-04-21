@@ -50,7 +50,7 @@ function Meme({ i, meme, onTag }: any) {
         <div className="flex flex-row items-center justify-between w-full mt-3">
           <h1 className="text-gray-500 text-sm ">{meme.created_on}</h1>
           <a href={meme.link} target="_blank" rel="noreferrer">
-            <div className="bg-blue-500 cursor-pointer first-line:hover:shadow-lg po bg-opacity-70 px-3 text-white rounded">
+            <div className="bg-blue-500 cursor-pointer first-line:hover:shadow-lg po  px-3 text-white rounded">
               View on
               <i className="pl-2 fa-brands fa-twitter" />
             </div>
