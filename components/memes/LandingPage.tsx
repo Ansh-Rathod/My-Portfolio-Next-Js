@@ -16,7 +16,7 @@ const Intro = () => (
     <div
       id="home"
       className="box-border  bg-no-repeat 
-      bg-cover bg-[url('/memes-intro.png')]"
+      bg-cover  bg-center "
     >
       <div className=" backdrop-blur-3xl bg-white/70  ">
         <div className="desktop:max-w-[1800px] m-auto  flex">
