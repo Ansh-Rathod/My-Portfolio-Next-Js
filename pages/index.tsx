@@ -37,8 +37,8 @@ const Home: NextPage = ({ data }: any) => {
 
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@AnshhRathod" />
-        <meta name="twitter:creator" content="@AnshhRathod" />
+        <meta name="twitter:site" content="@anshrathodfr" />
+        <meta name="twitter:creator" content="@anshrathodfr" />
         <meta name="twitter:title" content="Ansh Rathod | Portfolio" />
         <meta
           name="twitter:description"
