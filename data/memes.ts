@@ -447,7 +447,7 @@ export const memes = [
   {
     title: "Sigma tech bro @TheJackForge once said.....",
     id: "1651854321015832577",
-    tags: ["comments", "code", "sigma"],
+    tags: ["comment", "code", "sigma"],
     likes: 5,
     link: "https://twitter.com/anshrathodfr/status/1651854321015832577",
     created_on: "Apr 28, 2023",

@@ -55,7 +55,14 @@ function MemesComponent() {
       if (selectedTag == "latest") {
         setSelectedMemes(memes);
       } else {
-        const sel = memes.filter((meme) => meme.tags.includes(selectedTag));
+        const sel = memes
+          .filter((meme) => meme.tags.includes(selectedTag))
+          .sort((a, b) => {
+            return (
+              new Date(b.created_on).getTime() -
+              new Date(a.created_on).getTime()
+            );
+          });
         setSelectedMemes(sel);
       }
     }
