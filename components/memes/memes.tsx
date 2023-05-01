@@ -1,5 +1,6 @@
 import { memes } from "data/memes";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Meme from "./meme";
 
@@ -59,11 +60,9 @@ function MemesComponent() {
       }
     }
   }, [selectedTag]);
+  const router = useRouter();
   return (
-    <div
-      id="projects"
-      className="bg-no-repeat border-b bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center"
-    >
+    <div className="bg-no-repeat border-b bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center">
       <div className="backdrop-blur-3xll bg-white/70 pb-24 ">
         <div className="desktop:container ">
           <div className="pt-20 px-4 pb-10">
@@ -86,9 +85,10 @@ function MemesComponent() {
               transition={{ delay: 3 }}
               className="font-proxima text-slate-900 text-[18px] text-center"
             >
-              Enjoy the 30+ memes I made over the last few months.
+              Enjoy the {memes.length} memes I made over the last few months.
             </motion.p>
           </div>
+          <div id="memes"></div>
           <div className="max-w-[1100px] m-auto p-2 bg-white tablet:max-w-full sticky top-0 z-50  ">
             <div className=" bg-white w-full flex flex-col items-center  rounded-lg border border-gray-400 py-2 ">
               <div className="flex flex-row px-4 items-center w-full">
@@ -141,6 +141,8 @@ function MemesComponent() {
                   i={i}
                   onTag={(tag: string) => {
                     setSearch("");
+                    router.push("#memes");
+
                     setselectedTag(tag);
                   }}
                 />

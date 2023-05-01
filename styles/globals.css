@@ -17,9 +17,12 @@
   font-weight: 400;
   src: url("/Poppins-Bold.ttf");
 }
+*.unselectable {
+  pointer-events: none;
+}
 
 .musive {
-  @apply from-[#6ac88e] to-[#45b875] shadow-[#45b875e1] ;
+  @apply from-[#6ac88e] to-[#45b875] shadow-[#45b875e1];
 }
 
 .photoarc {
