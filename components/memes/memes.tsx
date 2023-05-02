@@ -14,7 +14,7 @@ const textUpAnimate = {
 };
 function MemesComponent() {
   const [search, setSearch] = useState<string>("");
-  const [selectedTag, setselectedTag] = useState<string>("popular");
+  const [selectedTag, setselectedTag] = useState<string>("latest");
   const [searchedTags, setSearchedTags] = useState<string[]>([]);
   const [selectedMemes, setSelectedMemes] = useState<any[]>(memes);
 
