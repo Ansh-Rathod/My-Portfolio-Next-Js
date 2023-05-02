@@ -35,17 +35,11 @@ function Meme({ i, meme, onTag }: any) {
           )}
         </div>
       </div>
-      <div className="flex border-b flex-row items-center justify-between w-full mt-3 px-4 pb-4">
-        <h1 className="text-gray-500 text-sm ">{meme.created_on}</h1>
-        <a href={meme.link} target="_blank" rel="noreferrer">
-          <div className="bg-blue-500 cursor-pointer first-line:hover:shadow-lg po  px-3 text-white rounded">
-            View on
-            <i className="pl-2 fa-brands fa-twitter" />
-          </div>
-        </a>
-      </div>
+
       <div className="bg-slate-50 bg-opacity-30   rounded-bl-2xl rounded-br-2xl w-full   px-4 pb-4 pt-2 flex flex-col items-start justify-start">
-        <h1 className="font-apple mt-2 text-base font-bold">{meme.title}</h1>
+        <h1 className="font-apple mt-2 text-base font-semibold">
+          {meme.title}
+        </h1>
         <div className="flex flex-wrap mt-3">
           {meme.tags.map((tag: string, i: number) => (
             <div
@@ -56,6 +50,15 @@ function Meme({ i, meme, onTag }: any) {
               {tag}
             </div>
           ))}
+        </div>
+        <div className="flex  flex-row items-center justify-between w-full mt-3">
+          <h1 className="text-gray-500 text-sm ">{meme.created_on}</h1>
+          <a href={meme.link} target="_blank" rel="noreferrer">
+            <div className="bg-blue-500 uppercase text-xs cursor-pointer first-line:hover:shadow-lg py-1  px-3 text-white rounded-lg">
+              View on
+              <i className="pl-2 fa-brands fa-twitter" />
+            </div>
+          </a>
         </div>
       </div>
     </motion.div>

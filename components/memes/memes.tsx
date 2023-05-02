@@ -14,7 +14,7 @@ const textUpAnimate = {
 };
 function MemesComponent() {
   const [search, setSearch] = useState<string>("");
-  const [selectedTag, setselectedTag] = useState<string>("latest");
+  const [selectedTag, setselectedTag] = useState<string>("popular");
   const [searchedTags, setSearchedTags] = useState<string[]>([]);
   const [selectedMemes, setSelectedMemes] = useState<any[]>(memes);
 
@@ -81,7 +81,7 @@ function MemesComponent() {
               transition={{ delay: 3 }}
               className="font-poppins pb-1 text-3xl uppercase text-black text-center"
             >
-              Memes I have Made
+              Memes i made
             </motion.h1>
 
             <motion.p
@@ -90,7 +90,7 @@ function MemesComponent() {
               whileInView={"onscreen"}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ delay: 3 }}
-              className="font-proxima text-slate-900 text-[18px] text-center"
+              className="font-proxima text-slate-600 text-[18px] text-center"
             >
               Enjoy the {memes.length} memes I made over the last few months.
             </motion.p>
@@ -133,13 +133,19 @@ function MemesComponent() {
           <div className="max-w-[1000px] m-auto p-2 pt-6 tablet:max-w-[550px] ">
             <div
               onClick={() => setselectedTag("latest")}
-              className="cursor-pointer select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1 text-lg bg-white border border-gray-300 rounded-md"
+              className="cursor-pointer uppercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
             >
               {search !== "latest" && (
                 <i className="fa-solid fa-xmark px-2 "></i>
               )}{" "}
               {selectedTag}
             </div>
+            <p className="px-2 text-xs uppercase pb-10 text-slate-500">
+              Note: here all memes are created by me and opinions are totally
+              mine. If you find any meme offensive, please tap the{" "}
+              <span className="underline">view on twitter</span> button and
+              share your thoughts.
+            </p>
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
               {selectedMemes.map((meme: any, i: number) => (
                 <Meme
