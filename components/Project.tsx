@@ -47,9 +47,7 @@ function ProjectComponent(props: any) {
             </h1>
           </div>
 
-          <p className="font-proxima text-white font-normal">
-            {project.description}{" "}
-          </p>
+          <p className="font-proxima  text-gray-100 ">{project.description} </p>
           <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
             <motion.p
               whileHover={{}}

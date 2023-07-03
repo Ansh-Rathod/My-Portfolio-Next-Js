@@ -43,7 +43,7 @@ function AllProjects() {
                 whileInView={"onscreen"}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 3 }}
-                className="font-proxima text-slate-900 text-[18px] text-center"
+                className="font-proxima text-slate-500 text-[18px] text-center"
               >
                 I have worked with multiple technologies as a developer to build
                 and maintain my projects.

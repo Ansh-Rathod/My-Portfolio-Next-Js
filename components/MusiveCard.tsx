@@ -65,7 +65,7 @@ function MusiveCard() {
 
             <div className="max-w-[400px]">
               <p
-                className=" text-white opacity-90 mb-8 text-[17px]
+                className="  text-gray-100 opacity-90 mb-8 text-[18px]
                leading-[25px] tracking-wide mobile:text-center font-semibold font-proxima"
               >
                 Explore & download free stock music and use it anywhere you like
@@ -76,7 +76,7 @@ function MusiveCard() {
               <div className="mr-4 bg-[#29a111] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
                 <i className="fa-solid fa-window-restore text-[16px]"></i>
               </div>
-              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
+              <p className="tracking-wide  opacity-80 font-medium text-gray-100 max-w-[350px] text-[16px]">
                 Web App: built with Next.js, Tailwind CSS, Algolia.
               </p>
             </div>
@@ -84,7 +84,7 @@ function MusiveCard() {
               <div className="mr-4 bg-[#279811] w-fit rounded-full p-2.5 text-center flex justify-center items-center text-white">
                 <i className="fa-brands fa-app-store-ios text-[16px]"></i>
               </div>
-              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
+              <p className="tracking-wide opacity-80 font-medium text-gray-100 max-w-[350px] text-[16px]">
                 Android and Ios app: built with Flutter.
               </p>
             </div>

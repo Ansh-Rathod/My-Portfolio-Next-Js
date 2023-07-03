@@ -42,7 +42,6 @@ function Skills() {
             <ListItem name="Nodejs" i={1} />
             <ListItem name="Tailwind CSS" i={1} />
             <ListItem name="Bootstrap" i={1} />
-            <ListItem name="Nuxtjs" i={1} />
             <ListItem name="react" i={1} />
             <ListItem name="python flask" i={1} />
           </div>

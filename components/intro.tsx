@@ -1,7 +1,7 @@
-import Image from "next/image";
-import NavbarItem from "../components/NavbarItem";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Icon from "../components/Icon";
+import NavbarItem from "../components/NavbarItem";
 
 const textAnimate = {
   offscreen: { y: 50, opacity: 0 },
@@ -19,7 +19,7 @@ const Intro = () => (
       className="box-border  bg-no-repeat 
       bg-cover bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.webp')]"
     >
-      <div className=" backdrop-blur-3xl bg-white/70  ">
+      <div className=" backdrop-blur-3xl bg-white/70    ">
         <div className="desktop:max-w-[1800px] m-auto  flex">
           <div
             className="w-[55%] flex flex-col justify-between h-screen max-h-[808px]
@@ -32,6 +32,7 @@ const Intro = () => (
                 <NavbarItem name="home" />
                 <NavbarItem name="About" />
                 <NavbarItem name="skills" />
+
                 <NavbarItem name="projects" />
               </ul>
             </div>
@@ -51,7 +52,7 @@ const Intro = () => (
               <h1 className=" font-bold font-poppins text-5xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
                 ANSH RATHOD
               </h1>
-              <p className="font-proxima text-[22px] max-w-[600px] text-slate-800 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
+              <p className="font-proxima text-[22px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
                 A full-stack developer, Building Seamless mobile & web
                 applications.
               </p>
@@ -81,19 +82,21 @@ const Intro = () => (
                 classes="fa-brands fa-linkedin"
                 name="Linkedin"
               />
-              <Icon
-                i={4}
-                url="https://discordapp.com/users/768376622243119114"
-                classes="fa-brands fa-discord"
-              />
+
               <Icon
                 i={5}
+                url="https://t.me/anshrathodfr"
+                name="Instagram"
+                classes="fa-brands fa-telegram"
+              />
+              <Icon
+                i={6}
                 url="mailto:anshrathod29@gmail.com"
                 classes="fa-solid fa-envelope"
                 name="Email"
               />
               <Icon
-                i={6}
+                i={7}
                 url="https://www.instagram.com/anshrathodfr"
                 name="Instagram"
                 classes="fa-brands fa-instagram"

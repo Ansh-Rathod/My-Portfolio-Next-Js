@@ -1,5 +1,5 @@
 import Contact from "@/components/Contact";
-import LandingPage from "@/components/memes/LandingPage";
+import NavBar from "@/components/NavBar";
 import MemesComponent from "@/components/memes/memes";
 import Head from "next/head";
 
@@ -39,7 +39,8 @@ function Memes() {
         <title>memeloper fr who?</title>
       </Head>
       <div>
-        <LandingPage />
+        {/* <LandingPage /> */}
+        <NavBar />
 
         <MemesComponent />
         <Contact />

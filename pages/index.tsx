@@ -20,8 +20,8 @@ const Home: NextPage = ({ data }: any) => {
   return (
     <div className="font-apple">
       <Head>
-        <meta property="og:title" content="Ansh Rathod | Portfolio" />
-        <meta property="og:site_name" content="Ansh Rathod | Portfolio" />
+        <meta property="og:title" content="Ansh Rathod" />
+        <meta property="og:site_name" content="Ansh Rathod" />
         <meta property="og:url" content="https://www.anshrathod.com" />
 
         <meta
@@ -39,7 +39,7 @@ const Home: NextPage = ({ data }: any) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@anshrathodfr" />
         <meta name="twitter:creator" content="@anshrathodfr" />
-        <meta name="twitter:title" content="Ansh Rathod | Portfolio" />
+        <meta name="twitter:title" content="Ansh Rathod" />
         <meta
           name="twitter:description"
           content="A full-stack developer, Building Seamless mobile & web applications."

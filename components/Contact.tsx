@@ -1,4 +1,3 @@
-import React from "react";
 import Icon from "@/components/Icon";
 import { motion } from "framer-motion";
 function Contact() {
@@ -14,12 +13,12 @@ function Contact() {
           <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase text-center">
             Contact me
           </h1>
-          <p className="font-proxima text-[18px] text-center mt-2">
-            Leave a message on my any of my social media, i&apos;ll reach out to
-            you soon.
+          <p className="font-proxima text-slate-500 text-[18px] text-center mt-2">
+            Leave a message on my any of my social media, I&apos;ll reach out to
+            you as soon as Possible.
+            <br /> Thank you! for visiting.
           </p>
         </div>
-
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
@@ -46,19 +45,21 @@ function Contact() {
             classes="fa-brands fa-linkedin"
             name="Linkedin"
           />
-          <Icon
-            i={4}
-            url="https://discordapp.com/users/768376622243119114"
-            classes="fa-brands fa-discord"
-          />
+
           <Icon
             i={5}
+            url="https://t.me/anshrathodfr"
+            name="Instagram"
+            classes="fa-brands fa-telegram"
+          />
+          <Icon
+            i={6}
             url="mailto:anshrathod29@gmail.com"
             classes="fa-solid fa-envelope"
             name="Email"
           />
           <Icon
-            i={6}
+            i={7}
             url="https://www.instagram.com/anshrathodfr"
             name="Instagram"
             classes="fa-brands fa-instagram"

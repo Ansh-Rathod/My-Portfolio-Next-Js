@@ -232,7 +232,7 @@ export const memes = [
   {
     title: "Flutter developers would love to hear more.",
     id: "1636271664844484610",
-    tags: ["statup", "founders", "investers", "flutter", "getx"],
+    tags: ["startup", "founders", "investers", "flutter", "getx"],
     likes: 96,
     link: "https://twitter.com/anshrathodfr/status/1636271664844484610",
     created_on: "Mar 16, 2023",

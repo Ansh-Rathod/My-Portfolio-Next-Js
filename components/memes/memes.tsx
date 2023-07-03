@@ -14,7 +14,7 @@ const textUpAnimate = {
 };
 function MemesComponent() {
   const [search, setSearch] = useState<string>("");
-  const [selectedTag, setselectedTag] = useState<string>("latest");
+  const [selectedTag, setselectedTag] = useState<string>("popular");
   const [searchedTags, setSearchedTags] = useState<string[]>([]);
   const [selectedMemes, setSelectedMemes] = useState<any[]>(memes);
 
@@ -96,7 +96,7 @@ function MemesComponent() {
             </motion.p>
           </div>
           <div id="memes"></div>
-          <div className="max-w-[1100px] m-auto p-2 bg-white tablet:max-w-full sticky top-0 z-50  ">
+          <div className="max-w-[1100px] m-auto p-2 bg-white tablet:max-w-full  top-0 z-50  ">
             <div className=" bg-white w-full flex flex-col items-center  rounded-lg border border-gray-400 py-2 ">
               <div className="flex flex-row px-4 items-center w-full">
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -135,9 +135,9 @@ function MemesComponent() {
               onClick={() => setselectedTag("latest")}
               className="cursor-pointer uppercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
             >
-              {search !== "latest" && (
+              {search != "latest" && (
                 <i className="fa-solid fa-xmark px-2 "></i>
-              )}{" "}
+              )}
               {selectedTag}
             </div>
             <p className="px-2 text-xs uppercase pb-10 text-slate-500">
