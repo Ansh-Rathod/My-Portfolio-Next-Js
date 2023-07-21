@@ -112,9 +112,9 @@ export async function getStaticProps() {
       data: {
         username: "Ansh-Rathod",
         avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
-        repos: 28,
-        followers: 122,
-        stars: 370,
+        repos: 29,
+        followers: 235,
+        stars: 536,
       },
       // posts: posts,
     },
