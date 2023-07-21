@@ -144,6 +144,7 @@ function MemesComponent() {
               {getValuesWithDuplicates(tags).map((tag: string, i: number) => (
                 <div
                   onClick={() => setselectedTag(tag)}
+                  key={tag + i}
                   className="cursor-pointer uppercase text-[12px] select-none 
                   w-fit text-gray-500 mr-2 mb-2 px-2 py-1  bg-white border border-gray-300 rounded-md"
                 >
