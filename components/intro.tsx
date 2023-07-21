@@ -45,7 +45,7 @@ const Intro = () => (
               >
                 HELLO👋, I AM
               </motion.p>
-              <h1 className=" font-bold font-poppins text-6xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
+              <h1 className=" font-bold font-poppins text-5xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
                 ANSH RATHOD
               </h1>
               <p className="font-proxima text-[18px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
