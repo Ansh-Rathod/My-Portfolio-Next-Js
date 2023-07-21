@@ -534,4 +534,14 @@ export const memes = [
     path: "/memes/10-ai-tool-that-you-dont-know-about.jpg",
     type: "image",
   },
+  {
+    title: "Flutter developers sorry!🙂",
+    id: "1665662788017049602",
+    tags: ["flutter", "sarcasm", "native", "framework", "language"],
+    likes: 270,
+    link: "https://twitter.com/anshrathodfr/status/1665662788017049602?s=20",
+    created_on: "Jun 5, 2023",
+    path: "/memes/native-framwork-and-languages-flutter.jpeg",
+    type: "image",
+  },
 ];
