@@ -10,16 +10,9 @@
   },
   "dependencies": {
     "framer-motion": "^8.0.2",
-    "gray-matter": "^4.0.3",
-    "ioredis": "^5.2.4",
-    "marked": "^5.1.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-use": "^17.4.0",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2",
-    "slugify": "^1.6.6",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
