@@ -133,30 +133,12 @@ function MemesComponent() {
           <div className="max-w-[1000px] m-auto p-2 pt-6 tablet:max-w-[550px] ">
             <div
               onClick={() => setselectedTag("latest")}
-              className="cursor-pointer uppercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
+              className="flex flex-row items-center justify-center cursor-pointer uppercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
             >
               {search != "latest" && (
                 <i className="fa-solid fa-xmark px-2 "></i>
               )}
               {selectedTag}
-            </div>
-            <div className="flex flex-wrap mb-8">
-              {getValuesWithDuplicates(tags).map((tag: string, i: number) => (
-                <div
-                  onClick={() => setselectedTag(tag)}
-                  key={tag + i}
-                  className="cursor-pointer uppercase text-[12px] select-none 
-                  w-fit text-gray-500 mr-2 mb-2 px-2 py-1  bg-white border border-gray-300 rounded-md"
-                >
-                  {selectedTag === tag && (
-                    <i
-                      className="fa-solid fa-xmark px-2 "
-                      onClick={() => setselectedTag("latest")}
-                    ></i>
-                  )}
-                  {tag}
-                </div>
-              ))}
             </div>
 
             <p className="px-2 text-xs uppercase pb-10 text-slate-500">
