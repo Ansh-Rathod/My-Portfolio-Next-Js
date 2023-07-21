@@ -9,7 +9,6 @@ import Contact from "@/components/Contact";
 import GithubCard from "@/components/GithubCard";
 import MusiveCard from "@/components/MusiveCard";
 import Skills from "@/components/Skills";
-import redis from "lib/redis";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { projects } from "../data/projects";
@@ -49,33 +48,34 @@ const Home: NextPage = ({ data }: any) => {
           itemProp="image"
           content="https://anshrathod.com/intro_image_meta.png"
         />
-        <title>Ansh Rathod | Portfolio</title>
+        <title>Ansh Rathod</title>
       </Head>
 
       <div>
         <Intro />
         <About />
-        <div className=" border-t-[0.6px] border-t-slate-200"></div>
+        {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
         <div
           className=" pt-14 max-w-[1200px] mx-auto flex flex-col
          items-center px-2"
         >
           <GithubCard data={data} />
         </div>
-        <div className=" border-t-[0.6px] border-t-slate-200 mt-14"></div>
+        <div className="  mt-14"></div>
 
         <Skills />
-        <div className="border-t-[1px] border-t-slate-300 "></div>
-
+        {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
+        {/* <Views posts={posts} /> */}
         <div
           className="py-14 max-w-[1200px] mx-auto flex flex-col
          items-center px-4"
         >
           <MusiveCard />
         </div>
-        <div className="border-t-[1px] border-t-slate-300 mt-14"></div>
+        {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
 
         <AllProjects />
+
         <Contact />
         <Model
           isOpen={!!router.query.slug}
@@ -89,57 +89,36 @@ const Home: NextPage = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  try {
-    if (redis.status == "end") {
-      await redis.connect();
-    }
-    const cache = await redis.get("Ansh-Rathod");
-    if (cache == null) {
-      const res = await fetch(`https://api.github.com/users/Ansh-Rathod`);
-      const repos = await fetch(
-        `https://api.github.com/users/Ansh-Rathod/repos`
-      );
-      const repoData = await repos.json();
-      const data = await res.json();
-      var totalStars = 0;
-      repoData.forEach((repo: any) => {
-        totalStars += repo.stargazers_count;
-      });
-      const cache = {
-        username: data.login,
-        avatar: data.avatar_url,
-        repos: data.public_repos,
-        followers: data.followers,
-        stars: totalStars,
-      };
-      await redis.setex("Ansh-Rathod", 86400, JSON.stringify(cache));
-      redis.disconnect();
-      return {
-        props: {
-          data: cache,
-        },
-      };
-    } else {
-      redis.disconnect();
-      return {
-        props: {
-          data: JSON.parse(cache),
-        },
-      };
-    }
-  } catch (error) {
-    return {
-      props: {
-        data: {
-          username: "Ansh-Rathod",
-          avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
-          repos: 28,
-          followers: 122,
-          stars: 370,
-        },
+  // const files = fs.readdirSync(path.join("public", "views"));
+
+  // const posts = files.map((file) => {
+  //   const slug = slugify(file.replace(".md", ""));
+  //   const markdownMetaData = fs.readFileSync(
+  //     path.join("public", "views", file),
+  //     "utf-8"
+  //   );
+
+  //   const { data: frontmatter, content } = matter(markdownMetaData);
+  //   return {
+  //     slug,
+  //     frontmatter,
+  //     content,
+  //   };
+  // });
+  // console.log(posts);
+
+  return {
+    props: {
+      data: {
+        username: "Ansh-Rathod",
+        avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
+        repos: 28,
+        followers: 122,
+        stars: 370,
       },
-    };
-  }
+      // posts: posts,
+    },
+  };
 }
 
 export default Home;

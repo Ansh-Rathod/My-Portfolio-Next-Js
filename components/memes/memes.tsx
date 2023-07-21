@@ -140,11 +140,29 @@ function MemesComponent() {
               )}
               {selectedTag}
             </div>
+            <div className="flex flex-wrap mb-8">
+              {getValuesWithDuplicates(tags).map((tag: string, i: number) => (
+                <div
+                  onClick={() => setselectedTag(tag)}
+                  className="cursor-pointer uppercase text-[12px] select-none 
+                  w-fit text-gray-500 mr-2 mb-2 px-2 py-1  bg-white border border-gray-300 rounded-md"
+                >
+                  {selectedTag === tag && (
+                    <i
+                      className="fa-solid fa-xmark px-2 "
+                      onClick={() => setselectedTag("latest")}
+                    ></i>
+                  )}
+                  {tag}
+                </div>
+              ))}
+            </div>
+
             <p className="px-2 text-xs uppercase pb-10 text-slate-500">
-              Note: here all memes are created by me and opinions are totally
-              mine. If you find any meme offensive, please tap the{" "}
-              <span className="underline">view on twitter</span> button and
-              share your thoughts.
+              <strong>Note</strong>: here all memes are created by me and
+              opinions are totally mine. If you find any meme offensive, please
+              tap the <span className="underline">view on twitter</span> button
+              and share your thoughts.
             </p>
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
               {selectedMemes.map((meme: any, i: number) => (
@@ -155,7 +173,6 @@ function MemesComponent() {
                   onTag={(tag: string) => {
                     setSearch("");
                     router.push("#memes");
-
                     setselectedTag(tag);
                   }}
                 />
@@ -169,3 +186,21 @@ function MemesComponent() {
 }
 
 export default MemesComponent;
+function getValuesWithDuplicates(arr: string[]) {
+  const countMap = new Map();
+  const duplicateValues: string[] = [];
+
+  // Count occurrences of each element
+  arr.forEach((element) => {
+    countMap.set(element, (countMap.get(element) || 0) + 1);
+  });
+
+  // Check for duplicate values and add them to the result array
+  countMap.forEach((count, element) => {
+    if (count > 1) {
+      duplicateValues.push(element);
+    }
+  });
+
+  return duplicateValues;
+}

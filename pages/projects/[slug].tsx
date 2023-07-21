@@ -3,19 +3,24 @@ import Slider from "@/components/slider";
 import { GetServerSidePropsContext } from "next";
 import { projects } from "../../data/projects";
 
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Head from "next/head";
+
 function Project({ project }: { project: any }) {
   const router = useRouter();
+
   return (
     <div>
       <Head>
-        <title>{project.name + " | Ansh Rathod"}</title>
-        <meta property="og:title" content={project.name + " | Ansh Rathod"} />
+        <title>{project.name + " built by Ansh Rathod"}</title>
+        <meta
+          property="og:title"
+          content={project.name + " built by Ansh Rathod"}
+        />
         <meta
           property="og:site_name"
-          content={project.name + " | Ansh Rathod"}
+          content={project.name + " built by Ansh Rathod"}
         />
         <meta property="og:description" content={project.description} />
         <meta
@@ -28,8 +33,11 @@ function Project({ project }: { project: any }) {
           name="twitter:site"
           content={`https://anshrathod.com/projects/${project.name.toLowerCase()}`}
         />
-        <meta name="twitter:creator" content="@AnshhRathod" />
-        <meta name="twitter:title" content={project.name + " | Ansh Rathod"} />
+        <meta name="twitter:creator" content="@anshrathodfr" />
+        <meta
+          name="twitter:title"
+          content={project.name + " built by Ansh Rathod"}
+        />
         <meta name="twitter:description" content={project.description} />
         <meta
           name="twitter:image"
@@ -45,7 +53,7 @@ function Project({ project }: { project: any }) {
         >
           <div
             className=" w-[700px] max-w-[700px] mx-auto
-                     tablet:rounded-none mobile:rounded-none flex flex-row 
+                     tablet:rounded-none mobile:rounded-none flex flex-row tablet:w-full mobile:w-full 
                justify-between items-center "
           >
             <div
@@ -68,7 +76,7 @@ function Project({ project }: { project: any }) {
           className={`items-center
                     font-proxima  flex flex-col bg-white 
                      w-[700px] max-w-[700px] mx-auto
-                     tablet:rounded-none mobile:rounded-none
+                     tablet:rounded-none mobile:rounded-none tablet:w-full mobile:w-full
                      `}
         >
           <div

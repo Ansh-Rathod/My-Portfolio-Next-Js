@@ -52,9 +52,11 @@ function Meme({ i, meme, onTag }: any) {
           ))}
         </div>
         <div className="flex  flex-row items-center justify-between w-full mt-3">
-          <h1 className="text-gray-500 text-sm ">{meme.created_on}</h1>
+          <h1 className="text-gray-400 text-sm text-[12px]">
+            {meme.created_on}
+          </h1>
           <a href={meme.link} target="_blank" rel="noreferrer">
-            <div className="bg-blue-500 uppercase text-xs cursor-pointer first-line:hover:shadow-lg py-1  px-3 text-white rounded">
+            <div className="bg-blue-500 uppercase text-xs cursor-pointer first-line:hover:shadow-lg py-1.5  px-3 text-white rounded-xl">
               View on
               <i className="pl-2 fa-brands fa-twitter" />
             </div>

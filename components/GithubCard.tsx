@@ -1,11 +1,21 @@
-import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 function GithubCard({ data }: { data: any }) {
   return (
-    <div className="select-none">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      viewport={{ once: true, amount: 1 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.3 },
+        autoReverse: false,
+      }}
+      transition={{ staggerChildren: 0.5 }}
+      className="select-none"
+    >
       <div
         className="w-[1000px] c-laptop:w-full mini-laptop:w-full 
         tablet:w-full mobile:w-full  rounded-3xl 
@@ -103,7 +113,7 @@ function GithubCard({ data }: { data: any }) {
               <div className="mr-3 bg-[#d19d0d] w-fit rounded-full p-2 text-center flex justify-center items-center text-white">
                 <i className="fa-solid fa-star text-[15px]"></i>
               </div>
-              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
+              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[15px]">
                 Earned <b>{data.stars}</b> Stars this year with my open source
                 project.
               </p>
@@ -112,7 +122,7 @@ function GithubCard({ data }: { data: any }) {
               <div className="mr-3 bg-[#3ed10d] w-fit rounded-full p-2 text-center flex justify-center items-center text-white">
                 <i className="fa-solid fa-code-commit my-[2px] text-[15px]"></i>
               </div>
-              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[16px]">
+              <p className="tracking-wide opacity-80 font-medium text-white max-w-[350px] text-[15  px]">
                 Total 1000+ commits to {data.repos} Repositories.
               </p>
             </div>
@@ -137,7 +147,7 @@ function GithubCard({ data }: { data: any }) {
                     key={item}
                   >
                     <Image
-                      src={`/${item}.png`}
+                      src={`/badges/${item}.png`}
                       layout="fill"
                       className="rounded-full "
                       alt="profile"
@@ -162,7 +172,7 @@ function GithubCard({ data }: { data: any }) {
         </div>
         <div className="mt-8"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

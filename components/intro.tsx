@@ -14,11 +14,7 @@ const textAnimate = {
 
 const Intro = () => (
   <div>
-    <div
-      id="home"
-      className="box-border  bg-no-repeat 
-      bg-cover bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.webp')]"
-    >
+    <div id="home" className="box-border  bg-no-repeat ">
       <div className=" backdrop-blur-3xl bg-white/70    ">
         <div className="desktop:max-w-[1800px] m-auto  flex">
           <div
@@ -45,14 +41,14 @@ const Intro = () => (
             >
               <motion.p
                 variants={textAnimate}
-                className="font-proxima text-xl leading-10 mobile:text-[18px] mobile:py-2 "
+                className="font-proxima text-xl leading-10 mobile:text-[22px] mobile:py-2 "
               >
                 HELLO👋, I AM
               </motion.p>
-              <h1 className=" font-bold font-poppins text-5xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
+              <h1 className=" font-bold font-poppins text-6xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
                 ANSH RATHOD
               </h1>
-              <p className="font-proxima text-[22px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
+              <p className="font-proxima text-[18px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
                 A full-stack developer, Building Seamless mobile & web
                 applications.
               </p>
@@ -106,7 +102,7 @@ const Intro = () => (
           <div className="w-[45%] h-screen max-h-[808px] tablet:hidden mobile:hidden ">
             <div className=" w-full h-full relative">
               <Image
-                src="/intro (1123 × 1123 px).png"
+                src="/intro.png"
                 layout="fill"
                 objectFit="cover"
                 className="object-left h-screen "

@@ -1,38 +1,33 @@
 # Ansh Rathod | Portfolio
 
-My portfoilo website as app  developer. 
-
+My portfoilo website as app developer.
 
 ### Tech used
+
 - Nextjs
 - Typescript
 - Tailwind css
 
-
-
 #### Last-updated: _September 2022_
-
 
 ## Screenshots
 
 <br/>
 
 #### 1. Full Page Preview
+
 <br/>
 
-<img src="./public/Ansh Rathod _ Portfolio (2).png"/>
+<img src="./public/webmap.png"/>
 
 <br/>
 
 #### 2. Project Details Dialog
 
 <br/>
-<img src="./public/Web capture_18-9-2022_93639_localhost.jpeg"/>
-
+<img src="./public/projectmap.jpeg"/>
 
 <br/>
-
-
 
 ## Getting Started
 

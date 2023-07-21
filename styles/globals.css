@@ -5,17 +5,17 @@
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
-  src: url("/sf_pro_text_regular.ttf");
+  src: url("/fonts/sf_pro_text_regular.ttf");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-weight: 400;
-  src: url("/Proxima Nova.ttf");
+  src: url("/fonts/Proxima Nova.ttf");
 }
 @font-face {
   font-family: "Poppins";
   font-weight: 400;
-  src: url("/Poppins-Bold.ttf");
+  src: url("/fonts/Poppins-Bold.ttf");
 }
 *.unselectable {
   pointer-events: none;
