@@ -55,27 +55,24 @@ const About = () => {
           <motion.p variants={textUpAnimate}>
             Hello! My name is <b>Ansh Rathod</b>, I have been interested in app
             development for many years and have been actively working on
-            building mobile applications for the past two years. I am constantly
-            seeking out new technologies and techniques to enhance my skills and
-            stay up-to-date in this field.
+            building mobile/desktop applications for the past three years. 
           </motion.p>
           <br />
           <motion.p variants={textUpAnimate}>
-            Fast-Forward to today. recently I have build an application called
-            <a href="https://app.cineast.in">
+            Fast-Forward to 2022. I built an android application called
+            <a href="https://play.google.com/store/apps/details?id=com.cineast.android&hl=en">
               <b> &quot;Cineast&quot; </b>
             </a>
             Which is a social media platform that I built specifically for movie
             enthusiasts. It allows users to connect with other movie fans, share
-            their favorite films and recommendations. I put a lot of thoughts
-            and effort into the building functionality of the app.
+            their favorite films and recommendations.   
           </motion.p>
           <br />
           <motion.p variants={textUpAnimate}>
-            It was a lot of hard work to build full-stack applications and I was
-            able to learn and grow as a developer through the building process.
-            I am excited to continue improving and expanding the app in the
-            future.
+          2024 is it? I am building desktop apps now! It's hard to keep updating the website.
+          Better you should follow me on Twitter/X. I am quite active there. 
+
+          What i did in 2023? I am constantly seeking out new technologies and techniques to enhance my skills and stay up-to-date in this field.
           </motion.p>
         </motion.div>
       </div>
