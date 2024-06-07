@@ -70,7 +70,7 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
 
                       <Icon
                         classes="fa-brands fa-twitter"
-                        url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on anshrathod.com&url=${project.url}&hashtags=flutter,opensource,github`}
+                        url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on https://anshrathodfr.vercel.app&url=${project.url}&hashtags=flutter,opensource,github`}
                       />
                       <Icon classes="fa-regular fa-copy" />
                     </div>

@@ -96,7 +96,7 @@ function MusiveCard() {
             {/* <h1 className="font-poppins text-white mt-8 mb-4 opacity-80 tracking-wider mobile:text-center"></h1> */}
 
             <div className="flex w-full mobile:justify-center">
-              <Link href="https://musive.anshrathod.com/" target={"_blank"}>
+              <Link href="https://musive.vercel.app/" target={"_blank"}>
                 <button
                   className="border px-4 text-white mt-10 rounded-md font-semibold tracking-wider
              hover:bg-white  hover:text-black py-2

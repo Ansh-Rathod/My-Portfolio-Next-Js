@@ -9,7 +9,7 @@ function Memes() {
       <Head>
         <meta property="og:title" content="memeloper fr who?" />
         <meta property="og:site_name" content="memeloper.fr" />
-        <meta property="og:url" content="https://www.anshrathod.com" />
+        <meta property="og:url" content="https://anshrathodfr.vercel.app" />
 
         <meta
           property="og:description"
@@ -19,7 +19,7 @@ function Memes() {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathod.com/intro_image_meta.png"
+          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -34,7 +34,7 @@ function Memes() {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathod.com/memes_intro_image_meta.png"
+          content="https://anshrathodfr.vercel.app/memes_intro_image_meta.png"
         />
         <title>memeloper fr who?</title>
       </Head>

@@ -21,7 +21,7 @@ const Home: NextPage = ({ data }: any) => {
       <Head>
         <meta property="og:title" content="Ansh Rathod" />
         <meta property="og:site_name" content="Ansh Rathod" />
-        <meta property="og:url" content="https://www.anshrathod.com" />
+        <meta property="og:url" content="https://anshrathodfr.vercel.app" />
 
         <meta
           property="og:description"
@@ -31,7 +31,7 @@ const Home: NextPage = ({ data }: any) => {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathod.com/intro_image_meta.png"
+          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -46,7 +46,7 @@ const Home: NextPage = ({ data }: any) => {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathod.com/intro_image_meta.png"
+          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
         />
         <title>Ansh Rathod</title>
       </Head>
@@ -112,9 +112,9 @@ export async function getStaticProps() {
       data: {
         username: "Ansh-Rathod",
         avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
-        repos: 29,
-        followers: 235,
-        stars: 536,
+        repos: 32,
+        followers: 297,
+        stars: 676,
       },
       // posts: posts,
     },

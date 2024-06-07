@@ -25,13 +25,13 @@ function Project({ project }: { project: any }) {
         <meta property="og:description" content={project.description} />
         <meta
           property="og:url"
-          content={`https://anshrathod.com/projects/${project.name.toLowerCase()}`}
+          content={`https://anshrathodfr.vercel.app/projects/${project.name.toLowerCase()}`}
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:site"
-          content={`https://anshrathod.com/projects/${project.name.toLowerCase()}`}
+          content={`https://anshrathodfr.vercel.app/projects/${project.name.toLowerCase()}`}
         />
         <meta name="twitter:creator" content="@anshrathodfr" />
         <meta
@@ -42,7 +42,7 @@ function Project({ project }: { project: any }) {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathod.com/intro_image_meta.png"
+          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
         />
       </Head>
 
@@ -101,7 +101,7 @@ function Project({ project }: { project: any }) {
 
                   <Icon
                     classes="fa-brands fa-twitter"
-                    url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on anshrathod.com&url=${project.url}&hashtags=flutter,opensource,github`}
+                    url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on https://anshrathodfr.vercel.app&url=${project.url}&hashtags=flutter,opensource,github`}
                   />
                   <Icon classes="fa-regular fa-copy" />
                 </div>
