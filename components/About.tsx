@@ -69,10 +69,10 @@ const About = () => {
           </motion.p>
           <br />
           <motion.p variants={textUpAnimate}>
-          2024 is it? I am building desktop apps now! It's hard to keep updating the website.
+          2024 is it? I am building desktop apps now! It&apos;s hard to keep updating the website.
           Better you should follow me on Twitter/X. I am quite active there. 
 
-          What i did in 2023? I am constantly seeking out new technologies and techniques to enhance my skills and stay up-to-date in this field.
+          What did I do in 2023? I am constantly seeking out new technologies and techniques to enhance my skills and stay up-to-date in this field.
           </motion.p>
         </motion.div>
       </div>
