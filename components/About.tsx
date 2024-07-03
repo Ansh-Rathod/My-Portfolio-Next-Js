@@ -68,11 +68,14 @@ const About = () => {
             their favorite films and recommendations.   
           </motion.p>
           <br />
-          <motion.p variants={textUpAnimate}>
-          2024 is it? I am building desktop apps now! It&apos;s hard to keep updating the website.
-          Better you should follow me on Twitter/X. I am quite active there. 
 
-          What did I do in 2023? I am constantly seeking out new technologies and techniques to enhance my skills and stay up-to-date in this field.
+          <motion.p variants={textUpAnimate}>
+          What I did in 2023? realised that distributing/marketing your shiney apps is harder than building it. learned too many lessions, well i&apos;m not gonna put all up here. oh I remember i won that supabase hacakthon with my tweet scheduling desktop app (that app is still super good).
+          </motion.p>
+
+          <motion.p variants={textUpAnimate}>
+          2024 is it? I am building desktop apps now! It&apos;s hard to keep updating the website. might built better website soon because this is very outdated/most of the stuff is missing.
+          Better you should follow me on Twitter/X. I am quite active there.          
           </motion.p>
         </motion.div>
       </div>
