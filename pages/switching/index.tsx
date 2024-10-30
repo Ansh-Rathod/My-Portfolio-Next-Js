@@ -92,12 +92,14 @@ export default function Component() {
                 </span>
               </Link>{" "}
               if flutter dies i dont care I&apos;m learning game dev, building
-              UI is boring now after doing it for the 4 years. My belief is that
-              make money by giving value to users and have fun, generally i like
-              building so i dont care about the tech stack, i just want to build
-              something that will be useful to users. dont get attached to these
-              frameworks its just zeros and onezies, 2030 nope i wont be using
-              it, or will i? maybe not maybe
+              UI is boring now after doing it for the 4 years.
+            </p>
+            <p>
+              My belief is that make money by giving value to users and have
+              fun, generally i like building so i dont care about the tech
+              stack, i just want to build something that will be useful to
+              users. dont get attached to these frameworks its just zeros and
+              onezies, 2030 nope i wont be using it, or will i? maybe not maybe
             </p>
 
             <p>
