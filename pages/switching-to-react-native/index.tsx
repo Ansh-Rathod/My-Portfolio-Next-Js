@@ -26,12 +26,12 @@ export default function Component() {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/clickbait.png"
+          content="https://anshrathodfr.vercel.app/clickbait2.png"
         />
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/clickbait.png"
+          content="https://anshrathodfr.vercel.app/clickbait2.png"
         />
       </Head>
       <div className="min-h-screen bg-zinc-900 text-zinc-100 p-4 md:p-8">
