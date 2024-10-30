@@ -11,9 +11,18 @@ export default function Component() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@anshrathodfr" />
         <meta name="twitter:creator" content="@anshrathodfr" />
-        <meta name="twitter:title" content="Ansh Rathod" />
-        <meta property="og:title" content="Ansh Rathod" />
-        <meta property="og:site_name" content="Ansh Rathod" />
+        <meta
+          name="twitter:title"
+          content="We're forking React native. This is why"
+        />
+        <meta
+          property="og:title"
+          content="We're forking React native. This is why"
+        />
+        <meta
+          property="og:site_name"
+          content="We're forking React native. This is why"
+        />
         <meta
           name="twitter:image"
           itemProp="image"
