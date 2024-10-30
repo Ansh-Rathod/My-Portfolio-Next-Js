@@ -7,6 +7,13 @@ export default function Component() {
     <div>
       <Head>
         <title>We&apos;re forking React native. This is why.</title>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@anshrathodfr" />
+        <meta name="twitter:creator" content="@anshrathodfr" />
+        <meta name="twitter:title" content="Ansh Rathod" />
+        <meta property="og:title" content="Ansh Rathod" />
+        <meta property="og:site_name" content="Ansh Rathod" />
         <meta
           name="twitter:image"
           itemProp="image"
