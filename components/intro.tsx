@@ -18,9 +18,9 @@ const Intro = () => (
       <div className=" backdrop-blur-3xl bg-white/70    ">
         <div className="desktop:max-w-[1800px] m-auto  flex">
           <div
-            className="w-[55%] flex flex-col justify-between h-screen max-h-[808px]
-          tablet:w-full tablet:max-w-[500px] tablet:m-auto
-          mobile:w-full
+            className=" flex flex-col 
+          tablet:w-full  tablet:m-auto
+          mobile:w-full align-center  mx-auto
         "
           >
             <div className="py-4 ">
@@ -32,82 +32,73 @@ const Intro = () => (
                 <NavbarItem name="projects" />
               </ul>
             </div>
-            <motion.div
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{ staggerChildren: 0.5 }}
-              className="px-16 tablet:px-10 mobile:px-8"
-            >
-              <motion.p
-                variants={textAnimate}
-                className="font-proxima text-xl leading-10 mobile:text-[22px] mobile:py-2 "
+            <div>
+              <motion.div
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ staggerChildren: 0.5 }}
+                className="px-16 tablet:px-10 mobile:px-8 text-center mt-32"
               >
-                HELLO👋, I AM
-              </motion.p>
-              <h1 className=" font-bold font-poppins text-5xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
-                ANSH RATHOD
-              </h1>
-              <p className="font-proxima text-[18px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
-                A full-stack developer, Building Seamless mobile & web
-                applications.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ y: 10, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
-              viewport={{ once: false, amount: 0.6 }}
-              className="px-14 tablet:px-10 py-12 flex flex-row mobile:px-8"
-            >
-              <Icon
-                i={1}
-                url="https://github.in/Ansh-Rathod"
-                name="Github"
-                classes="fa-brands fa-github"
-              />
+                <motion.p
+                  variants={textAnimate}
+                  className="font-proxima text-xl leading-10 mobile:text-[22px] mobile:py-2 text-slate-500 "
+                >
+                  HELLO👋, THIS WEBSITE IS ABOUT SOMEONE NAMED
+                </motion.p>
+                <h1 className=" font-bold font-poppins text-5xl  leading-snug mini-laptop:text-4xl mini-laptop:leading-normal tablet:text-4xl tablet:leading-sung mobile:leading-[1.1]">
+                  ANSH RATHOD
+                </h1>
+                <p className="font-proxima text-[18px] max-w-[600px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
+                  Who is A full-stack developer, Building apps for mobile,
+                  desktop and web platforms.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ y: 10, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
+                viewport={{ once: false, amount: 0.6 }}
+                className="py-12 flex flex-row  align-center justify-center text-center mobile:px-8 "
+              >
+                <Icon
+                  i={1}
+                  url="https://github.in/Ansh-Rathod"
+                  name="Github"
+                  classes="fa-brands fa-github"
+                />
 
-              <Icon
-                i={2}
-                url="https://twitter.com/anshrathodfr"
-                classes="fa-brands fa-twitter"
-                name="Twitter"
-              />
-              <Icon
-                i={3}
-                url="https://www.linkedin.com/in/ansh-rathod-478a81210/"
-                classes="fa-brands fa-linkedin"
-                name="Linkedin"
-              />
+                <Icon
+                  i={2}
+                  url="https://twitter.com/anshrathodfr"
+                  classes="fa-brands fa-twitter"
+                  name="Twitter"
+                />
+                <Icon
+                  i={3}
+                  url="https://www.linkedin.com/in/ansh-rathod-478a81210/"
+                  classes="fa-brands fa-linkedin"
+                  name="Linkedin"
+                />
 
-              <Icon
-                i={5}
-                url="https://t.me/anshrathodfr"
-                name="Instagram"
-                classes="fa-brands fa-telegram"
-              />
-              <Icon
-                i={6}
-                url="mailto:anshrathod29@gmail.com"
-                classes="fa-solid fa-envelope"
-                name="Email"
-              />
-              <Icon
-                i={7}
-                url="https://www.instagram.com/anshrathodfr"
-                name="Instagram"
-                classes="fa-brands fa-instagram"
-              />
-            </motion.div>
-          </div>
-          <div className="w-[45%] h-screen max-h-[808px] tablet:hidden mobile:hidden ">
-            <div className=" w-full h-full relative">
-              <Image
-                src="/intro.png"
-                layout="fill"
-                objectFit="cover"
-                className="object-left h-screen "
-                alt="intro"
-              />
+                <Icon
+                  i={5}
+                  url="https://t.me/anshrathodfr"
+                  name="Instagram"
+                  classes="fa-brands fa-telegram"
+                />
+                <Icon
+                  i={6}
+                  url="mailto:anshrathod29@gmail.com"
+                  classes="fa-solid fa-envelope"
+                  name="Email"
+                />
+                <Icon
+                  i={7}
+                  url="https://www.instagram.com/anshrathodfr"
+                  name="Instagram"
+                  classes="fa-brands fa-instagram"
+                />
+              </motion.div>
             </div>
           </div>
         </div>

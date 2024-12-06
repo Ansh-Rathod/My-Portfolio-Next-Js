@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 const textAnimate = {
   offscreen: { x: 50, opacity: 0 },
   onscreen: {
@@ -53,29 +54,51 @@ const About = () => {
           className=" font-proxima text-[17px] w-[65%] px-6 py-2 tablet:w-full mobile:w-full mobile:px-2 text-gray-500"
         >
           <motion.p variants={textUpAnimate}>
-            Hello! My name is <b>Ansh Rathod</b>, I have been interested in app
-            development for many years and have been actively working on
-            building mobile/desktop applications for the past three years. 
+            Hello! My name is <b>Ansh Rathod</b>, I&apos;m a self-taught
+            full-stack developer who wrote the first line of code in the 2020
+            Corona lockdown. I think I&apos;m a fast learner & implementor so I
+            have tried many trendy frameworks, and languages that come and gone
+            since I started.
           </motion.p>
           <br />
           <motion.p variants={textUpAnimate}>
-            Fast-Forward to 2022. I built an android application called
-            <a href="https://play.google.com/store/apps/details?id=com.cineast.android&hl=en">
-              <b> &quot;Cineast&quot; </b>
-            </a>
-            Which is a social media platform that I built specifically for movie
-            enthusiasts. It allows users to connect with other movie fans, share
-            their favorite films and recommendations.   
+            I started for the passion and was building & completing apps like
+            crazy till 2023, most of my 25+ apps are open source on my Github
+            which are just hard-to-build but fun projects (but not directly
+            useful).
+          </motion.p>
+          <br />
+          <motion.p variants={textUpAnimate}>
+            Then realized that life is more than writing code and mindlessly
+            gaining skills I should start earning with these skills too.
+          </motion.p>
+          <br />
+          <motion.p variants={textUpAnimate}>
+            I always wanted to build something of my own so I started observing
+            indie makers here on X/Twitter [and still observing] and I have
+            learned so much about what kind of product would buy and actually be
+            useful for a person. [well I have made all useless apps till now🙈
+            you can check the list somewhere on this site].
           </motion.p>
           <br />
 
           <motion.p variants={textUpAnimate}>
-          What I did in 2023? realised that distributing/marketing your shiney apps is harder than building it. learned too many lessions, well i&apos;m not gonna put all up here. oh I remember i won that supabase hacakthon with my tweet scheduling desktop app (that app is still super good).
+            In June 2024 I started building a desktop app{" "}
+            <Link href="https://pimosa.app">
+              <span className="text-blue-500">https://pimosa.app</span>
+            </Link>{" "}
+            where user will have a number of editing tools for video, photo, and
+            music files in one desktop app.
           </motion.p>
-
+          <br />
           <motion.p variants={textUpAnimate}>
-          2024 is it? I am building desktop apps now! It&apos;s hard to keep updating the website. might built better website soon because this is very outdated/most of the stuff is missing.
-          Better you should follow me on Twitter/X. I am quite active there.          
+            I tweeted about the paid beta version of it and turned out it is
+            very useful for some people I ended up making $300+ in the first few
+            hours of my tweet. realized &quot;Huh I made something good&quot;.
+          </motion.p>
+          <br />
+          <motion.p variants={textUpAnimate}>
+            This is how i started building apps and started earning.
           </motion.p>
         </motion.div>
       </div>
