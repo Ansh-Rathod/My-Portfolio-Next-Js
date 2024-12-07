@@ -11,10 +11,10 @@ function Contact() {
       <div className="bg-white pt-[130px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[1000px] desktop:container">
         <div className="px-2">
           <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase text-center">
-            Contact me
+            Contact Him
           </h1>
           <p className="font-proxima text-slate-500 text-[18px] text-center mt-2">
-            Leave a message on my any of my social media, I&apos;ll reach out to
+            Leave a message on any of his social media, He&apos;ll reach out to
             you as soon as Possible.
             <br /> Thank you! for visiting.
           </p>
@@ -39,18 +39,12 @@ function Contact() {
             classes="fa-brands fa-twitter"
             name="Twitter"
           />
-          <Icon
-            i={3}
-            url="https://www.linkedin.com/in/ansh-rathod-478a81210/"
-            classes="fa-brands fa-linkedin"
-            name="Linkedin"
-          />
 
           <Icon
             i={5}
-            url="https://t.me/anshrathodfr"
-            name="Instagram"
-            classes="fa-brands fa-telegram"
+            url="https://discord.com/users/768376622243119114"
+            name="discord"
+            classes="fa-brands fa-discord"
           />
           <Icon
             i={6}

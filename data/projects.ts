@@ -1,8 +1,29 @@
 export const projects: any = [
+  // {
+  //   name: "Musive Webapp",
+  //   madeWith: "Nextjs, Node.js, PostgreSQL",
+  //   date: "27 Oct 2022",
+  //   type: "vertical",
+  //   long_description:
+  //     "Musive is a full-stack music player app. It is written in Nextjs and Node.js with PostgreSQL as database. The app has a beautiful UI and is fully functional. Users can create their own playlists and collect liked songs. The app is fully responsive and works on all devices.",
+  //   description:
+  //     "Full Spotify clone webapp with Nextjs and Node.js with PostgreSQL as database.",
+  //   url: "https://play.google.com/store/apps/details?id=com.cineast.android",
+  //   images: [
+  //     "Musive-web-1.png",
+  //     "Musive-web-2.png",
+  //     "Musive-web-3.png",
+  //     "Musive-web-4.png",
+  //   ],
+  //   image: "Musive-web-1.png",
+  // },
   {
     name: "Cineast",
     madeWith: "Flutter, Node.js, PostgreSQL",
     date: "22 Feb 2022",
+
+    type: "horizontal",
+
     long_description:
       "Social media platform for movie enthusiasts. Share thoughts, reviews, and ratings about movies/tv-shows with your social network. <br/><br/>Scroll through reviews and thoughts about movies from the people you follow on your personalized home feed. Explore top trending movies & tv shows and get details about them. Find them by a specific genre or from actor/actresses or crew members and filter by any desired language.<br/><br/>Browse popular, highly rated, and most anticipated films, including trailers, member ratings, artwork, cast + crew details, studios, genres, and popular reviews.<br/><br/>Follow Other people on the platform & get reviews about what they are watching.",
     description:
@@ -14,6 +35,7 @@ export const projects: any = [
   {
     name: "Musive",
     madeWith: "Flutter, Node.js, PostgreSQL, and Heroku",
+    type: "horizontal",
     date: "18 Jan 2022",
     long_description:
       "Full-stack music player app is written in flutter and dart using node.js music API. Fully Functional music player with UI like Spotify app. Added 1000+ royalty-free music and information about artists. Application users can make their own playlist or collect liked songs.",
@@ -25,6 +47,7 @@ export const projects: any = [
   {
     name: "Photoarc",
     madeWith: "Flutter, Node.js  PostgreSQL and Heroku",
+    type: "horizontal",
     date: "24 nov 2021",
     long_description:
       "(Full-stack) Fully functional social media app (Instagram clone) written in flutter and dart with backend node.js and Postgres SQL.",
@@ -53,6 +76,7 @@ export const projects: any = [
   {
     name: "MovieDb",
     madeWith: "Flutter",
+    type: "horizontal",
     date: "13 July 2021",
     long_description:
       "Find The Latest, trending, upcoming movies/tv-shows with MovieDB app. The app contains all information about movies/tv-shows and find similar movies/shows of your intrest. Browse all genres, video trailers, backdrops, logos, and posters for any movie.\n App made using flutter as frontend and Nodejs as backend.",
@@ -66,6 +90,7 @@ export const projects: any = [
   {
     name: "Quizer",
     madeWith: "Flutter",
+    type: "horizontal",
     date: "24 june 2021",
 
     description:
@@ -77,6 +102,7 @@ export const projects: any = [
   },
   {
     name: "Animalia",
+    type: "horizontal",
     madeWith: "Flutter",
     date: "16 june 2021",
     description:
@@ -92,6 +118,7 @@ export const projects: any = [
     name: "Sponacular",
     madeWith: "Flutter",
     date: "25 May 2021",
+    type: "horizontal",
 
     long_description:
       "A Recipe app with spoonacular API.App includes 5,0000+ recipes. cost breakdown per servings.",
@@ -104,6 +131,7 @@ export const projects: any = [
   {
     name: "Marvel",
     madeWith: "Flutter",
+    type: "horizontal",
     date: "12 mar 2021",
 
     description:

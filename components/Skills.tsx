@@ -9,7 +9,7 @@ function Skills() {
       id="skills"
       className="py-[50px] w-screen max-w-full desktop:container"
     >
-      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-2 py-2">
+      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-6  py-2">
         <h1 className="font-poppins uppercase text-3xl font-bold mobile:text-center">
           Blah Blah...
         </h1>
