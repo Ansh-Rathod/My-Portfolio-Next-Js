@@ -25,16 +25,16 @@ function AllProjects() {
       <div className="backdrop-blur-[100px] bg-white/60 pb-24">
         <div className="desktop:container">
           <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
-            <div className="py-20 px-4">
+            <div className="py-20 px-4 max-w-[600px] mx-auto">
               <motion.h1
                 variants={textUpAnimate}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 3 }}
-                className="font-poppins pb-1 text-3xl uppercase text-black text-center"
+                className="font-poppins pb-1 text-3xl uppercase text-black "
               >
-                Completed Projects
+                Some useless apps he built
               </motion.h1>
 
               <motion.p
@@ -43,10 +43,11 @@ function AllProjects() {
                 whileInView={"onscreen"}
                 viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 3 }}
-                className="font-proxima text-slate-500 text-[18px] text-center"
+                className="font-proxima text-slate-500 text-[18px] mt-4"
               >
-                I have worked with multiple technologies as a developer to build
-                and maintain my projects.
+                He built some useless but fully functional apps in order to
+                learn and improve the building skills. click on the card to view
+                some images and information about the app.
               </motion.p>
             </div>
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">

@@ -1,6 +1,5 @@
-import React from "react";
-import ListItem from "./ListItem";
 import { motion } from "framer-motion";
+import ListItem from "./ListItem";
 function Skills() {
   return (
     <motion.div
@@ -8,14 +7,28 @@ function Skills() {
       whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
       viewport={{ once: true, amount: 0.4 }}
       id="skills"
-      className="py-[100px] w-screen max-w-full desktop:container"
+      className="py-[50px] w-screen max-w-full desktop:container"
     >
+      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-2 py-2">
+        <h1 className="font-poppins uppercase text-3xl font-bold mobile:text-center">
+          Blah Blah...
+        </h1>
+        <p className="text-[16px] font-apple  text-gray-500 mt-4">
+          He knows these listed things but mostly uses Flutter, postgres, and
+          Nextjs here and there for his apps. uses AI for writing code and
+          figures out the code very quickly.
+        </p>
+        <br />
+        <p className="text-[16px] font-apple  text-gray-500 ">
+          Sometimes he plays with the LLMS, Sometimes try to build a game with
+          godot.
+        </p>
+      </div>
       <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">
           <h1 className="font-poppins uppercase text-3xl font-bold mobile:text-center">
             Skills
           </h1>
-          <p className="font-proxima text-[18px]"></p>
         </div>
 
         <div
@@ -40,8 +53,8 @@ function Skills() {
             <ListItem name="flutter" i={1} />
             <ListItem name="nextjs" i={1} />
             <ListItem name="Nodejs" i={1} />
+            <ListItem name="Bunjs" i={1} />
             <ListItem name="Tailwind CSS" i={1} />
-            <ListItem name="Bootstrap" i={1} />
             <ListItem name="react" i={1} />
             <ListItem name="python flask" i={1} />
           </div>
@@ -62,9 +75,7 @@ function Skills() {
             </h1>
             <ListItem name="docker" i={1} />
             <ListItem name="git & github" i={1} />
-            <ListItem name="kubernetes" i={1} />
             <ListItem name="digital ocean" i={1} />
-            <ListItem name="heroku" i={1} />
           </div>
         </div>
       </div>

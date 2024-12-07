@@ -55,23 +55,22 @@ const Home: NextPage = ({ data }: any) => {
         <Intro />
         <About />
         {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
-        <div
+        {/* <div
           className=" pt-14 max-w-[1200px] mx-auto flex flex-col
          items-center px-2"
         >
           <GithubCard data={data} />
-        </div>
-        <div className="  mt-14"></div>
+        </div> */}
 
         <Skills />
         {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
         {/* <Views posts={posts} /> */}
-        <div
+        {/* <div
           className="py-14 max-w-[1200px] mx-auto flex flex-col
          items-center px-4"
         >
           <MusiveCard />
-        </div>
+        </div> */}
         {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
 
         <AllProjects />

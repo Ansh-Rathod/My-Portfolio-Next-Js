@@ -23,7 +23,7 @@ const About = () => {
       id="about"
       className="bg-white py-[100px] w-screen max-w-full desktop:container"
     >
-      <div className=" flex flex-row max-w-[900px] mx-auto tablet:block mobile:block mobile:px-3">
+      <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3">
         <motion.div
           variants={textAnimate}
           initial={{ y: 20, opacity: 0 }}
@@ -34,11 +34,10 @@ const About = () => {
           }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ staggerChildren: 1 }}
-          className="flex-grow my-auto text-right uppercase px-6 tablet:text-center mobile:text-center"
+          className="   uppercase px-6 "
         >
-          <h1 className="font-poppins text-3xl font-bold ">About</h1>
-          <p className="text-gray-500">Me, Myself and I</p>
-          <div className="h-52 tablet:h-8 mobile:h-8"></div>
+          <h1 className="font-poppins text-3xl font-bold ">HIS Story</h1>
+          <p className="text-gray-500">He wrote this section BTW</p>
         </motion.div>
 
         <motion.div
@@ -51,7 +50,7 @@ const About = () => {
           }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ staggerChildren: 1 }}
-          className=" font-proxima text-[17px] w-[65%] px-6 py-2 tablet:w-full mobile:w-full mobile:px-2 text-gray-500"
+          className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500"
         >
           <motion.p variants={textUpAnimate}>
             Hello! My name is <b>Ansh Rathod</b>, I&apos;m a self-taught
@@ -64,8 +63,9 @@ const About = () => {
           <motion.p variants={textUpAnimate}>
             I started for the passion and was building & completing apps like
             crazy till 2023, most of my 25+ apps are open source on my Github
-            which are just hard-to-build but fun projects (but not directly
-            useful).
+            which are just <b className="text-black">hard-to-build</b> but{" "}
+            <i>fun </i>
+            projects (but not directly useful).
           </motion.p>
           <br />
           <motion.p variants={textUpAnimate}>

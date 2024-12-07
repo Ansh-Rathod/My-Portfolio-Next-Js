@@ -56,7 +56,9 @@ function ProjectComponent(props: any) {
             >
               Read More
             </motion.p>
-            {/* <p className="text-gray-100  uppercase text-[12px]">{project.date}</p> */}
+            <p className="text-gray-100  uppercase text-[12px]">
+              {project.date}
+            </p>
           </div>
         </div>
       </motion.div>
