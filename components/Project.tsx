@@ -13,8 +13,8 @@ function ProjectComponent(props: any) {
     >
       <div
         className={`select-none cursor-pointer items-center 
-       font-apple    hover:border-blue-600 bg-[#FAFAFA] border-[#EFEFF1]
-       p-2 bg-gradient-to-r border-[2px] rounded-lg ${
+       font-apple    hover:border-blue-600 bg-gray-100 
+       p-2 rounded-lg ${
          project.type == "horizontal" ? "flex flex-row" : "flex flex-col"
        }`}
       >

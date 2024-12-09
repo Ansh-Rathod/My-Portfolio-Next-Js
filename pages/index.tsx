@@ -12,6 +12,7 @@ import Skills from "@/components/Skills";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { projects } from "../data/projects";
+import WhyIBuiltThisWebsite from "@/components/why-i built-this";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -61,7 +62,6 @@ const Home: NextPage = ({ data }: any) => {
         >
           <GithubCard data={data} />
         </div> */}
-
         <Skills />
         {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
         {/* <Views posts={posts} /> */}
@@ -72,9 +72,8 @@ const Home: NextPage = ({ data }: any) => {
           <MusiveCard />
         </div> */}
         {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
-
         <AllProjects />
-
+        <WhyIBuiltThisWebsite />
         <Contact />
         <Model
           isOpen={!!router.query.slug}
