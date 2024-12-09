@@ -18,13 +18,15 @@ const Slider = (props: SliderProps) => {
       >
         <i className="fa-sharp fa-solid fa-chevron-left"></i>
       </div>
-      <div className="h-[500px] ">
+      <div className="h-[500px] w-[500px]  mobile:w-[300px] tablet:w-[400px] rounded-lg relative">
         <Image
           src={`/imgs/` + images[i]}
           alt="image"
           objectFit="contain"
-          width={250}
-          height={500}
+          layout="fill"
+          height={0}
+          width={0}
+          sizes="100vw"
           placeholder="blur"
           blurDataURL="/Cineast-1.PNG"
         />

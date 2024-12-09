@@ -11,8 +11,9 @@ import MusiveCard from "@/components/MusiveCard";
 import Skills from "@/components/Skills";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
-import { projects } from "../data/projects";
+import { projects, usefulProjects } from "../data/projects";
 import WhyIBuiltThisWebsite from "@/components/why-i built-this";
+import UsefulProducts from "@/components/useful-products";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -72,12 +73,13 @@ const Home: NextPage = ({ data }: any) => {
           <MusiveCard />
         </div> */}
         {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
+        <UsefulProducts />
         <AllProjects />
         <WhyIBuiltThisWebsite />
         <Contact />
         <Model
           isOpen={!!router.query.slug}
-          project={projects.find(
+          project={[...projects, ...usefulProjects].find(
             (project: any) => project.name.toLowerCase() == router.query.slug
           )}
         />

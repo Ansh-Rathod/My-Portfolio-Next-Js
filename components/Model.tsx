@@ -1,9 +1,9 @@
-import React from "react";
-import Image from "next/image";
-import Slider from "./slider";
 import Icon from "@/components/Icon";
-import { Router, useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import Slider from "./slider";
+
 function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
   const router = useRouter();
   return (
@@ -100,28 +100,32 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
                     <b className="font-poppins">Created on</b>
                     <p className="mt-1.5 ">{project.date}</p>
                   </div>
-                  <div className="mx-6">
-                    <b className="font-poppins">
-                      {project.name != "Cineast" ? "Earned Stars" : "Downloads"}
-                    </b>
-                    <p className="mt-1">
-                      <Image
-                        src={
-                          project.name != "Cineast"
-                            ? `https://img.shields.io/github/stars/${project.url.replace(
-                                "https://github.com/",
-                                ""
-                              )}?style=social`
-                            : "https://img.shields.io/static/v1?label=Downloads&message=1k&color=%3CCOLOR%3E"
-                        }
-                        alt="stars"
-                        height={26}
-                        width={100}
-                        objectFit="contain"
-                        unoptimized
-                      />
-                    </p>
-                  </div>
+                  {project.url.includes("github") && (
+                    <div className="mx-6">
+                      <b className="font-poppins">
+                        {project.name != "Cineast"
+                          ? "Earned Stars"
+                          : "Downloads"}
+                      </b>
+                      <p className="mt-1">
+                        <Image
+                          src={
+                            project.url.includes("github")
+                              ? `https://img.shields.io/github/stars/${project.url.replace(
+                                  "https://github.com/",
+                                  ""
+                                )}?style=social`
+                              : "https://img.shields.io/static/v1?label=Downloads&message=1k&color=%3CCOLOR%3E"
+                          }
+                          alt="stars"
+                          height={26}
+                          width={100}
+                          objectFit="contain"
+                          unoptimized
+                        />
+                      </p>
+                    </div>
+                  )}
                 </div>
                 <div className="mt-2 flex flex-row justify-center">
                   <a href={project.url} target="_blank" rel="noreferrer">
@@ -130,17 +134,10 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
                   flex flex-row justify-center items-center text-center cursor-pointer bg-blue-500 text-white 
                    transition-all ease-in-out shadow-md shadow-blue-400 "
                     >
-                      {project.name != "Cineast" ? (
-                        <>
-                          <i className="fa-brands fa-github px-2" />
-                          <p className="text-[12px]">view source code</p>
-                        </>
-                      ) : (
-                        <>
-                          <i className="fa-brands fa-google-play px-2" />
-                          <p className="text-[12px]">Download now</p>
-                        </>
-                      )}
+                      <div>
+                        <i className="fa-solid fa-globe px-2" />
+                        <p className="text-[12px]">Visit</p>
+                      </div>
                     </div>
                   </a>
                 </div>

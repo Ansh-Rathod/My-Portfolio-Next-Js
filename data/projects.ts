@@ -143,3 +143,50 @@ export const projects: any = [
     image: "Marvel-1.PNG",
   },
 ];
+
+export const usefulProjects: any = [
+  // {
+  //   name: "Untitled app",
+  //   madeWith: "Flutter",
+  //   date: "8 Dec 2024",
+  //   type: "vertical",
+  //   long_description: "He is building something check on his twitter",
+  //   description: "Terminal Wrapper for MacOS. currently in development",
+  //   url: "https://x.com/anshrathodfr",
+  //   images: ["terminal.jpg"],
+  //   image: "terminal.jpg",
+  // },
+  {
+    name: "Pimosa",
+    madeWith: "Flutter, sqlite, nextjs, FFmpeg, ImageMagick",
+    date: "27 July 2024",
+    type: "vertical",
+    long_description:
+      "<div>Pimosa: Simple Video, Photo & Music Editing Tools in One App<br/>Convert, edit, and enhance video, photo, and music files easily. Batch processing for faster work. Simple tools for everyone.<br/><br/>Tools are organized into categories by file type:<br/><br/>Video Tools:<br/>• Compress<br/>• Merge & Combine<br/>• Resize & Rotate<br/>• Speed Control<br/>• Flip & Mirror<br/>• Convert Formats<br/>• Extract Audio<br/>• Trim & Cut<br/><br/>Image Tools:<br/>• Convert Formats<br/>• Compress<br/>• Resize<br/>• Crop<br/><br/>Audio Tools:<br/>• Extract from Video<br/>• Convert Formats<br/>• Edit Metadata<br/>• Create Waveform Videos<br/><br/>Video Playground:<br/>• Crop Videos<br/>• Combine Clips<br/><br/>All your essential media editing tools—in one place!</div>",
+    description: "Simple Video, Photo & Music Editing Tools in one app. ",
+    url: "https://pimosa.app",
+    images: [
+      "pimosa-1.png",
+      "pimosa-2.png",
+      "pimosa-3.png",
+      "pimosa-4.png",
+      "pimosa-5.png",
+      "pimosa-6.png",
+      "pimosa-7.png",
+      "pimosa-8.png",
+    ],
+    image: "pimosa-logo.png",
+  },
+  {
+    name: "Keystro",
+    madeWith: "Flutter",
+    date: "23 April 2024",
+    type: "vertical",
+    long_description:
+      "Show which key you pressing to your audience, Highlight your cursor, and hear realistic keyboard sounds! Available for Windows and MacOS.<br/> <br/> Fully Customizable Floating Keystroke Widget.Personalize keycap colors, Explore diffrent styles and themes. Enjoy Flexible widget placement: Any pixel of your screen; Your choice! <br/> <br/> Highlight the cursor. Our cursor highlighter is highly customizable. Pick your shape, size, and colors. You'll effortlessly create a breathtaking design that will amaze your audience.<br/><br/>Hear realistic keyboard sounds! Don't have mechanical keyboards but miss those juicy sounds? Thock is the perfect feature we brought for you.",
+    description: "Enhance Your Screen Recording Experience!",
+    url: "https://pimosa.app",
+    images: ["keystro-1.png", "keystro-2.png", "keystro-3.png"],
+    image: "keystro-logo.png",
+  },
+];
