@@ -14,6 +14,7 @@ import Model from "../components/Model";
 import { projects, usefulProjects } from "../data/projects";
 import WhyIBuiltThisWebsite from "@/components/why-i built-this";
 import UsefulProducts from "@/components/useful-products";
+import MyGallery from "@/components/image-gallery";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -77,6 +78,7 @@ const Home: NextPage = ({ data }: any) => {
         <AllProjects />
         <WhyIBuiltThisWebsite />
         <Contact />
+        <MyGallery />
         <Model
           isOpen={!!router.query.slug}
           project={[...projects, ...usefulProjects].find(
