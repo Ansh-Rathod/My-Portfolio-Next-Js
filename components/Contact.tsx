@@ -8,12 +8,12 @@ function Contact() {
       viewport={{ once: true, amount: 0.4 }}
       id="contact"
     >
-      <div className="bg-white pt-[130px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[1000px] desktop:container">
-        <div className="px-2">
-          <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase text-center">
+      <div className="bg-white pt-[130px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[600px] desktop:container">
+        <div className="px-2 ">
+          <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase ">
             Contact Him
           </h1>
-          <p className="font-proxima text-slate-500 text-[18px] text-center mt-2">
+          <p className="font-proxima text-slate-500 text-[18px]  mt-2">
             Leave a message on any of his social media, He&apos;ll reach out to
             you as soon as Possible.
             <br /> Thank you! for visiting.
@@ -24,7 +24,7 @@ function Contact() {
           whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
           viewport={{ once: false, amount: 0.6 }}
           transition={{ staggerChildren: 0.5 }}
-          className="px-14 tablet:px-10 py-12 flex flex-row mobile:px-8 justify-center items-center"
+          className="px-4  py-12 flex flex-row "
         >
           <Icon
             i={1}
@@ -61,7 +61,7 @@ function Contact() {
         </motion.div>
       </div>
 
-      <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 border-slate-200 text-center text-[14px] text-slate-500">
+      <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 px-8 border-slate-200 max-w-[600px] mx-auto text-[14px] text-slate-500">
         <p>
           © 2024 Ansh Rathod. All rights reserved. last updated: Dec 9, 2024
         </p>
