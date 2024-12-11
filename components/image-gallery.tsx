@@ -74,7 +74,7 @@ const MyGallery = () => {
         <Masonry
           items={numbers}
           config={{
-            columns: [2, 3, 4],
+            columns: [2, 3, 3],
             gap: [6, 6, 6],
             media: [640, 768, 1024],
           }}
