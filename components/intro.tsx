@@ -44,8 +44,9 @@ const Intro = () => (
               <p className="font-proxima text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mobile:py-2">
                 Who is a full-stack developer, Builds apps for mobile, desktop
                 and web platforms. He stays quite active on X/Twitter shares
-                journey of building apps and other random things, also hates
-                linkedin.
+                journey of building apps and other random things, plays chess ♟️
+                somedays, does cycling 🚴, gym, watches movies, tvshows, also
+                hates linkedin.
               </p>
             </motion.div>
             <motion.div

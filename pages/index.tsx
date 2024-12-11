@@ -2,19 +2,17 @@ import type { NextPage } from "next";
 
 import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
-import Intro from "@/components/intro";
-import Head from "next/head";
-
 import Contact from "@/components/Contact";
-import GithubCard from "@/components/GithubCard";
-import MusiveCard from "@/components/MusiveCard";
+import MyGallery from "@/components/image-gallery";
+import Intro from "@/components/intro";
 import Skills from "@/components/Skills";
+import UsefulProducts from "@/components/useful-products";
+import WhyIBuiltThisWebsite from "@/components/why-i built-this";
+import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { projects, usefulProjects } from "../data/projects";
-import WhyIBuiltThisWebsite from "@/components/why-i built-this";
-import UsefulProducts from "@/components/useful-products";
-import MyGallery from "@/components/image-gallery";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -56,6 +54,19 @@ const Home: NextPage = ({ data }: any) => {
 
       <div>
         <Intro />
+        {/* <div className=" max-w-[600px] mx-auto rounded-lg px-4 ">
+          <Image
+            src="/pins/wall15.jpg"
+            alt="image"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            objectFit="cover"
+            className="rounded-lg "
+          />
+        </div> */}
+
         <About />
         {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
         {/* <div
