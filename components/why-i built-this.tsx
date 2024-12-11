@@ -39,9 +39,9 @@ function WhyIBuiltThisWebsite() {
             <br />
             <p>
               people build portfolio websites showcasing skills and projects to
-              get a job or something i dont care about that i have added more of
-              personality in this site, for reminder to my future self about the
-              things i love at this time and not to lost it.
+              get a job or get client i dont care about that i have added more
+              of personality in this site, for reminder to my future self about
+              the things i love at this time and not to lost it.
             </p>
           </div>
         </div>

@@ -48,7 +48,6 @@ const MyGallery = () => {
     "/pins/wall19.jpg",
     "/pins/wall53.jpg",
     "/pins/wall3.jpg",
-    "/pins/wall18.jpg",
     "/pins/wall13.jpg",
     "/pins/wall22.jpg",
     "/pins/wall31.jpg",
