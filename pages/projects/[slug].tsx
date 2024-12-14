@@ -1,7 +1,7 @@
 import Icon from "@/components/Icon";
 import Slider from "@/components/slider";
+import { allHisProjects } from "data/projects";
 import { GetServerSidePropsContext } from "next";
-import { projects, usefulProjects } from "../../data/projects";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -185,7 +185,7 @@ function Project({ project }: { project: any }) {
 
 export async function getServerSideProps(params: GetServerSidePropsContext) {
   try {
-    const data = [...projects, ...usefulProjects].find(
+    const data = allHisProjects.find(
       (project: any) => project.name.toLowerCase() == params.query.slug
     );
     if (!data) {

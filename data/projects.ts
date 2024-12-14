@@ -1,22 +1,4 @@
 export const projects: any = [
-  // {
-  //   name: "Musive Webapp",
-  //   madeWith: "Nextjs, Node.js, PostgreSQL",
-  //   date: "27 Oct 2022",
-  //   type: "vertical",
-  //   long_description:
-  //     "Musive is a full-stack music player app. It is written in Nextjs and Node.js with PostgreSQL as database. The app has a beautiful UI and is fully functional. Users can create their own playlists and collect liked songs. The app is fully responsive and works on all devices.",
-  //   description:
-  //     "Full Spotify clone webapp with Nextjs and Node.js with PostgreSQL as database.",
-  //   url: "https://play.google.com/store/apps/details?id=com.cineast.android",
-  //   images: [
-  //     "Musive-web-1.png",
-  //     "Musive-web-2.png",
-  //     "Musive-web-3.png",
-  //     "Musive-web-4.png",
-  //   ],
-  //   image: "Musive-web-1.png",
-  // },
   {
     name: "Cineast",
     madeWith: "Flutter, Node.js, PostgreSQL",
@@ -145,17 +127,6 @@ export const projects: any = [
 ];
 
 export const usefulProjects: any = [
-  // {
-  //   name: "Untitled app",
-  //   madeWith: "Flutter",
-  //   date: "8 Dec 2024",
-  //   type: "vertical",
-  //   long_description: "He is building something check on his twitter",
-  //   description: "Terminal Wrapper for MacOS. currently in development",
-  //   url: "https://x.com/anshrathodfr",
-  //   images: ["terminal.jpg"],
-  //   image: "terminal.jpg",
-  // },
   {
     name: "Pimosa",
     madeWith: "Flutter, sqlite, nextjs, FFmpeg, ImageMagick",
@@ -185,8 +156,65 @@ export const usefulProjects: any = [
     long_description:
       "Show which key you pressing to your audience, Highlight your cursor, and hear realistic keyboard sounds! Available for Windows and MacOS.<br/> <br/> Fully Customizable Floating Keystroke Widget.Personalize keycap colors, Explore diffrent styles and themes. Enjoy Flexible widget placement: Any pixel of your screen; Your choice! <br/> <br/> Highlight the cursor. Our cursor highlighter is highly customizable. Pick your shape, size, and colors. You'll effortlessly create a breathtaking design that will amaze your audience.<br/><br/>Hear realistic keyboard sounds! Don't have mechanical keyboards but miss those juicy sounds? Thock is the perfect feature we brought for you.",
     description: "Enhance Your Screen Recording Experience!",
-    url: "https://pimosa.app",
+    url: "https://keystro.app",
     images: ["keystro-1.png", "keystro-2.png", "keystro-3.png"],
     image: "keystro-logo.png",
   },
+];
+
+export const newProjects: any = [
+  {
+    name: "Craftor",
+    madeWith: "Flutter",
+    date: "8 July 2023 - April 2024",
+    type: "vertical",
+    description:
+      "Attempt of building a graphic design tool better than canva from scratch as solo developer.",
+    long_description:
+      "This app was attempt of building a grapich design tool better than canva from scratch. I went very deep into the concepts of flutter and maths to build the features of this app. usually i build apps solo but this time i got friend who helped me with some parts of figuring out maths.<br/><br/> i nearly completed the app like 70% of the feautres but i spent 8 months on this project and tired as hell to finish it. I abandoned the porject in april 2024 because the project was quite ambitious also required so much work to be done to launch in the very competive market among big design tools, then i started building the small app 'keystro' with friend Damy. <br/> <br/> Craftor is first abandon project and it will allways be the best app i ever built, I built this app in public you can check out the journey of building & demo videos on this official twitter account i made for Craftor app [hit the visit button below].",
+    url: "https://x.com/craftor_app",
+    images: ["Craftor-1.jpeg", "Craftor-2.jpeg", "Craftor-3.jpeg"],
+    image: "Craftor-1.jpeg",
+  },
+  {
+    name: "Schedurio",
+    madeWith: "Flutter, X/Twitter API,supabase/PostgreSQL",
+    date: "8 April 2023",
+    type: "vertical",
+    description: "Open source Tweet schedular desktop app.",
+    long_description:
+      "Fully functional Tweet schedular desktop app with Supabase and PostgreSQL. Built while supabase launch week hackathon. and got 1st runner up prize.",
+    url: "https://github.com/Ansh-Rathod/Flutter-Schedurio-app",
+    images: [
+      "Schedurio-1.png",
+      "Schedurio-2.png",
+      "Schedurio-3.png",
+      "Schedurio-4.png",
+    ],
+    image: "Schedurio-1.png",
+  },
+  {
+    name: "Musive Webapp",
+    madeWith: "Nextjs, Node.js, PostgreSQL",
+    date: "27 Oct 2022",
+    type: "vertical",
+    long_description:
+      "Musive is a full-stack music player app. It is written in Nextjs and Node.js with PostgreSQL as database. The app has a beautiful UI and is fully functional. Users can create their own playlists and collect liked songs. The app is fully responsive and works on all devices.",
+    description:
+      "Full Spotify clone webapp with Nextjs and Node.js with PostgreSQL as database.",
+    url: "https://github.com/Ansh-Rathod/Nextjs-musive-app",
+    images: [
+      "Musive-web-1.png",
+      "Musive-web-2.png",
+      "Musive-web-3.png",
+      "Musive-web-4.png",
+    ],
+    image: "Musive-web-1.png",
+  },
+];
+
+export const allHisProjects: any = [
+  ...newProjects,
+  ...projects,
+  ...usefulProjects,
 ];

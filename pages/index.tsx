@@ -12,7 +12,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
-import { projects, usefulProjects } from "../data/projects";
+import { allHisProjects, projects, usefulProjects } from "../data/projects";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -92,7 +92,7 @@ const Home: NextPage = ({ data }: any) => {
         <MyGallery />
         <Model
           isOpen={!!router.query.slug}
-          project={[...projects, ...usefulProjects].find(
+          project={allHisProjects.find(
             (project: any) => project.name.toLowerCase() == router.query.slug
           )}
         />
