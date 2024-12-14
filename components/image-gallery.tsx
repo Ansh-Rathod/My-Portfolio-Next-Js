@@ -6,7 +6,6 @@ const MyGallery = () => {
     "/pins/wall21.jpg",
     "/pins/wall11.jpg",
     "/pins/wall40.jpg",
-    "/pins/wall17.jpg",
     "/pins/wall24.jpg",
     "/pins/wall2.jpg",
     "/pins/wall12.jpg",
@@ -30,8 +29,8 @@ const MyGallery = () => {
     "/pins/wall4.jpg",
     "/pins/wall33.jpg",
     "/pins/wall50.jpg",
-    "/pins/wall27.jpg",
     "/pins/wall49.jpg",
+    "/pins/wall17.jpg",
     "/pins/wall20.jpg",
     "/pins/wall30.jpg",
     "/pins/wall23.jpg",
@@ -62,11 +61,12 @@ const MyGallery = () => {
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3 px-4">
         <div className=" px-6 my-20">
           <h1 className="uppercase font-poppins text-3xl font-bold ">
-            Random Pins from Wall
+            Random Pins
           </h1>
           <p className="text-gray-500 mt-2">
-            why would someone add this section to the website? it makes no
-            sense, see he just built this website for fun.
+            The random images he saved last year in boredom also some while
+            building this website. Most images are from the movies, tvshows and
+            sport. this nerd watches sport MMA lol from begining of 2024.
           </p>
         </div>
       </div>

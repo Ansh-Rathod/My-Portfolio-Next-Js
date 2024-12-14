@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 
 import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
+import ChessStats from "@/components/chess";
 import Contact from "@/components/Contact";
 import MyGallery from "@/components/image-gallery";
 import Intro from "@/components/intro";
@@ -9,10 +10,9 @@ import Skills from "@/components/Skills";
 import UsefulProducts from "@/components/useful-products";
 import WhyIBuiltThisWebsite from "@/components/why-i built-this";
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
-import { allHisProjects, projects, usefulProjects } from "../data/projects";
+import { allHisProjects } from "../data/projects";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -87,6 +87,7 @@ const Home: NextPage = ({ data }: any) => {
         {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
         <UsefulProducts />
         <AllProjects />
+        <ChessStats />
         <WhyIBuiltThisWebsite />
         <Contact />
         <MyGallery />
