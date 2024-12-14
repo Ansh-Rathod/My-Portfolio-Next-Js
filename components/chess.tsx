@@ -42,12 +42,9 @@ function ChessStats() {
         </p>
       </div>
       <div className="px-6 ">
-        <Link href={chessStats.url} target="_blank" rel="noreferrer">
-          <p className="text-blue-500 my-4 cursor-pointer hover:underline">
-            {chessStats.username} - from lichess
-          </p>
-        </Link>
         <div className="text-gray-500 mt-2">
+          <br />
+
           <p>Mostly plays blitz & Bullet</p>
           <br />
           <p>
@@ -77,6 +74,23 @@ function ChessStats() {
             Total play time: {(chessStats.playTime.total / 3600).toFixed(2)}{" "}
             hours
           </p>
+        </div>
+        <Link href={chessStats.url} target="_blank" rel="noreferrer">
+          <p className="text-blue-500 my-4 cursor-pointer hover:underline">
+            {chessStats.username} - on lichess
+          </p>
+        </Link>
+      </div>
+      <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+        <p>Message from him:</p>
+        <div className="bg-gray-100 p-2 rounded-lg mt-2">
+          <p>
+            I messure the level of focus by playing chess. you can just know how
+            much focused are you today with numbers of bluneders you make in the
+            game.
+          </p>
+          <br />
+          <p>didnt know my stats where this bad. well i dont care</p>
         </div>
       </div>
     </div>
