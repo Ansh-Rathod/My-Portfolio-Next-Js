@@ -66,7 +66,7 @@ const MyGallery = () => {
           <p className="text-gray-500 mt-2">
             The random images he saved last year in boredom also some while
             building this website. Most images are from the movies, tvshows and
-            sport. this nerd watches sport MMA lol from begining of 2024.
+            sport. this nerd watches sport: MMA lol from begining of 2024.
           </p>
         </div>
       </div>
