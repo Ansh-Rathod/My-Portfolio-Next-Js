@@ -1,7 +1,9 @@
+import axios from "axios";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-function ChessStats() {
-  const chessStats = {
+function userData() {
+  const [userData, setUserData] = useState({
     id: "anshrathod999",
     username: "Anshrathod999",
     perfs: {
@@ -27,7 +29,22 @@ function ChessStats() {
       loss: 3565,
       win: 3583,
     },
-  };
+  });
+
+  useEffect(() => {
+    // Fetch data from Lichess API
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get(
+          `https://lichess.org/api/user/Anshrathod999`
+        );
+        setUserData(response.data);
+      } catch (err) {}
+    };
+
+    fetchUserData();
+  }, []);
+
   return (
     <div className="mx-auto max-w-[600px] my-20">
       <div className=" px-6 ">
@@ -48,36 +65,50 @@ function ChessStats() {
           <p>Mostly plays blitz & Bullet</p>
           <br />
           <p>
-            Bullet rating in {chessStats.perfs.bullet.games} games📈:{" "}
-            {chessStats.perfs.bullet.rating}
+            <span className="text-black font-bold">Bullet rating 📈 </span> :{" "}
+            {userData.perfs.bullet.rating} (in {userData.perfs.bullet.games}{" "}
+            games)
           </p>
           <p>
-            Blitz rating in {chessStats.perfs.blitz.games} games📈:{" "}
-            {chessStats.perfs.blitz.rating}
+            <span className="text-black font-bold">Blitz rating 📈</span>:{" "}
+            {userData.perfs.blitz.rating}
+            (in {userData.perfs.blitz.games} games)
           </p>
           <br />
 
-          <p>Total games played: {chessStats.count.all}</p>
           <p>
-            Wins: {chessStats.count.win} -{" "}
-            {((chessStats.count.win / chessStats.count.all) * 100).toFixed(2)}%
+            <span className="text-black font-bold">Total games played</span>:{" "}
+            {userData.count.all}
           </p>
           <p>
-            Losses: {chessStats.count.loss} -{" "}
-            {((chessStats.count.loss / chessStats.count.all) * 100).toFixed(2)}%
+            <span className="text-black font-bold">Last game played on</span>:{" "}
+            {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
           </p>
           <p>
-            Draws: {chessStats.count.draw} -{" "}
-            {((chessStats.count.draw / chessStats.count.all) * 100).toFixed(2)}%
+            <span className="text-black font-bold">Wins</span>:{" "}
+            {userData.count.win} (
+            {((userData.count.win / userData.count.all) * 100).toFixed(2)}%)
           </p>
           <p>
-            Total play time: {(chessStats.playTime.total / 3600).toFixed(2)}{" "}
-            hours
+            <span className="text-black font-bold">Losses</span>:{" "}
+            {userData.count.loss} (
+            {((userData.count.loss / userData.count.all) * 100).toFixed(2)}
+            %)
+          </p>
+          <p>
+            <span className="text-black font-bold">Draws</span>:{" "}
+            {userData.count.draw} (
+            {((userData.count.draw / userData.count.all) * 100).toFixed(2)}
+            %)
+          </p>
+          <p>
+            <span className="text-black font-bold">Total play time</span>:{" "}
+            {(userData.playTime.total / 3600).toFixed(2)} hours
           </p>
         </div>
-        <Link href={chessStats.url} target="_blank" rel="noreferrer">
+        <Link href={userData.url} target="_blank" rel="noreferrer">
           <p className="text-blue-500 my-4 cursor-pointer hover:underline">
-            {chessStats.username} - on lichess
+            {userData.username} - on lichess
           </p>
         </Link>
       </div>
@@ -97,4 +128,44 @@ function ChessStats() {
   );
 }
 
-export default ChessStats;
+export default userData;
+export function timeAgo(timestamp: number): string {
+  const now = new Date();
+  const date = new Date(timestamp);
+  const secondsAgo = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+  if (secondsAgo < 60) {
+    return `${secondsAgo} second(s) ago`;
+  } else if (secondsAgo < 3600) {
+    const minutes = Math.floor(secondsAgo / 60);
+    return `${minutes} minute(s) ago`;
+  } else if (secondsAgo < 86400) {
+    const hours = Math.floor(secondsAgo / 3600);
+    return `${hours} hour(s) ago`;
+  } else if (secondsAgo < 2592000) {
+    const days = Math.floor(secondsAgo / 86400);
+    return `${days} day(s) ago`;
+  } else if (secondsAgo < 31536000) {
+    const months = Math.floor(secondsAgo / 2592000);
+    return `${months} month(s) ago`;
+  } else {
+    const years = Math.floor(secondsAgo / 31536000);
+    return `${years} year(s) ago`;
+  }
+}
+
+export function formatTimestamp(timestamp: number): string {
+  const date = new Date(timestamp);
+
+  // Format the date as "Sun Dec 15 6:59 PM"
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  };
+
+  return new Intl.DateTimeFormat("en-US", options).format(date);
+}
