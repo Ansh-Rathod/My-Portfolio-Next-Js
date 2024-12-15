@@ -59,7 +59,7 @@ function UsefulProducts() {
             </p>
           </div>
           <div className="max-w-[1000px] mx-auto">
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
+            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
               {newProjects.map((project: any, i: number) => (
                 <ProjectComponent2 key={project.name} project={project} i={i} />
               ))}

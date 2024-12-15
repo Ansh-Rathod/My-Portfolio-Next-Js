@@ -1,8 +1,9 @@
+"use client";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-function userData() {
+function ChessStats() {
   const [userData, setUserData] = useState({
     id: "anshrathod999",
     username: "Anshrathod999",
@@ -128,7 +129,7 @@ function userData() {
   );
 }
 
-export default userData;
+export default ChessStats;
 export function timeAgo(timestamp: number): string {
   const now = new Date();
   const date = new Date(timestamp);

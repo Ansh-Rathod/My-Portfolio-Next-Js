@@ -1,11 +1,7 @@
-import { motion } from "framer-motion";
 import ListItem from "./ListItem";
 function Skills() {
   return (
-    <motion.div
-      initial={{ y: 10, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
-      viewport={{ once: true, amount: 0.4 }}
+    <div
       id="skills"
       className="py-[50px] w-screen max-w-full desktop:container"
     >
@@ -79,7 +75,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
