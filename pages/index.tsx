@@ -13,6 +13,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { allHisProjects } from "../data/projects";
+import MemesIntro from "@/components/memes";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
@@ -88,6 +89,7 @@ const Home: NextPage = ({ data }: any) => {
         <UsefulProducts />
         <AllProjects />
         <ChessStats />
+        <MemesIntro />
         <WhyIBuiltThisWebsite />
         <Contact />
         <MyGallery />

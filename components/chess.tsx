@@ -115,7 +115,7 @@ function ChessStats() {
       </div>
       <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
         <p>Message from him:</p>
-        <div className="bg-gray-100 p-2 rounded-lg mt-2">
+        <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>
             I messure the level of focus by playing chess. you can just know how
             much focused are you today with numbers of bluneders you make in the

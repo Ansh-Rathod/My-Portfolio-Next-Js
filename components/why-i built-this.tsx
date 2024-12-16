@@ -30,7 +30,7 @@ function WhyIBuiltThisWebsite() {
           <p>-Elon Musk</p>
           <br />
           <p>He wrote little message:</p>
-          <div className="bg-gray-100 p-2 rounded-lg mt-2">
+          <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
             <p>
               I built this website for fun, some people said &quot;why work hard
               on building this kinda useless website?&quot; the elon musk video

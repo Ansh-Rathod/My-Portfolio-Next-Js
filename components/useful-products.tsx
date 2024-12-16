@@ -30,7 +30,7 @@ function UsefulProducts() {
             </div>
             <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
               <p>Message from him:</p>
-              <div className="bg-gray-100 p-2 rounded-lg mt-2">
+              <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
                 <p>
                   My one rule is to build super simple apps with best possible
                   user exprience and dont ship mediocre apps. I design all my
@@ -65,9 +65,9 @@ function UsefulProducts() {
               ))}
             </div>
           </div>
-          <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+          <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
             <p>Message from him:</p>
-            <div className="bg-gray-100 p-2 rounded-lg mt-2">
+            <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
               <p>
                 First time i abandoned building any of my app
                 &apos;Craftor&apos; felt bad but well i made something better:
