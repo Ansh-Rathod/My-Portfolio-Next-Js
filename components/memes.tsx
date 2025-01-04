@@ -1,6 +1,6 @@
 import { memes } from "data/memes";
-import HorizontalScroll from "./horizontal-scroll";
 import Image from "next/image";
+import HorizontalScroll from "./horizontal-scroll";
 function MemesIntro() {
   return (
     <div>
@@ -66,7 +66,7 @@ function MemesIntro() {
             </div>
           ))}
       </HorizontalScroll>
-      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>

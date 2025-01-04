@@ -89,10 +89,10 @@ const Home: NextPage = ({ data }: any) => {
         <UsefulProducts />
         <AllProjects />
         <ChessStats />
-        <MemesIntro />
-        <WhyIBuiltThisWebsite />
+        {/* <MemesIntro /> */}
+        {/* <WhyIBuiltThisWebsite /> */}
         <Contact />
-        <MyGallery />
+        {/* <MyGallery /> */}
         <Model
           isOpen={!!router.query.slug}
           project={allHisProjects.find(

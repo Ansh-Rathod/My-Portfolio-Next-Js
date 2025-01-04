@@ -4,10 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 function UsefulProducts() {
   return (
-    <div
-      id="projects"
-      className="bg-no-repeat  bg-fill bg-[url('/daniel-huniewicz-iQaFCjuMTfo-unsplash.webp')] bg-cover"
-    >
+    <div id="projects" className="bg-no-repeat  bg-cover">
       <div className="backdrop-blur-[100px] bg-white/60 pb-24">
         <div className="desktop:container">
           <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
@@ -23,12 +20,12 @@ function UsefulProducts() {
                 information about the app.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
+            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
               {usefulProjects.map((project: any, i: number) => (
                 <ProjectComponent key={project.name} project={project} i={i} />
               ))}
             </div>
-            <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+            <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
               <p>Message from him:</p>
               <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
                 <p>
@@ -59,13 +56,13 @@ function UsefulProducts() {
             </p>
           </div>
           <div className="max-w-[1000px] mx-auto">
-            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-2">
+            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
               {newProjects.map((project: any, i: number) => (
                 <ProjectComponent2 key={project.name} project={project} i={i} />
               ))}
             </div>
           </div>
-          <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
+          <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
             <p>Message from him:</p>
             <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
               <p>

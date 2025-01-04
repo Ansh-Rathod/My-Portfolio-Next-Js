@@ -12,7 +12,7 @@ const About = () => {
           <p className="text-gray-500">He wrote this section BTW</p>
         </div>
 
-        <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-2 py-2 tablet:w-full mobile:w-full  text-gray-500">
+        <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500">
           <p>
             Hello! My name is <b>Ansh Rathod</b>, I&apos;m a self-taught
             full-stack developer who wrote the first line of code in the 2020
