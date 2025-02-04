@@ -25,7 +25,7 @@ function UsefulProducts() {
                 <ProjectComponent key={project.name} project={project} i={i} />
               ))}
             </div>
-            <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+            {/* <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
               <p>Message from him:</p>
               <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
                 <p>
@@ -40,7 +40,7 @@ function UsefulProducts() {
                   ship apps fast now.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="py-20 px-4 max-w-[600px] mx-auto">
             <h1 className="font-poppins pb-1 text-3xl uppercase text-black ">
@@ -52,7 +52,8 @@ function UsefulProducts() {
               what apps to build. he won 1st runner up prices in supabase launch
               week hackathon with that Tweet schedular desktop app in may 2023.
               but after in july 2023 he started building graphic design tool and
-              spending months on that was mistake but that tool was super good.
+              spending months on building that tool but then he burn out while
+              building it.
             </p>
           </div>
           <div className="max-w-[1000px] mx-auto">
@@ -62,7 +63,7 @@ function UsefulProducts() {
               ))}
             </div>
           </div>
-          <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
+          {/* <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
             <p>Message from him:</p>
             <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
               <p>
@@ -77,7 +78,7 @@ function UsefulProducts() {
                 the apps i built after Craftor
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

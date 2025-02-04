@@ -45,8 +45,7 @@ const Intro = () => (
                 Who is a full-stack developer, Builds apps for mobile, desktop
                 and web platforms. He stays quite active on X/Twitter shares
                 journey of building apps and other random things, plays chess ♟️
-                somedays, does cycling 🚴, gym, watches movies, tvshows, also
-                hates linkedin.
+                somedays, does cycling 🚴, gym, watches movies, tvshows.
               </p>
             </motion.div>
             <motion.div

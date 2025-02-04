@@ -118,11 +118,11 @@ function ChessStats() {
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>
             I messure the level of focus by playing chess. you can just know how
-            much focused are you today with numbers of bluneders you make in the
+            much focused you are today with numbers of bluneders you make in the
             game.
           </p>
           <br />
-          <p>didnt know my stats where this bad. well i dont care</p>
+          <p>didnt know my stats where this bad.</p>
         </div>
       </div>
     </div>

@@ -9,11 +9,11 @@ function AllProjects() {
           <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
             <div className="py-10 px-4 max-w-[600px] mx-auto">
               <h1 className="font-poppins pb-1 text-3xl uppercase text-black ">
-                Some useless apps he built
+                OPEN SOURCE APPS HE BUILT BEFORE 2022
               </h1>
 
               <p className="font-proxima text-slate-500 text-[18px] mt-4">
-                He built some useless but fully functional apps in order to
+                He built some open-source fully functional apps in order to
                 learn and improve the building skills. click on the card to view
                 some images and information about the app.
               </p>
@@ -26,7 +26,7 @@ function AllProjects() {
           </div>
         </div>
       </div>
-      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+      {/* <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>
@@ -34,7 +34,7 @@ function AllProjects() {
             no longer maintain them.
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

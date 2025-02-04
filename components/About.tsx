@@ -23,28 +23,30 @@ const About = () => {
           <br />
           <p>
             I started for the passion and was building & completing apps like
-            crazy till 2023, most of my 25+ apps are open source on my Github
+            madmen till 2023, most of my 25+ apps are open source on my Github
             which are just <b className="text-black">hard-to-build</b> but{" "}
             <i>fun </i>
             projects (but not directly useful).
           </p>
           <br />
-          <p>
+          {/* <p>
             Then realized that life is more than writing code and mindlessly
             gaining skills I should start earning with these skills too.
-          </p>
+          </p> */}
           <br />
           <p>
             I always wanted to build something of my own so I started observing
-            indie makers here on X/Twitter [and still observing] and I have
-            learned so much about what kind of product would buy and actually be
-            useful for a person. [well I have made all useless apps till now🙈
-            you can check the list somewhere on this site].
+            indie makers on X/Twitter [still observing] and I have learned so
+            much about what kind of product would buy and actually be useful for
+            a person. [well I have made all apps that are good for resume only
+            till now🙈 you can check the list somewhere on this site].
           </p>
           <br />
 
           <p>
-            In June 2024 I started building a desktop app{" "}
+            As i design mine own apps and spend so much time building and
+            observing i decided to build the my own product, In June 2024 I
+            started building a desktop app{" "}
             <Link href="https://pimosa.app">
               <span className="text-blue-500">https://pimosa.app</span>
             </Link>{" "}
@@ -54,11 +56,12 @@ const About = () => {
           <br />
           <p>
             I tweeted about the paid beta version of it and turned out it is
-            very useful for some people I ended up making $300+ in the first few
-            hours of my tweet. realized &quot;Huh I made something good&quot;.
+            very simple & useful for some people I ended up making $300+ in the
+            first few hours of my tweet. realized &quot;Huh I made something
+            good&quot;.
           </p>
           <br />
-          <p>This is how i started building apps and started earning.</p>
+          <p>This is how i started monetizing my apps.</p>
         </div>
       </div>
     </div>

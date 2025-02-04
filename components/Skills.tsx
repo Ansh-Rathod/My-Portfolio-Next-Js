@@ -7,7 +7,7 @@ function Skills() {
     >
       <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-5  py-2">
         <h1 className="font-poppins uppercase text-3xl font-bold ">
-          Blah Blah...
+          What tech skills does he have?
         </h1>
         <p className="text-[16px] font-apple  text-gray-500 mt-4">
           He knows these listed things but mostly uses Flutter, postgres, and
