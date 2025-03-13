@@ -1,6 +1,7 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -36,6 +37,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           type="font/ttf"
         />
       </Head>
+      <Script
+        src="/track.js"
+        async
+        data-website-id="dedb1572-40b4-419d-aae4-4bdac9067f2b"
+      ></Script>
+
       <Component {...pageProps} />
     </div>
   );
