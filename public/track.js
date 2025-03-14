@@ -3,12 +3,13 @@
  * @property {string} website_id
  * @property {string} visitor_id
  * @property {string} session_id
- * @property {'pageview'} event_type
+ * @property {'pageview' | 'pagevisit'} event_type
  * @property {string} url_path
  * @property {string | null} url_query
  * @property {string | null} referrer
  * @property {string | null} user_agent
  * @property {{ width: number; height: number } | null} viewport
+ * @property {number} duration
  */
 
 /**
@@ -19,12 +20,11 @@
 !function () {
   "use strict";
 
-  // // Disable on localhost, file protocol, or iframe
-  // if (/^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$/.test(window.location.hostname) ||
-  //   "file:" === window.location.protocol ||
-  //   window !== window.parent) {
-  //   return console.warn("Tracker: Disabled on localhost, file protocol, or iframe");
-  // }
+  if (/^localhost$|^127(\.[0-9]+){0,2}\.[0-9]+$|^\[::1?\]$/.test(window.location.hostname) ||
+    "file:" === window.location.protocol ||
+    window !== window.parent) {
+    return console.warn("Tracker: Disabled on localhost, file protocol, or iframe");
+  }
 
   const script = document.currentScript;
   const websiteId = script.getAttribute('data-website-id');
@@ -32,10 +32,8 @@
     return console.warn("Tracker: Missing data-website-id attribute");
   }
 
-  // Update this to your deployed domain
-  const endpoint = 'https://api.ansh.life/track'; // Replace with your actual domain
+  const endpoint = 'https://api.ansh.life/track';
 
-  /** @type {(name: string, value: string, days: number) => void} */
   function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -46,7 +44,6 @@
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
 
-  /** @type {(name: string) => string | null} */
   function getCookie(name) {
     const nameEQ = name + "=";
     const cookies = document.cookie.split(';');
@@ -58,7 +55,6 @@
     return null;
   }
 
-  /** @type {() => string} */
   function generateUUID() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
       const r = Math.random() * 16 | 0;
@@ -66,39 +62,40 @@
     });
   }
 
-  /** @type {() => string} */
   function getVisitorId() {
     let visitorId = getCookie('tracker_visitor_id');
-    if (!visitorId) {
+    const isNewVisitor = !visitorId;
+    if (isNewVisitor) {
       visitorId = generateUUID();
       setCookie('tracker_visitor_id', visitorId, 365);
     }
-    return visitorId;
+    return { visitorId, isNewVisitor };
   }
 
-  /** @type {() => string} */
   function getSessionId() {
     let sessionId = getCookie('tracker_session_id');
     if (!sessionId) {
       sessionId = generateUUID();
-      setCookie('tracker_session_id', sessionId, 1 / 48); // 30 minutes
+      setCookie('tracker_session_id', sessionId, 1 / 48);
     }
     return sessionId;
   }
 
-  /** @type {() => TrackingData | null} */
-  function collectData() {
+  let startTime = Date.now();
+
+  function collectData(isNewVisitor = false) {
     const href = window.location.href;
     if (!href) {
       console.warn("Tracker: Unable to collect href");
       return null;
     }
 
+    const duration = Math.round((Date.now() - startTime) / 1000);
     return {
       website_id: websiteId,
-      visitor_id: getVisitorId(),
+      visitor_id: getVisitorId().visitorId,
       session_id: getSessionId(),
-      event_type: 'pageview',
+      event_type: isNewVisitor ? 'pagevisit' : 'pageview', // Differentiate here
       url_path: window.location.pathname,
       url_query: window.location.search || "",
       referrer: document.referrer || "",
@@ -107,10 +104,10 @@
         width: window.innerWidth,
         height: window.innerHeight,
       },
+      duration: duration >= 0 ? duration : 0,
     };
   }
 
-  /** @type {(data: TrackingData, callback?: (response: CallbackResponse) => void) => Promise<void>} */
   async function sendData(data, callback) {
     if (localStorage.getItem('tracker_ignore') === 'true') {
       console.log("Tracker: Disabled via localStorage flag");
@@ -125,10 +122,9 @@
         body: JSON.stringify(data),
       });
       if (response.ok) {
-        console.log("Tracker: Data sent successfully");
+        console.log("Tracker: Data sent successfully:", await response.json());
         setCookie('tracker_session_id', getSessionId(), 1 / 48);
       } else {
-        console.error("Tracker: Failed to send data, status:", await response.json());
         console.error("Tracker: Failed to send data, status:", response.status);
       }
       callback && callback({ status: response.status });
@@ -138,14 +134,19 @@
     }
   }
 
-  /** @type {(callback?: (response: CallbackResponse) => void) => void} */
-  function trackPageView(callback) {
-    const data = collectData();
-    if (data) sendData(data, callback);
+  function trackPageView(callback, isNewVisitor = false) {
+    const data = collectData(isNewVisitor);
+    if (data) {
+      sendData(data, (response) => {
+        if (response.status === 200) startTime = Date.now();
+        callback && callback(response);
+      });
+    }
   }
 
-  // Initial page view
-  trackPageView();
+  // Initial page view/visit
+  const { isNewVisitor } = getVisitorId();
+  trackPageView(null, isNewVisitor);
 
   // SPA support
   let lastPath = window.location.pathname;
@@ -154,13 +155,20 @@
     originalPushState.apply(this, arguments);
     if (lastPath !== window.location.pathname) {
       lastPath = window.location.pathname;
-      trackPageView();
+      trackPageView(); // Always pageview for SPA navigation
     }
   };
   window.addEventListener('popstate', () => {
     if (lastPath !== window.location.pathname) {
       lastPath = window.location.pathname;
-      trackPageView();
+      trackPageView(); // Always pageview for SPA navigation
+    }
+  });
+
+  window.addEventListener('beforeunload', () => {
+    const data = collectData();
+    if (data) {
+      navigator.sendBeacon(endpoint, JSON.stringify(data));
     }
   });
 }();
