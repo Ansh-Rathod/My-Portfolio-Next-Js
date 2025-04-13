@@ -15,7 +15,7 @@ function Meme({ i, meme, onTag }: any) {
       // whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
       // viewport={{ once: true, amount: 0.7 }}
       className={` items-center
-       font-apple rounded-2xl flex flex-col border-[1px] border-gray-200 shadow
+       font-apple tracking-tighter lowercase rounded-2xl flex flex-col border-[1px] border-gray-200 shadow
        `}
     >
       <div className="bg-white w-full  rounded-tl-2xl rounded-tr-2xl py-6 items-center flex justify-center">
@@ -37,7 +37,7 @@ function Meme({ i, meme, onTag }: any) {
       </div>
 
       <div className="bg-slate-50 bg-opacity-30   rounded-bl-2xl rounded-br-2xl w-full   px-4 pb-4 pt-2 flex flex-col items-start justify-start">
-        <h1 className="font-apple mt-2 text-base font-semibold">
+        <h1 className="font-apple tracking-tighter lowercase mt-2 text-base font-semibold">
           {meme.title}
         </h1>
         <div className="flex flex-wrap mt-3">
@@ -56,7 +56,7 @@ function Meme({ i, meme, onTag }: any) {
             {meme.created_on}
           </h1>
           <a href={meme.link} target="_blank" rel="noreferrer">
-            <div className="bg-blue-500 uppercase text-xs cursor-pointer first-line:hover:shadow-lg py-1.5  px-3 text-white rounded-xl">
+            <div className="bg-blue-500 lowercase text-xs cursor-pointer first-line:hover:shadow-lg py-1.5  px-3 text-white rounded-xl">
               View on
               <i className="pl-2 fa-brands fa-twitter" />
             </div>

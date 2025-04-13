@@ -8,7 +8,7 @@ function AllProjects() {
         <div className="desktop:container">
           <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
             <div className="py-10 px-4 max-w-[600px] mx-auto">
-              <h1 className="font-poppins pb-1 text-3xl uppercase text-black ">
+              <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
                 OPEN SOURCE APPS HE BUILT BEFORE 2022
               </h1>
 

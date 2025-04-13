@@ -13,7 +13,7 @@ function ProjectComponent(props: any) {
     >
       <div
         className={`select-none cursor-pointer items-center 
-       font-apple    hover:border-blue-600 bg-gray-100 
+       font-apple tracking-tighter lowercase    hover:border-blue-600 bg-gray-100 
        p-2 rounded-lg ${
          project.type == "horizontal" ? "flex flex-row" : "flex flex-col"
        }`}
@@ -30,7 +30,7 @@ function ProjectComponent(props: any) {
 
         <div className="px-2 py-6 w-full">
           <div className="flex flex-row items-center justify-between pb-1">
-            <h1 className="font-poppins text-[18px] uppercase text-black">
+            <h1 className="font-poppins text-[18px] lowercase text-black">
               {project.name}
             </h1>
           </div>
@@ -39,12 +39,12 @@ function ProjectComponent(props: any) {
           <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
             <motion.p
               whileHover={{}}
-              className="uppercase text-[12px] mobile:text-[10px]
+              className="lowercase text-[12px] mobile:text-[10px]
            text-gray-500 border-b-[1px] border-gray-500 hover:text-black hover:border-black"
             >
               Read More
             </motion.p>
-            <p className="text-gray-500  uppercase text-[12px]">
+            <p className="text-gray-500  lowercase text-[12px]">
               {project.date}
             </p>
           </div>

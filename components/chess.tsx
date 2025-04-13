@@ -1,8 +1,9 @@
 "use client";
 import axios from "axios";
+import * as changeCase from "change-case";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import RatingChart from "./rechart";
 function ChessStats() {
   const [userData, setUserData] = useState({
     id: "anshrathod999",
@@ -32,81 +33,135 @@ function ChessStats() {
     },
   });
 
-  useEffect(() => {
-    // Fetch data from Lichess API
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get(
-          `https://lichess.org/api/user/Anshrathod999`
-        );
-        setUserData(response.data);
-      } catch (err) {}
-    };
+  const [recentGames, setRecentGames] = useState([]);
 
+  useEffect(() => {
     fetchUserData();
+    fetchRecentGames();
   }, []);
 
+  // Fetch data from Lichess API
+  const fetchUserData = async () => {
+    try {
+      const response = await axios.get(
+        `https://lichess.org/api/user/Anshrathod999`
+      );
+      setUserData(response.data);
+    } catch (err) {}
+  };
+  // Fetch recent games from Lichess API
+  const fetchRecentGames = async () => {
+    try {
+      const response = await axios.get(
+        `https://lichess.org/api/games/user/Anshrathod999?max=20&rated=true&analysed=false&clocks=false`,
+        {
+          headers: {
+            Accept: "application/x-ndjson",
+          },
+          responseType: "text",
+        }
+      );
+      // Split by newlines and parse each line
+      const lines = response.data.trim().split("\n");
+      const games = lines.map((line: any) => JSON.parse(line));
+
+      // Example: extract usernames and ratings
+      const allgames = games.map((game: any) => ({
+        id: game.id,
+        perf: game.perf,
+        speed: game.speed,
+        createdAt: game.createdAt,
+        winner: game.winner,
+        status: changeCase.noCase(game.status),
+
+        white: {
+          name: game.players.white.user?.name || "Anonymous",
+          rating: game.players.white.rating,
+          ratingDiff: game.players.white.ratingDiff,
+        },
+        black: {
+          name: game.players.black.user?.name || "Anonymous",
+          rating: game.players.black.rating,
+          ratingDiff: game.players.black.ratingDiff,
+        },
+      }));
+      setRecentGames(allgames);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
-    <div className="mx-auto max-w-[600px] my-20">
+    <div className="mx-auto max-w-[600px] mt-20">
       <div className=" px-6 ">
-        <h1 className="uppercase font-poppins text-3xl font-bold ">
+        <h1 className="lowercase font-poppins text-3xl font-bold ">
           HIS Chess stats ♟️♔♕♖♘
         </h1>
-        <p className="text-gray-500 mt-2">
-          He started playing chess same year he started writing code in 2020.
-          doesnt plays daily maybe 3-4 matches onces a week. He suck at chess
+        <p className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
+          he started playing chess same year he started writing code in 2020.
+          doesnt plays daily maybe 3-4 matches onces a week. he suck at chess
           tbh. he has wining probability of 50% in chess against same ranked
           oponent but still plays.
         </p>
       </div>
       <div className="px-6 ">
-        <div className="text-gray-500 mt-2">
+        <div className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
           <br />
 
-          <p>Mostly plays blitz & Bullet</p>
+          <p className="font-bold">
+            mostly plays Bullet - very fast-paced 1-minute games that require
+            intense focus and quick decision making.
+          </p>
           <br />
           <p>
-            <span className="text-black font-bold">Bullet rating 📈 </span> :{" "}
-            {userData.perfs.bullet.rating} (in {userData.perfs.bullet.games}{" "}
-            games)
+            <span className="text-black font-bold">bullet rating 📈 </span> :{" "}
+            <span className="font-bold text-green-500">
+              {userData.perfs.bullet.rating} (in {userData.perfs.bullet.games}{" "}
+              games)
+            </span>
           </p>
-          <p>
+          {/*<p>
             <span className="text-black font-bold">Blitz rating 📈</span>:{" "}
             {userData.perfs.blitz.rating}
             (in {userData.perfs.blitz.games} games)
           </p>
           <br />
+          
+          */}
 
           <p>
-            <span className="text-black font-bold">Total games played</span>:{" "}
-            {userData.count.all}
-          </p>
-          <p>
-            <span className="text-black font-bold">Last game played on</span>:{" "}
+            <span className="text-black font-bold">last game played on</span>:{" "}
             {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
           </p>
-          <p>
-            <span className="text-black font-bold">Wins</span>:{" "}
-            {userData.count.win} (
-            {((userData.count.win / userData.count.all) * 100).toFixed(2)}%)
-          </p>
-          <p>
-            <span className="text-black font-bold">Losses</span>:{" "}
-            {userData.count.loss} (
-            {((userData.count.loss / userData.count.all) * 100).toFixed(2)}
-            %)
-          </p>
-          <p>
-            <span className="text-black font-bold">Draws</span>:{" "}
-            {userData.count.draw} (
-            {((userData.count.draw / userData.count.all) * 100).toFixed(2)}
-            %)
-          </p>
-          <p>
-            <span className="text-black font-bold">Total play time</span>:{" "}
+          <p className="mt-4">
+            <span className="text-black font-bold">total play time</span>:{" "}
             {(userData.playTime.total / 3600).toFixed(2)} hours
           </p>
         </div>
+
+        <RatingChart games={recentGames} username={userData.username} />
+        <p className="mt-4">
+          <span className="text-black font-bold">total games played</span>:{" "}
+          {userData.count.all}
+        </p>
+        <p className="mt-4">
+          <span className="text-black font-bold">wins</span>:{" "}
+          {userData.count.win} (
+          {((userData.count.win / userData.count.all) * 100).toFixed(2)}%)
+        </p>
+        <p>
+          <span className="text-black font-bold">losses</span>:{" "}
+          {userData.count.loss} (
+          {((userData.count.loss / userData.count.all) * 100).toFixed(2)}
+          %)
+        </p>
+        <p>
+          <span className="text-black font-bold">draws</span>:{" "}
+          {userData.count.draw} (
+          {((userData.count.draw / userData.count.all) * 100).toFixed(2)}
+          %)
+        </p>
+
         <Link href={userData.url} target="_blank" rel="noreferrer">
           <p className="text-blue-500 my-4 cursor-pointer hover:underline">
             {userData.username} - on lichess
@@ -114,15 +169,15 @@ function ChessStats() {
         </Link>
       </div>
       <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
-        <p>Message from him:</p>
+        <p>message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>
-            I messure the level of focus by playing chess. you can just know how
+            i messure the level of focus by playing chess. you can just know how
             much focused you are today with numbers of bluneders you make in the
             game.
           </p>
           <br />
-          <p>didnt know my stats where this bad.</p>
+          <p>didnt know my stats were this bad.</p>
         </div>
       </div>
     </div>

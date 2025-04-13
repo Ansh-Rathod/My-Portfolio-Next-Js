@@ -130,7 +130,7 @@ function Model({ project, isOpen }: { project: any; isOpen: boolean }) {
                 <div className="mt-2 flex flex-row justify-center">
                   <a href={project.url} target="_blank" rel="noreferrer">
                     <div
-                      className="pr-4 pl-3 py-2 uppercase font-proxima rounded-lg 
+                      className="pr-4 pl-3 py-2 lowercase font-proxima rounded-lg 
                   flex flex-row justify-center items-center text-center cursor-pointer bg-blue-500 text-white 
                    transition-all ease-in-out shadow-md shadow-blue-400 "
                     >

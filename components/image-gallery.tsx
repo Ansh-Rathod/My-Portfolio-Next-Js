@@ -60,7 +60,7 @@ const MyGallery = () => {
     <div>
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3 px-4">
         <div className=" px-6 my-20">
-          <h1 className="uppercase font-poppins text-3xl font-bold ">
+          <h1 className="lowercase font-poppins text-3xl font-bold ">
             Random Pins
           </h1>
           <p className="text-gray-500 mt-2">

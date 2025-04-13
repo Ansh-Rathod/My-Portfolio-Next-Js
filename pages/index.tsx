@@ -4,22 +4,20 @@ import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
 import ChessStats from "@/components/chess";
 import Contact from "@/components/Contact";
-import MyGallery from "@/components/image-gallery";
 import Intro from "@/components/intro";
+import MemesIntro from "@/components/memes";
 import Skills from "@/components/Skills";
 import UsefulProducts from "@/components/useful-products";
-import WhyIBuiltThisWebsite from "@/components/why-i built-this";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { allHisProjects } from "../data/projects";
-import MemesIntro from "@/components/memes";
 
 const Home: NextPage = ({ data }: any) => {
   const router = useRouter();
 
   return (
-    <div className="font-apple">
+    <div className="font-apple tracking-tighter lowercase">
       <Head>
         <meta property="og:title" content="Ansh Rathod" />
         <meta property="og:site_name" content="Ansh Rathod" />
@@ -53,7 +51,7 @@ const Home: NextPage = ({ data }: any) => {
         <title>Ansh Rathod</title>
       </Head>
 
-      <div>
+      <div className="tracking-tighter">
         <Intro />
         {/* <div className=" max-w-[600px] mx-auto rounded-lg px-4 ">
           <Image
@@ -76,7 +74,6 @@ const Home: NextPage = ({ data }: any) => {
         >
           <GithubCard data={data} />
         </div> */}
-        <Skills />
         {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
         {/* <Views posts={posts} /> */}
         {/* <div
@@ -88,8 +85,47 @@ const Home: NextPage = ({ data }: any) => {
         {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
         <UsefulProducts />
         <AllProjects />
+        <Skills />
+        <div className="max-w-[600px] mx-auto">
+          <div className="mt-10 font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=Ansh-Rathod"
+              alt="GitHub Stats"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+
+          <div className=" font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=Ansh-Rathod"
+              alt="GitHub Streak"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <div className=" font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+            <img
+              src="http://ghchart.rshah.org/Ansh-Rathod"
+              alt="GitHub Streak"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+
+          <h2 className="px-6 font-poppins text-[24px] mt-10">
+            time spent in the text editor:
+          </h2>
+          <p className="px-6 mb-4"> From 2 jan, 2024 to today</p>
+
+          <div className=" font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+            <img
+              src="https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D23597%26project%3D%26in%3D0"
+              alt="CodeTime Shield"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+
         <ChessStats />
-        {/* <MemesIntro /> */}
+        <MemesIntro />
         {/* <WhyIBuiltThisWebsite /> */}
         <Contact />
         {/* <MyGallery /> */}

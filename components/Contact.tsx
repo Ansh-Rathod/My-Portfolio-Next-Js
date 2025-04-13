@@ -2,18 +2,17 @@ import Icon from "@/components/Icon";
 function Contact() {
   return (
     <div id="contact">
-      <div className="bg-white pt-[130px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[600px] desktop:container">
+      <div className="bg-white pt-[10px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[600px] desktop:container">
         <div className="px-2 ">
-          <h1 className="font-poppins font-bold mb-1.5 text-3xl uppercase ">
-            Contact Him
+          <h1 className="font-poppins font-bold mb-1.5 text-3xl lowercase ">
+            Contact Him:
           </h1>
           <p className="font-proxima text-slate-500 text-[18px]  mt-2">
             Leave a message on any of his social media, He&apos;ll reach out to
             you as soon as Possible.
-            <br /> Thank you! for visiting.
           </p>
         </div>
-        <div className="px-4  py-12 flex flex-row ">
+        <div className="px-4  pt-12 flex flex-row ">
           <Icon
             i={1}
             url="https://github.in/Ansh-Rathod"
@@ -49,9 +48,17 @@ function Contact() {
         </div>
       </div>
 
+      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
+        <p>Message from him:</p>
+        <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
+          <p>i share my thoughts and daily updates on X/Twitter. </p>
+          <br />
+          <p>Thank you! for visiting.</p>
+        </div>
+      </div>
       <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 px-8 border-slate-200 max-w-[600px] mx-auto text-[14px] text-slate-500">
         <p>
-          © 2024 Ansh Rathod. All rights reserved. last updated: Dec 9, 2024
+          © 2024 Ansh Rathod. All rights reserved. last updated: Apr 13, 2025
         </p>
       </div>
     </div>

@@ -14,9 +14,10 @@ module.exports = {
     },
     fontFamily: {
       apple: ['San Francisco'],
-      proxima: ['Proxima Nova'],
+      proxima: ['San Francisco'],
       poppins: ['Poppins'],
     },
+
     screens: {
       'mobile': { 'min': '100px', 'max': '500px' },
       'tablet': { 'min': '500px', 'max': '750px' },

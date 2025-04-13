@@ -32,7 +32,7 @@ const NavbarItem = (props: any) => {
   return (
     <Link href={`${props.href}`} scroll={true}>
       <li
-        className="uppercase cursor-pointer mobile:text-[14px] tablet:text-[14px] text-[16px]
+        className="lowercase cursor-pointer mobile:text-[14px] tablet:text-[14px] text-[16px]
        hover:text-blue-700 mx-3 tablet:px-1 my-1 text-gray-500 hover:border-b-blue-700 hover:border-b"
       >
         {props.name}

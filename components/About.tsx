@@ -7,12 +7,12 @@ const About = () => {
       className="bg-white py-[100px] w-screen max-w-full desktop:container"
     >
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3">
-        <div className="uppercase px-6 ">
+        <div className=" px-6 ">
           <h1 className="font-poppins text-3xl font-bold ">HIS Story</h1>
-          <p className="text-gray-500">He wrote this section BTW</p>
+          <p className="text-gray-500 text-[18px]">He wrote this section BTW</p>
         </div>
 
-        <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500">
+        <div className="mt-10 font-proxima  max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
           <p>
             Hello! My name is <b>Ansh Rathod</b>, I&apos;m a self-taught
             full-stack developer who wrote the first line of code in the 2020

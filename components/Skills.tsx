@@ -5,34 +5,34 @@ function Skills() {
       id="skills"
       className="py-[50px] w-screen max-w-full desktop:container"
     >
-      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-5  py-2">
-        <h1 className="font-poppins uppercase text-3xl font-bold ">
+      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-6  py-2">
+        <h1 className="font-poppins lowercase text-3xl font-bold ">
           What tech skills does he have?
         </h1>
-        <p className="text-[16px] font-apple  text-gray-500 mt-4">
+        <p className="font-apple tracking-tighter lowercase   mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
           He knows these listed things but mostly uses Flutter, postgres, and
           Nextjs here and there for his apps. uses AI for writing code and
           figures out the code very quickly.
         </p>
         <br />
-        <p className="text-[16px] font-apple  text-gray-500 ">
+        <p className="font-apple tracking-tighter lowercase  text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
           Sometimes he plays with the LLMS, Sometimes try to build a game with
           godot.
         </p>
       </div>
       <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">
-          <h1 className="font-poppins uppercase text-3xl font-bold mobile:text-center">
+          <h1 className="font-poppins lowercase text-3xl font-bold mobile:text-center">
             Skills
           </h1>
         </div>
 
         <div
           className="text-[18px] grid grid-cols-4 mini-laptop:grid-cols-2
-           tablet:grid-cols-2 mobile:grid-cols-2 mobile:pl-8"
+           tablet:grid-cols-2 mobile:grid-cols-2 mobile:pl-4"
         >
           <div className="mr-14 mb-5">
-            <h1 className="font-apple font-bold tracking-wide mb-3 uppercase text-[16px]">
+            <h1 className="font-apple  lowercase font-bold tracking-wide mb-3  text-[18px] text-slate-900 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
               Languages
             </h1>
             <ListItem name="dart" i={1} />
@@ -43,7 +43,7 @@ function Skills() {
             <ListItem name="css" i={6} />
           </div>
           <div className="mr-14 tablet:mr-0 mobile:mr-0 mb-5">
-            <h1 className="font-apple font-bold tracking-wide mb-3 uppercase text-[16px]">
+            <h1 className="font-apple tracking-tighter  font-bold  mb-3 lowercase text-[18px] text-slate-900 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
               Frameworks
             </h1>
             <ListItem name="flutter" i={1} />
@@ -55,7 +55,7 @@ function Skills() {
             <ListItem name="python flask" i={1} />
           </div>
           <div className="mr-14 mb-5">
-            <h1 className="font-apple font-bold tracking-wide mb-3 uppercase text-[16px]">
+            <h1 className="font-apple tracking-tighter lowercase font-bold  mb-3 text-[18px] text-slate-900 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
               Databases
             </h1>
             <ListItem name="PostgreSql" i={1} />
@@ -66,7 +66,7 @@ function Skills() {
             <ListItem name="Sqlite" i={1} />
           </div>
           <div className="mr-14 tablet:mr-0 mobile:mr-0 mb-5">
-            <h1 className="font-apple font-bold tracking-wide mb-3 uppercase text-[16px]">
+            <h1 className="font-apple tracking-tighter  font-bold  mb-3 lowercase text-[18px] text-slate-900 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
               Tools
             </h1>
             <ListItem name="docker" i={1} />

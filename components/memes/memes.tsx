@@ -79,7 +79,7 @@ function MemesComponent() {
               whileInView={"onscreen"}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ delay: 3 }}
-              className="font-poppins pb-1 text-3xl uppercase text-black text-center"
+              className="font-poppins pb-1 text-3xl lowercase text-black text-center"
             >
               Memes i made
             </motion.h1>
@@ -133,7 +133,7 @@ function MemesComponent() {
           <div className="max-w-[1000px] m-auto p-2 pt-6 tablet:max-w-[550px] ">
             <div
               onClick={() => setselectedTag("latest")}
-              className="flex flex-row items-center justify-center cursor-pointer uppercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
+              className="flex flex-row items-center justify-center cursor-pointer lowercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
             >
               {search != "latest" && (
                 <i className="fa-solid fa-xmark px-2 "></i>
@@ -141,7 +141,7 @@ function MemesComponent() {
               {selectedTag}
             </div>
 
-            <p className="px-2 text-xs uppercase pb-10 text-slate-500">
+            <p className="px-2 text-xs lowercase pb-10 text-slate-500">
               <strong>Note</strong>: here all memes are created by me and
               opinions are totally mine. If you find any meme offensive, please
               tap the <span className="underline">view on twitter</span> button

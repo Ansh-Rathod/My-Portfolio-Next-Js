@@ -17,21 +17,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <link
           rel="preload"
-          href="/sf_pro_text_regular.ttf"
+          href="/fonts/SpaceMono-Regular.ttf"
           as="font"
           crossOrigin=""
           type="font/ttf"
         />
+
         <link
           rel="preload"
-          href="/Proxima Nova.ttf"
-          as="font"
-          crossOrigin=""
-          type="font/ttf"
-        />
-        <link
-          rel="preload"
-          href="/Poppins-Bold.ttf"
+          href="/fonts/Poppins-Bold.ttf"
           as="font"
           crossOrigin=""
           type="font/ttf"
