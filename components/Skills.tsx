@@ -3,9 +3,9 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="py-[50px] w-screen max-w-full desktop:container"
+      className="py-[50px] w-screen max-w-full desktop:container "
     >
-      <div className="mx-auto max-w-[600px] mb-20  px-6 mobile:px-6  py-2">
+      <div className="mx-auto max-w-[600px] mb-20     py-2 px-6">
         <h1 className="font-poppins lowercase text-3xl font-bold ">
           What tech skills does he have?
         </h1>
@@ -20,7 +20,7 @@ function Skills() {
           godot.
         </p>
       </div>
-      <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto mobile:px-3">
+      <div className="flex flex-row mobile:flex-col justify-center max-w-[900px] mx-auto px-6 ">
         <div className="w-[150px] mx-4 mobile:mb-14 mobile:w-full mobile:mx-0">
           <h1 className="font-poppins lowercase text-3xl font-bold mobile:text-center">
             Skills
@@ -29,7 +29,7 @@ function Skills() {
 
         <div
           className="text-[18px] grid grid-cols-4 mini-laptop:grid-cols-2
-           tablet:grid-cols-2 mobile:grid-cols-2 mobile:pl-4"
+           tablet:grid-cols-2 mobile:grid-cols-2 mobile:pl-4 "
         >
           <div className="mr-14 mb-5">
             <h1 className="font-apple  lowercase font-bold tracking-wide mb-3  text-[18px] text-slate-900 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
@@ -75,8 +75,8 @@ function Skills() {
           </div>
         </div>
       </div>
-      <div className="max-w-[600px] mx-auto">
-        <div className="mt-10 font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+      <div className="max-w-[600px] mx-auto px-6">
+        <div className="mt-10 font-proxima text-[17px] max-w-[600px]   py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
           <img
             src="https://github-readme-stats.vercel.app/api?username=Ansh-Rathod"
             alt="GitHub Stats"
@@ -84,7 +84,7 @@ function Skills() {
           />
         </div>
 
-        <div className=" font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+        <div className=" font-proxima text-[17px] max-w-[600px]   py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
           <img
             src="https://github-readme-streak-stats.herokuapp.com/?user=Ansh-Rathod"
             alt="GitHub Streak"
@@ -92,16 +92,14 @@ function Skills() {
           />
         </div>
 
-        <h2 className="px-6 font-poppins text-[24px] mt-10">
-          time spent in the code editor:
-        </h2>
-        <p className="px-6 mb-4"> From 2 jan, 2024 to today</p>
+        <h2 className=" text-[20px] mt-10">time spent in the code editor:</h2>
+        <p className=" mb-4"> (From 2 jan, 2024 to today)</p>
 
-        <div className=" font-proxima text-[17px] max-w-[600px] px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
+        <div className=" font-proxima text-[17px] max-w-[600px]   py-2 tablet:w-full mobile:w-full text-gray-500 mx-auto">
           <img
             src="https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D23597%26project%3D%26in%3D0"
             alt="CodeTime Shield"
-            className="w-full h-auto rounded-lg"
+            className="w-[70%] h-auto rounded-lg"
           />
         </div>
       </div>

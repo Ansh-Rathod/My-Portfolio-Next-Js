@@ -18,7 +18,7 @@ function NavBar() {
       </Link>
 
       <div className="py-4 mobile:border-y ">
-        <ul className="flex flex-row justify-center px-14 tablet:px-8 mobile:px-4">
+        <ul className="flex flex-row justify-center px-14 tablet:px-8 ">
           <NavbarItem name="home" href="/" />
           <NavbarItem name="Memes" href="/memes" />
           <NavbarItem name="connect" href="#connect" />

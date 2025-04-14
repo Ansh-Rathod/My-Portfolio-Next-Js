@@ -6,8 +6,8 @@ function AllProjects() {
     <div>
       <div className="backdrop-blur-[100px] bg-white/60 ">
         <div className="desktop:container">
-          <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
-            <div className="py-10 px-4 max-w-[600px] mx-auto">
+          <div className="max-w-[1000px] m-auto  tablet:max-w-[550px] px-6 ">
+            <div className="py-10 max-w-[600px] mx-auto">
               <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
                 OPEN SOURCE APPS HE BUILT BEFORE 2022
               </h1>
@@ -22,7 +22,7 @@ function AllProjects() {
                 app.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
+            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1  ">
               {projects.map((project: any, i: number) => (
                 <ProjectComponent key={project.name} project={project} i={i} />
               ))}
@@ -30,7 +30,7 @@ function AllProjects() {
           </div>
         </div>
       </div>
-      {/* <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+      {/* <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6  py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>

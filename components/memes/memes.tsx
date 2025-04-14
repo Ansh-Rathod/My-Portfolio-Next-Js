@@ -147,7 +147,7 @@ function MemesComponent() {
               tap the <span className="underline">view on twitter</span> button
               and share your thoughts.
             </p>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
+            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 ">
               {selectedMemes.map((meme: any, i: number) => (
                 <Meme
                   key={meme.title}

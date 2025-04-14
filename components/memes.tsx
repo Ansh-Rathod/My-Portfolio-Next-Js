@@ -4,7 +4,7 @@ import HorizontalScroll from "./horizontal-scroll";
 function MemesIntro() {
   return (
     <div>
-      <div className="py-20 px-4 max-w-[600px] mx-auto">
+      <div className="py-20 px-6 max-w-[600px] mx-auto">
         <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
           TECH RELATED MEMEs HE MADE
         </h1>
@@ -67,7 +67,7 @@ function MemesIntro() {
             </div>
           ))}
       </HorizontalScroll>
-      <div className="mb-10 mt-2 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+      <div className="mb-10 mt-2 font-proxima text-[17px] max-w-[600px]  px-6  py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>

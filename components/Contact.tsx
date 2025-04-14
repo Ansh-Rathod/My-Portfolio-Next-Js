@@ -3,8 +3,8 @@ import Image from "next/image";
 function Contact() {
   return (
     <div id="contact">
-      <div className="bg-white pt-[10px] pb-[60px] tablet:px-8 mini-laptop:px-8 laptop:px-8  mobile:px-4 border-slate-200 m-auto max-w-[600px] desktop:container">
-        <div className="px-2 ">
+      <div className="bg-white pt-[10px] pb-[60px]   border-slate-200 m-auto max-w-[600px] desktop:container">
+        <div className="px-6">
           <h1 className="font-poppins font-bold mb-1.5 text-3xl lowercase ">
             Contact Him:
           </h1>
@@ -13,7 +13,7 @@ function Contact() {
             you as soon as Possible.
           </p>
         </div>
-        <div className="px-4  pt-12 flex flex-row ">
+        <div className="px-6  pt-12 flex flex-row ">
           <Icon
             i={1}
             url="https://github.in/Ansh-Rathod"
@@ -49,7 +49,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
+      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6  py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
           <p>

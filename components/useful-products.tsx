@@ -5,10 +5,10 @@ import Link from "next/link";
 function UsefulProducts() {
   return (
     <div id="projects" className="bg-no-repeat  bg-cover">
-      <div className="backdrop-blur-[100px] bg-white/60 pb-24">
-        <div className="desktop:container">
-          <div className="max-w-[1000px] m-auto p-2 tablet:max-w-[550px] ">
-            <div className="py-20 px-4 max-w-[600px] mx-auto">
+      <div className="backdrop-blur-[100px] bg-white/60 pb-24 ">
+        <div className="desktop:container ">
+          <div className="max-w-[1000px] m-auto  tablet:max-w-[550px] px-6 ">
+            <div className="py-20  max-w-[600px] mx-auto">
               <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
                 useful Products he built
               </h1>
@@ -24,12 +24,12 @@ function UsefulProducts() {
                 app.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
+            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1  ">
               {usefulProjects.map((project: any, i: number) => (
                 <ProjectComponent key={project.name} project={project} i={i} />
               ))}
             </div>
-            <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+            <div className="mt-10 font-proxima text-[17px] max-w-[600px]   py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
               <p>Message from him:</p>
               <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
                 <p>
@@ -42,7 +42,7 @@ function UsefulProducts() {
               </div>
             </div>
           </div>
-          <div className="py-20 px-4 max-w-[600px] mx-auto mobile:px-6">
+          <div className="py-20 max-w-[600px] mx-auto px-6">
             <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
               few Good ones after 2022
             </h1>
@@ -59,8 +59,8 @@ function UsefulProducts() {
               burned out while building it.
             </p>
           </div>
-          <div className="max-w-[1000px] mx-auto">
-            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
+          <div className="max-w-[1000px] mx-auto px-6">
+            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1  ">
               {newProjects.map((project: any, i: number) => (
                 <ProjectComponent2 key={project.name} project={project} i={i} />
               ))}
@@ -150,7 +150,7 @@ function ProjectComponent(props: any) {
       <div
         className={`select-none cursor-pointer items-center 
        font-apple tracking-tighter lowercase  flex flex-row  hover:border-blue-600 bg-gray-100 
-       px-2 rounded-lg `}
+        rounded-lg `}
       >
         {/* <div className="w-full h-[200px] mobile:h-[300px] tablet:h-[150px] relative rounded-lg ">
           <Image

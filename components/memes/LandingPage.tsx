@@ -28,7 +28,7 @@ const Intro = () => (
         "
           >
             <div className="py-4 ">
-              <ul className="flex flex-row items-end  px-14 tablet:px-8 mobile:px-4">
+              <ul className="flex flex-row items-end  px-14 tablet:px-8 ">
                 <Link href={`/`} scroll={true}>
                   <li
                     className=" cursor-pointer mobile:text-[14px] tablet:text-[14px]
