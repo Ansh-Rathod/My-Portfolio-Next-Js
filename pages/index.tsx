@@ -9,6 +9,7 @@ import MemesIntro from "@/components/memes";
 import Skills from "@/components/Skills";
 import UsefulProducts from "@/components/useful-products";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { allHisProjects } from "../data/projects";
@@ -53,18 +54,6 @@ const Home: NextPage = ({ data }: any) => {
 
       <div className="tracking-tighter">
         <Intro />
-        {/* <div className=" max-w-[600px] mx-auto rounded-lg px-4 ">
-          <Image
-            src="/pins/wall15.jpg"
-            alt="image"
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
-            objectFit="cover"
-            className="rounded-lg "
-          />
-        </div> */}
 
         <About />
         {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
@@ -128,6 +117,21 @@ const Home: NextPage = ({ data }: any) => {
         <MemesIntro />
         {/* <WhyIBuiltThisWebsite /> */}
         <Contact />
+        <h2 className="px-6 font-poppins text-[24px] mt-10 max-w-[600px] mx-auto">
+          and
+        </h2>
+        <div className=" max-w-[600px] mx-auto rounded-lg px-4 mb-10 ">
+          <Image
+            src="/pins/wall15.jpg"
+            alt="image"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+            objectFit="cover"
+            className="rounded-lg "
+          />
+        </div>
         {/* <MyGallery /> */}
         <Model
           isOpen={!!router.query.slug}
