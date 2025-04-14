@@ -125,11 +125,11 @@ export default function RatingChart({ games, username }: Props) {
           />
           <Tooltip content={<CustomTooltip />} />
           <Line
-            type="linear"
+            type="monotone"
             dataKey="yourRating"
             name="Your Rating"
-            stroke="#0B82FE"
-            strokeWidth={2}
+            stroke="#64758C"
+            strokeWidth={1.5}
             dot={({ cx, cy, payload }: any) => {
               let fill = "#4f46e5";
               if (payload.result === "Win") fill = "#16a34a"; // green
@@ -140,9 +140,9 @@ export default function RatingChart({ games, username }: Props) {
                 <circle
                   cx={cx}
                   cy={cy}
-                  r={5}
+                  r={4}
                   fill={fill}
-                  stroke="white"
+                  stroke="#64758C"
                   strokeWidth={1}
                 />
               );

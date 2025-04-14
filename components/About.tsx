@@ -1,11 +1,58 @@
 import Link from "next/link";
 
+function calculateAge(year: number, month: number, day: number) {
+  const today = new Date();
+  const birthDate = new Date(year, month - 1, day);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+}
+
 const About = () => {
   return (
     <div
       id="about"
       className="bg-white py-[100px] w-screen max-w-full desktop:container"
     >
+      {" "}
+      <div className=" px-6 mobile:px-4 max-w-[600px] mx-auto mb-20">
+        <h1 className="font-poppins text-3xl font-bold mb-5 ">Basic Info:</h1>
+        <p className="text-gray-500 text-[18px]">
+          Name: Ansh Rathod
+          <br />
+          Other names given by family: appii
+          <br />
+          born on: 2 may 2003
+          <br />
+          Age: {calculateAge(2003, 5, 2)}
+          <br />
+          Location: 127.0.0.1
+          <br />
+          weight: 77 kg
+          <br />
+          height: 180 cm
+          <br />
+          goal: to build digital products that will help people.
+          <br />
+          fav phrase: nerd today, boss tomorrow!
+          <br />
+          writes code on: 13 inch Macbook air (2020) 16GB RAM, 256 SSD, M1
+          Chip.(no monitors)
+          <br />
+          recevices notifications on: iPhone 16 pro (2025)
+          <br />
+          subscriptions he pays: Spotify Premium, chatgpt, grok, twitter(x),
+          digital ocean droplet, vercel
+          <br />
+          fav apps he uses: Hevy, strava, screen studio, warp
+          <br />
+          fav exercise: bench press
+          <br />
+        </p>
+      </div>
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3">
         <div className=" px-6 mobile:px-4 ">
           <h1 className="font-poppins text-3xl font-bold ">HIS Story</h1>
