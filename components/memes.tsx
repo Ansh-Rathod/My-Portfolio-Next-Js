@@ -73,11 +73,10 @@ function MemesIntro() {
           <p>
             back in 2023 when i had humour,[now these memes are outdated maybe]
             <br />
-            <br />I believe memes are the better explainers than some
-            professors. memes are supposed to be relatable to the audience.
+            <br />I believe Sometimes, a meme teaches more than a lecture. When
+            it’s relatable, it hits differen. one meme can say what a
+            thousand-word essay tries to
           </p>
-          <br />
-          <p>one meme speaks thousand of words than a whole big paragraph.</p>
         </div>
       </div>
       <div className="pb-20"></div>

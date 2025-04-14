@@ -1,4 +1,5 @@
 import Icon from "@/components/Icon";
+import Image from "next/image";
 function Contact() {
   return (
     <div id="contact">
@@ -51,11 +52,34 @@ function Contact() {
       <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6 mobile:px-4 py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
         <p>Message from him:</p>
         <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
-          <p>i share my thoughts and daily updates on X/Twitter. </p>
+          <p>
+            i usually share my thoughts and daily updates on X (Twitter). that’s
+            the best place to reach me!
+          </p>
+
           <br />
-          <p>Thank you! for visiting.</p>
+
+          <p>and one last thing:</p>
+          <div className="rounded-lg mt-2">
+            <Image
+              src="/pins/wall15.jpg"
+              alt="image"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+              objectFit="cover"
+              className="rounded-lg "
+            />
+          </div>
         </div>
       </div>
+
+      <div className="max-w-[600px] mx-auto mb-10 text-center">
+        <br />
+        <p>Thank you! for visiting.</p>
+      </div>
+
       <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 px-8 border-slate-200 max-w-[600px] mx-auto text-[14px] text-slate-500">
         <p>
           © 2024 Ansh Rathod. All rights reserved. last updated: Apr 13, 2025

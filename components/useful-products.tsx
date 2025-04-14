@@ -14,10 +14,14 @@ function UsefulProducts() {
               </h1>
 
               <p className="font-proxima  mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
-                The actual useful products he built which{" "}
+                The actual useful products he built, which{" "}
                 <span className="bg-slate-100"> generates revenue</span> for him
-                are listed below. click on the card to view some images and
-                information about the app.
+                are listed below.
+              </p>
+              <br />
+              <p className="text-[16px] text-slate-500">
+                click on the card to view some images and information about the
+                app.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">
@@ -29,12 +33,12 @@ function UsefulProducts() {
               <p>Message from him:</p>
               <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
                 <p>
-                  I design all my apps, My one rule is to build super simple
-                  apps with best possible user exprience which any person can
-                  use.
+                  I design all my apps with one rule: keep it super simple and
+                  deliver the best possible user experience; something anyone
+                  can use.
                 </p>
                 <br />
-                <p>New product is dropping soon.</p>
+                <p>New product dropping soon.</p>
               </div>
             </div>
           </div>
@@ -46,10 +50,13 @@ function UsefulProducts() {
             <p className="font-proxima mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
               After 2022 as he got more exprience, he started to get picky with
               what apps to build. he won 1st runner up prices in supabase launch
-              week hackathon with that Tweet schedular desktop app in may 2023.
-              but after in july 2023 he started building graphic design tool and
-              spending months on building that tool but then he burn out while
-              building it.
+              week hackathon with Tweet schedular desktop app(schedurio) in may
+              2023.
+            </p>
+            <p className="font-proxima mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
+              after in july 2023 he started building graphic design
+              tool(craftor) and was spending months on building it then he
+              burned out while building it.
             </p>
           </div>
           <div className="max-w-[1000px] mx-auto">

@@ -14,8 +14,12 @@ function AllProjects() {
 
               <p className="font-proxima text-slate-500 text-[18px] mt-4">
                 He built some open-source fully functional apps in order to
-                learn and improve the building skills. click on the card to view
-                some images and information about the app.
+                learn and improve the building skills.
+              </p>
+              <br />
+              <p className="font-proxima text-slate-500 text-[14px] mt-4">
+                click on the card to view some images and information about the
+                app.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 mobile:px-4">

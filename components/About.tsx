@@ -7,7 +7,7 @@ const About = () => {
       className="bg-white py-[100px] w-screen max-w-full desktop:container"
     >
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3">
-        <div className=" px-6 ">
+        <div className=" px-6 mobile:px-4 ">
           <h1 className="font-poppins text-3xl font-bold ">HIS Story</h1>
           <p className="text-gray-500 text-[18px]">He wrote this section BTW</p>
         </div>
