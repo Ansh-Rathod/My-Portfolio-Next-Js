@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script
         src="/track.js"
         async
-        data-website-id="dedb1572-40b4-419d-aae4-4bdac9067f2b"
+        data-website-id="197b8706-1f1c-4b81-a7a7-1af79df25d6c"
       ></Script>
 
       <Component {...pageProps} />
