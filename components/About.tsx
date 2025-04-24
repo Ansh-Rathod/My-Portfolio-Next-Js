@@ -31,9 +31,9 @@ const About = () => {
           <br />
           Location: 127.0.0.1
           <br />
-          weight: 77 kg
+          weight: ~77 kg
           <br />
-          height: 180 cm
+          height: 178 cm (5&apos;10&quot;)
           <br />
           goal: to build digital products that will help people.
           <br />
