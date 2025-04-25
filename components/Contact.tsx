@@ -82,7 +82,7 @@ function Contact() {
 
       <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 px-8 border-slate-200 max-w-[600px] mx-auto text-[14px] text-slate-500">
         <p>
-          © 2024 Ansh Rathod. All rights reserved. last updated: Apr 13, 2025
+          © 2025 Ansh Rathod. All rights reserved. last updated: Apr 25, 2025
         </p>
       </div>
     </div>

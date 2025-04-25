@@ -21,35 +21,50 @@ const About = () => {
       <div className=" px-6  max-w-[600px] mx-auto mb-20">
         <h1 className="font-poppins text-3xl font-bold mb-5 ">Basic Info:</h1>
         <p className="text-gray-500 text-[18px]">
-          Name: Ansh Rathod
+          <span className="text-black font-bold">Name:</span> Ansh Rathod
           <br />
-          Other names given by family: appii
+          <span className="text-black font-bold">
+            Other names given by family:
+          </span>{" "}
+          appii
           <br />
-          born on: 2 may 2003
+          <span className="text-black font-bold">Born on:</span> 2 may 2003
           <br />
-          Age: {calculateAge(2003, 5, 2)}
+          <span className="text-black font-bold">Age:</span>{" "}
+          {calculateAge(2003, 5, 2)}
           <br />
-          Location: 127.0.0.1
+          <span className="text-black font-bold">Location:</span> 127.0.0.1
           <br />
-          weight: ~77 kg
+          <span className="text-black font-bold">Weight:</span> ~77 kg
           <br />
-          height: 178 cm (5&apos;10&quot;)
+          <span className="text-black font-bold">Height:</span> 178 cm
+          (5&apos;10&quot;)
           <br />
-          goal: to build digital products that will help people.
+          <span className="text-black font-bold">Goal:</span> to build digital
+          products that will help people.
           <br />
-          fav phrase: nerd today, boss tomorrow!
+          <span className="text-black font-bold">Fav phrase:</span> nerd today,
+          boss tomorrow!
           <br />
-          writes code on: 13 inch Macbook air (2020) 16GB RAM, 256 SSD, M1
-          Chip.(no monitors)
+          <span className="text-black font-bold">Writes code on:</span> 13 inch
+          Macbook air (2020) 16GB RAM, 256 SSD, M1 Chip.(no monitors)
           <br />
-          recevices notifications on: iPhone 16 pro (2025)
+          <span className="text-black font-bold">
+            Receives notifications on:
+          </span>{" "}
+          iPhone 16 pro (2025)
           <br />
-          subscriptions he pays: Spotify Premium, chatgpt, grok, twitter(x),
-          digital ocean droplet, vercel
+          <span className="text-black font-bold">
+            Subscriptions he pays:
+          </span>{" "}
+          Spotify Premium, chatgpt, grok, twitter(x), digital ocean droplet,
+          vercel
           <br />
-          fav apps he uses: Hevy, strava, screen studio, warp
+          <span className="text-black font-bold">Fav apps he uses:</span> Hevy,
+          strava, screen studio, warp
           <br />
-          fav exercise: bench press
+          <span className="text-black font-bold">Fav exercise:</span> bench
+          press
           <br />
         </p>
       </div>

@@ -150,7 +150,7 @@ function ProjectComponent(props: any) {
       <div
         className={`select-none cursor-pointer items-center 
        font-apple tracking-tighter lowercase  flex flex-row  hover:border-blue-600 bg-gray-100 
-        rounded-lg `}
+        rounded-lg px-2`}
       >
         {/* <div className="w-full h-[200px] mobile:h-[300px] tablet:h-[150px] relative rounded-lg ">
           <Image

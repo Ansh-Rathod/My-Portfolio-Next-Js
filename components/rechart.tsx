@@ -128,8 +128,8 @@ export default function RatingChart({ games, username }: Props) {
             type="monotone"
             dataKey="yourRating"
             name="Your Rating"
-            stroke="#64758C"
-            strokeWidth={1.5}
+            stroke="#0B82FE"
+            strokeWidth={3}
             dot={({ cx, cy, payload }: any) => {
               let fill = "#4f46e5";
               if (payload.result === "Win") fill = "#16a34a"; // green
@@ -142,8 +142,8 @@ export default function RatingChart({ games, username }: Props) {
                   cy={cy}
                   r={4}
                   fill={fill}
-                  stroke="#64758C"
-                  strokeWidth={1}
+                  stroke="#fff"
+                  strokeWidth={2}
                 />
               );
             }}
