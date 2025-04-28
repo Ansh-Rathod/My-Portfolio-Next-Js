@@ -94,7 +94,7 @@ function ChessStats() {
   return (
     <div className="mx-auto max-w-[600px] mt-20">
       <div className=" px-6 ">
-        <h1 className="lowercase font-poppins text-3xl font-bold ">
+        <h1 className="lowercase font-poppins text-3xl font-bold mb-4">
           HIS Chess stats ♟️♔♕♖♘
         </h1>
         <p className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
