@@ -120,7 +120,7 @@ const CustomActivityCalendar: React.FC = () => {
         </h1>
         <p className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
           he tracks his fitness quests using hevy/strava app, and here are the
-          some stats that keeps him consistance and moving.
+          some stats that keeps him consistent and moving.
         </p>
       </div>
       <div className="p-6 mobile:p-2 bg-gray-100 rounded-lg">
