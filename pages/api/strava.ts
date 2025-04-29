@@ -13,6 +13,7 @@ async function getFreshAccessToken(refresh_token: string) {
     }),
   });
 
+  console.log(await response.json());
   if (!response.ok) {
     throw new Error(`Failed to refresh token: ${response.statusText}`);
   }
@@ -91,7 +92,6 @@ export default async function handler(
 
     const time_slot = await getTimeSlot();
     const { start, end } = req.query;
-    console.log(req.query);
     // Check if we've already made a request for this time slot today
     if (await hasRequestedToday(time_slot)) {
       // Fetch activites from PocketBase
@@ -121,10 +121,9 @@ export default async function handler(
 
       access_token = newToken.access_token;
     }
-
     // Fetch activites from Strava
     const activitiesRes = await fetch(
-      "https://www.strava.com/api/v3/athlete/activites",
+      "https://www.strava.com/api/v3/athlete/activities",
       {
         headers: { Authorization: `Bearer ${access_token}` },
       }
