@@ -13,7 +13,6 @@ async function getFreshAccessToken(refresh_token: string) {
     }),
   });
 
-  console.log(await response.json());
   if (!response.ok) {
     throw new Error(`Failed to refresh token: ${response.statusText}`);
   }
@@ -130,7 +129,6 @@ export default async function handler(
     );
 
     if (!activitiesRes.ok) {
-      console.log(await activitiesRes.json());
       throw new Error(`Strava API error: ${activitiesRes.statusText}`);
     }
 
