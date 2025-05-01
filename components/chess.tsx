@@ -53,7 +53,7 @@ function ChessStats() {
   const fetchRecentGames = async () => {
     try {
       const response = await axios.get(
-        `https://lichess.org/api/games/user/Anshrathod999?max=20&rated=true&analysed=false&clocks=false`,
+        `https://lichess.org/api/games/user/Anshrathod999?max=20&perfType=bullet&moves=false&clocks=false&sort=dateDesc`,
         {
           headers: {
             Accept: "application/x-ndjson",

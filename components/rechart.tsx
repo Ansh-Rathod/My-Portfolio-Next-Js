@@ -86,6 +86,11 @@ export default function RatingChart({ games, username }: Props) {
               <ArrowBigDownDash className="inline-block h-4 w-4 ml-1 text-red-500" />
             )}
           </p>
+          <p
+            className={yourRatingDiff >= 0 ? "text-green-600" : "text-red-500"}
+          >
+            new rating: {yourRating + yourRatingDiff}
+          </p>
 
           <p>method: {method}</p>
 
