@@ -128,6 +128,27 @@ export const projects: any = [
 
 export const usefulProjects: any = [
   {
+    name: "persisto",
+    madeWith: "Flutter, sqlite, nextjs",
+    date: "5 may 2025",
+    type: "vertical",
+    long_description:
+      "<div>build a life you're proud of, one routine at a time. whether you're planning your day, staying consistent, or reflecting on what matters, persisto provides the tools you need to stay focused, mindful, and in control of your progress.</div>",
+    description: "small wins, every day!",
+    url: "https://persis.to",
+    images: [
+      "persisto-1.png",
+      "persisto-2.png",
+      "persisto-3.png",
+      "persisto-4.png",
+      "persisto-5.png",
+      "persisto-6.png",
+      "persisto-7.png",
+      "persisto-8.png",
+    ],
+    image: "persisto.png",
+  },
+  {
     name: "Pimosa",
     madeWith: "Flutter, sqlite, nextjs, FFmpeg, ImageMagick",
     date: "27 July 2024",
