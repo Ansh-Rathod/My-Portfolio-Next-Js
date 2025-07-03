@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Script
-        src="/track.js"
-        async
-        data-website-id="197b8706-1f1c-4b81-a7a7-1af79df25d6c"
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="c0b35b73-97bb-431d-b0da-dcb3c4582bca"
       ></Script>
 
       <Component {...pageProps} />
