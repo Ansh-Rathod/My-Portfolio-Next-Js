@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && wrangler dev",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -30,6 +33,7 @@
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.4.0",
     "@types/marked": "^5.0.0",
     "@types/node": "^18.7.15",
     "@types/react": "18.0.18",
@@ -39,6 +43,7 @@
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
-    "typescript": "4.8.2"
+    "typescript": "4.8.2",
+    "wrangler": "^4.23.0"
   }
 }
