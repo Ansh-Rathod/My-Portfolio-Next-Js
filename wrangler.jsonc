@@ -3,10 +3,19 @@
   "main": ".open-next/worker.js",
   "name": "my-portfolio-next-js",
   "compatibility_date": "2024-12-30",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "kv_namespaces": []
+  "kv_namespaces": [],
+  "vars": {
+    "STRAVA_CLIENT_ID": 157354,
+    "STRAVA_CLIENT_SECRET": "f84aceb93d122518791bccffcc1a2d6a3b1e2d48",
+    "POCKETBASE_API": "https://four-firm.pockethost.io/",
+    "DBUSERNAME": "anshrathodfr@gmail.com",
+    "DBPASSWORD": "2EKYEQBFcjp4exb"
+  }
 }

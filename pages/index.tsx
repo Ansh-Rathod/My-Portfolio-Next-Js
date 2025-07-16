@@ -77,7 +77,7 @@ const Home: NextPage = ({ data }: any) => {
         <Skills />
         <ActivityCalendar />
 
-        <ChessStats />
+        {/* <ChessStats /> */}
         <MemesIntro />
         {/* <WhyIBuiltThisWebsite /> */}
         <Contact />
