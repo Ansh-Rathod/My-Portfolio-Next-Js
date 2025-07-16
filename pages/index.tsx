@@ -53,7 +53,6 @@ const Home: NextPage = ({ data }: any) => {
 
       <div className="tracking-tighter">
         <Intro />
-
         <About />
         {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
         {/* <div
@@ -74,14 +73,12 @@ const Home: NextPage = ({ data }: any) => {
         <UsefulProducts />
         <AllProjects />
         <Skills />
-
         <ActivityCalendar />
-
         {/* <ChessStats /> */}
+
         <MemesIntro />
         {/* <WhyIBuiltThisWebsite /> */}
         <Contact />
-
         {/* <MyGallery /> */}
         <Model
           isOpen={!!router.query.slug}
