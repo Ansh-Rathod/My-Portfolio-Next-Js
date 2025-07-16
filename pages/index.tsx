@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 import About from "@/components/About";
 import AllProjects from "@/components/AllProjects";
 import ActivityCalendar from "@/components/calender";
-import ChessStats from "@/components/chess";
 import Contact from "@/components/Contact";
 import Intro from "@/components/intro";
 import MemesIntro from "@/components/memes";
@@ -75,6 +74,7 @@ const Home: NextPage = ({ data }: any) => {
         <UsefulProducts />
         <AllProjects />
         <Skills />
+
         <ActivityCalendar />
 
         {/* <ChessStats /> */}
