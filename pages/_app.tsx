@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import "../styles/globals.css";
-import { spaceMono } from "./fonts";
+import spaceMono from "./fonts";
 
 export const textBody = "text-[18px]    text-slate-500 ";
 
