@@ -2,77 +2,68 @@ import { newProjects, usefulProjects } from "data/projects";
 
 import Image from "next/image";
 import Link from "next/link";
-function UsefulProducts() {
+import { message, smallContainer, textBody, textDes, textH1 } from "pages/_app";
+export default function UsefulProducts() {
   return (
     <div id="projects" className="bg-no-repeat  bg-cover">
-      <div className="backdrop-blur-[100px] bg-white/60 pb-24 ">
-        <div className="desktop:container ">
-          <div className="max-w-[1000px] m-auto  tablet:max-w-[550px] px-6 ">
-            <div className="py-20  max-w-[600px] mx-auto">
-              <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
-                useful Products he built
-              </h1>
+      <div className={`my-10 ${smallContainer} border-t py-10`}>
+        <h1 className={`pb-1  text-black ${textH1}`}>
+          useful Products he built
+        </h1>
 
-              <p className="font-proxima  mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
-                The actual useful products he built, which{" "}
-                <span className="bg-slate-100"> generates revenue</span> for him
-                are listed below.
-              </p>
-              <br />
-              <p className="text-[16px] text-slate-500">
-                click on the card to view some images and information about the
-                app.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1  ">
-              {usefulProjects.map((project: any, i: number) => (
-                <ProjectComponent key={project.name} project={project} i={i} />
-              ))}
-            </div>
-            <div className="mt-10 font-proxima text-[17px] max-w-[600px]   py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
-              <p>Message from him:</p>
-              <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
-                <p>
-                  I design all my apps with one rule: keep it super simple and
-                  deliver the best possible user experience; something anyone
-                  can use.
-                </p>
-                <br />
-                <p>New product dropping soon.</p>
-              </div>
-            </div>
-          </div>
-          <div className="py-20 max-w-[600px] mx-auto px-6">
-            <h1 className="font-poppins pb-1 text-3xl lowercase text-black ">
-              few Good ones after 2022
-            </h1>
+        <p className={`${textBody} mt-4 `}>
+          The actual useful products he built, which{" "}
+          <span className="bg-slate-100"> generates revenue</span> for him are
+          listed below.
+        </p>
+        <br />
+        <p className={`mt-4 ${textDes}`}>
+          click on the card to view some images and information about the app.
+        </p>
+      </div>
+      <div className="max-w-[1000px] m-auto   px-6 mt-10 ">
+        <div className="grid md:grid-cols-2 gap-4 grid-cols-1  ">
+          {usefulProjects.map((project: any, i: number) => (
+            <ProjectComponent key={project.name} project={project} i={i} />
+          ))}
+        </div>
+      </div>
+      <div className={`${smallContainer} mt-10 py-10 border-b`}>
+        <p>Message from him:</p>
+        <div className={message}>
+          <p>
+            I design all my apps with a single rule: keep them simple, clean,
+            and uncluttered, while delivering the best possible user experience,
+            something anyone can pick up and use it without thinking much.
+          </p>
+          <br />
+          <p>(probably because of ADHD)</p>
+        </div>
+      </div>
+      <div className={`mt-20 border-t py-10  ${smallContainer}`}>
+        <h1 className={`${textH1} pb-1 `}>few Good ones after 2022</h1>
 
-            <p className="font-proxima mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
-              After 2022 as he got more exprience, he started to get picky with
-              what apps to build. he won 1st runner up prices in supabase launch
-              week hackathon with Tweet schedular desktop app(schedurio) in may
-              2023.
-            </p>
-            <p className="font-proxima mt-4 text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px]">
-              after in july 2023 he started building graphic design
-              tool(craftor) and was spending months on building it then he
-              burned out while building it.
-            </p>
-          </div>
-          <div className="max-w-[1000px] mx-auto px-6">
-            <div className="grid grid-cols-3 gap-4 mobile:grid-cols-1 tablet:grid-cols-1  ">
-              {newProjects.map((project: any, i: number) => (
-                <ProjectComponent2 key={project.name} project={project} i={i} />
-              ))}
-            </div>
-          </div>
+        <p className="mt-4 text-[18px] text-slate-500   ">
+          After 2022 as he got more exprience, he started to get picky with what
+          apps to build. he won 1st runner up prices in supabase launch week
+          hackathon with Tweet schedular desktop app(schedurio) in may 2023.
+        </p>
+        <p className="mt-4 text-[18px] text-slate-500   ">
+          after in july 2023 he started building graphic design tool(craftor)
+          and was spending months on building it then he burned out while
+          building it.
+        </p>
+      </div>
+      <div className="max-w-[1000px] mx-auto px-6 mt-10">
+        <div className="grid md:grid-cols-3 gap-4 grid-cols-1   ">
+          {newProjects.map((project: any, i: number) => (
+            <ProjectComponent2 key={project.name} project={project} i={i} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
-
-export default UsefulProducts;
 
 function ProjectComponent2(props: any) {
   const { project, i } = props;
@@ -85,16 +76,15 @@ function ProjectComponent2(props: any) {
     >
       <div
         className={`select-none cursor-pointer items-center 
-       font-apple tracking-tighter lowercase  flex flex-col  hover:border-blue-600 bg-gray-100 
+       tracking-tighter lowercase  flex flex-col  hover:border-blue-600 bg-gray-100 
        p-2 rounded-lg `}
       >
-        <div className="w-full h-[200px] mobile:h-[300px] tablet:h-[150px] relative rounded-lg my-2">
+        <div className="w-full h-[200px]   relative rounded-lg my-2">
           <Image
             src={`/imgs/` + project.image}
             alt="image"
-            objectFit="contain"
-            layout="fill"
-            className="unselectable rounded-lg"
+            fill
+            className="object-contain unselectable rounded-lg"
             width={0}
             sizes="100vw"
             height={0}
@@ -104,8 +94,8 @@ function ProjectComponent2(props: any) {
           <Image
             src={`/imgs/` + project.image}
             alt="image"
-            objectFit="contain"
-            layout="fill"
+            className="object-contain"
+            fill
             className="unselectable rounded-lg"
             width={0}
             sizes="100vw"
@@ -115,15 +105,13 @@ function ProjectComponent2(props: any) {
 
         <div className="px-2 py-6 w-full">
           <div className="flex flex-row items-center justify-between pb-1">
-            <h1 className="font-poppins text-[18px] lowercase text-black">
-              {project.name}
-            </h1>
+            <h1 className="text-[18px] lowercase text-black">{project.name}</h1>
           </div>
 
-          <p className="font-proxima  text-gray-500 ">{project.description} </p>
+          <p className=" text-gray-500 ">{project.description} </p>
           <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
             <p
-              className="lowercase text-[12px] mobile:text-[10px]
+              className="lowercase text-[12px] 
            text-gray-500 border-b-[1px] border-gray-500 hover:text-black hover:border-black"
             >
               Read More
@@ -149,15 +137,15 @@ function ProjectComponent(props: any) {
     >
       <div
         className={`select-none cursor-pointer items-center 
-       font-apple tracking-tighter lowercase  flex flex-row  hover:border-blue-600 bg-gray-100 
+       tracking-tighter lowercase  flex flex-row  hover:border-blue-600 bg-gray-100 
         rounded-lg px-2`}
       >
-        {/* <div className="w-full h-[200px] mobile:h-[300px] tablet:h-[150px] relative rounded-lg ">
+        {/* <div className="w-full h-[200px]   relative rounded-lg ">
           <Image
             src={`/imgs/` + project.image}
             alt="image"
-            objectFit="contain"
-            layout="fill"
+            className="object-contain"
+            fill
             className="unselectable rounded-lg"
             width={0}
             sizes="100vw"
@@ -168,9 +156,8 @@ function ProjectComponent(props: any) {
           <Image
             src={`/imgs/` + project.image}
             alt="image"
-            objectFit="contain"
-            layout="fill"
-            className="unselectable rounded-lg"
+            fill
+            className="object-contain unselectable rounded-lg"
             width={0}
             sizes="100vw"
             height={0}
@@ -179,15 +166,13 @@ function ProjectComponent(props: any) {
 
         <div className="px-2 py-6 w-full">
           <div className="flex flex-row items-center justify-between pb-1">
-            <h1 className="font-poppins text-[18px] lowercase text-black">
-              {project.name}
-            </h1>
+            <h1 className="text-[18px] lowercase text-black">{project.name}</h1>
           </div>
 
-          <p className="font-proxima  text-gray-500 ">{project.description} </p>
+          <p className=" text-gray-500 ">{project.description} </p>
           <div className="px-0.5 pt-2.5 flex flex-row items-center justify-between">
             <p
-              className="lowercase text-[12px] mobile:text-[10px]
+              className="lowercase text-[12px] 
            text-gray-500 border-b-[1px] border-gray-500 hover:text-black hover:border-black"
             >
               Read More

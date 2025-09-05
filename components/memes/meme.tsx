@@ -15,11 +15,11 @@ function Meme({ i, meme, onTag }: any) {
       // whileInView={{ y: 0, transition: { duration: 0.3, delay: i * 0.4 } }}
       // viewport={{ once: true, amount: 0.7 }}
       className={` items-center
-       font-apple tracking-tighter lowercase rounded-2xl flex flex-col border-[1px] border-gray-200 shadow
+       tracking-tighter lowercase rounded-2xl flex flex-col border-[1px] border-gray-200 shadow
        `}
     >
       <div className="bg-white w-full  rounded-tl-2xl rounded-tr-2xl py-6 items-center flex justify-center">
-        <div className=" select-none  w-[400px] relative h-[400px] flex justify-end mobile:h-[300px] mobile:w-[280px]">
+        <div className=" select-none  w-[400px] relative h-[400px] flex justify-end 
           {meme.type !== "image" ? (
             <video autoPlay muted controlsList="play" controls loop>
               <source src={meme.path} type="video/mp4" />
@@ -28,16 +28,15 @@ function Meme({ i, meme, onTag }: any) {
             <Image
               src={meme.path}
               alt="image"
-              objectFit="contain"
-              layout="fill"
-              className="unselectable"
+              fill
+              className="object-contain unselectable"
             />
           )}
         </div>
       </div>
 
       <div className="bg-slate-50 bg-opacity-30   rounded-bl-2xl rounded-br-2xl w-full   px-4 pb-4 pt-2 flex flex-col items-start justify-start">
-        <h1 className="font-apple tracking-tighter lowercase mt-2 text-base font-semibold">
+        <h1 className="tracking-tighter lowercase mt-2 text-body font-semibold">
           {meme.title}
         </h1>
         <div className="flex flex-wrap mt-3">
@@ -52,7 +51,7 @@ function Meme({ i, meme, onTag }: any) {
           ))}
         </div>
         <div className="flex  flex-row items-center justify-between w-full mt-3">
-          <h1 className="text-gray-400 text-sm text-[12px]">
+          <h1 className="text-gray-400 text-description text-[12px]">
             {meme.created_on}
           </h1>
           <a href={meme.link} target="_blank" rel="noreferrer">

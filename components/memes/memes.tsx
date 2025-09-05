@@ -71,7 +71,7 @@ function MemesComponent() {
   return (
     <div className="bg-no-repeat border-b bg-fill bg-[url('/bgs1s.png')] bg-cover bg-fixed bg-center">
       <div className="backdrop-blur-3xll bg-white/70 pb-24 ">
-        <div className="desktop:container ">
+        <div className=" ">
           <div className="pt-20 px-4 pb-10">
             <motion.h1
               variants={textUpAnimate}
@@ -79,7 +79,7 @@ function MemesComponent() {
               whileInView={"onscreen"}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ delay: 3 }}
-              className="font-poppins pb-1 text-3xl lowercase text-black text-center"
+              className="pb-1 text-3xl lowercase text-black text-center"
             >
               Memes i made
             </motion.h1>
@@ -90,13 +90,13 @@ function MemesComponent() {
               whileInView={"onscreen"}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ delay: 3 }}
-              className="font-proxima text-slate-600 text-[18px] text-center"
+              className="text-slate-600 text-[18px] text-center"
             >
               Enjoy the {memes.length} memes I made over the last few months.
             </motion.p>
           </div>
           <div id="memes"></div>
-          <div className="max-w-[1100px] m-auto p-2 bg-white tablet:max-w-full  top-0 z-50  ">
+          <div className="max-w-[1100px] m-auto p-2 bg-white   top-0 z-50  ">
             <div className=" bg-white w-full flex flex-col items-center  rounded-lg border border-gray-400 py-2 ">
               <div className="flex flex-row px-4 items-center w-full">
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -130,7 +130,7 @@ function MemesComponent() {
               </div>
             </div>
           </div>
-          <div className="max-w-[1000px] m-auto p-2 pt-6 tablet:max-w-[550px] ">
+          <div className="max-w-[1000px] m-auto p-2 pt-6  ">
             <div
               onClick={() => setselectedTag("latest")}
               className="flex flex-row items-center justify-center cursor-pointer lowercase text-sm select-none w-fit text-gray-500 mr-3 mb-6 px-2 py-1  bg-white border border-gray-300 rounded-md"
@@ -147,7 +147,7 @@ function MemesComponent() {
               tap the <span className="underline">view on twitter</span> button
               and share your thoughts.
             </p>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:px-4 ">
+            <div className="grid grid-cols-2 gap-4 
               {selectedMemes.map((meme: any, i: number) => (
                 <Meme
                   key={meme.title}

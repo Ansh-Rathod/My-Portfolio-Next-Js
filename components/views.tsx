@@ -9,7 +9,7 @@ function Views({ posts }: { posts: any }) {
             key={post.frontmatter.title}
             className="p-6 border-[1px] border-gray-200 shadow rounded-lg"
           >
-            <h1 className="font-normal font-poppins text-[20px] ">
+            <h1 className="font-normal text-[20px] ">
               {post.frontmatter.title}
             </h1>
             <p dangerouslySetInnerHTML={{ __html: post.content }}></p>

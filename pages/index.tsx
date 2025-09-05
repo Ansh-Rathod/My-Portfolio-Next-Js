@@ -18,11 +18,11 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div className="font-apple tracking-tighter lowercase">
+    <div className="font-apple lowercase">
       <Head>
         <meta property="og:title" content="Ansh Rathod" />
         <meta property="og:site_name" content="Ansh Rathod" />
-        <meta property="og:url" content="https://anshrathodfr.vercel.app" />
+        <meta property="og:url" content="https://ansh.life" />
 
         <meta
           property="og:description"
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
+          content="https://ansh.life/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -52,26 +52,11 @@ const Home: NextPage = () => {
         <title>Ansh Rathod</title>
       </Head>
 
-      <div className="tracking-tighter">
+      <div>
         <Intro />
 
         <About />
-        {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
-        {/* <div
-          className=" pt-14 max-w-[1200px] mx-auto flex flex-col
-         items-center px-2"
-        >
-          <GithubCard data={data} />
-        </div> */}
-        {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
-        {/* <Views posts={posts} /> */}
-        {/* <div
-          className="py-14 max-w-[1200px] mx-auto flex flex-col
-         items-center px-4"
-        >
-          <MusiveCard />
-        </div> */}
-        {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
+
         <UsefulProducts />
         <AllProjects />
         <Skills />
