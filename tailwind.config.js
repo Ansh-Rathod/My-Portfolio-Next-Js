@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin')
-module.exports = {
+
+// const plugin = require('tailwindcss/plugin')
+export const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -35,6 +36,6 @@ module.exports = {
 
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
+    // require('tailwind-scrollbar-hide')
   ],
 }

@@ -9,7 +9,7 @@ const textUpAnimate = {
   onscreen: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
+    transition: { type: "spring" as const, bounce: 0.4, duration: 1 },
   },
 };
 function MemesComponent() {

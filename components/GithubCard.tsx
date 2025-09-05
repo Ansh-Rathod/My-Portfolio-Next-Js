@@ -11,7 +11,6 @@ function GithubCard({ data }: { data: any }) {
         y: 0,
         opacity: 1,
         transition: { duration: 0.3 },
-        autoReverse: false,
       }}
       transition={{ staggerChildren: 0.5 }}
       className="select-none"
@@ -34,7 +33,6 @@ function GithubCard({ data }: { data: any }) {
               y: 0,
               opacity: 1,
               transition: { duration: 0.3 },
-              autoReverse: false,
             }}
             transition={{ staggerChildren: 0.5 }}
           >
@@ -46,7 +44,6 @@ function GithubCard({ data }: { data: any }) {
                   scale: 1,
                   opacity: 1,
                   transition: { duration: 0.3 },
-                  autoReverse: false,
                 }}
                 transition={{ staggerChildren: 0.5 }}
                 className="border-b-[4px] border-l-[6px] 
@@ -95,7 +92,6 @@ function GithubCard({ data }: { data: any }) {
               y: 0,
               opacity: 1,
               transition: { duration: 0.3 },
-              autoReverse: false,
             }}
             transition={{ staggerChildren: 0.5 }}
             className="tablet:mt-10 mobile:mt-10 desktop:pl-24
@@ -140,7 +136,6 @@ function GithubCard({ data }: { data: any }) {
                       x: 0,
                       opacity: 1,
                       transition: { duration: 0.3, delay: 0.2 * i },
-                      autoReverse: false,
                     }}
                     transition={{ staggerChildren: 0.5 }}
                     className={`cursor-pointer ml-1 relative w-[35px] h-[35px] mobile:w-[40px] mobile:h-[40px]`}

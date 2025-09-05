@@ -34,8 +34,10 @@ function ChessStats() {
   });
 
   const [recentGames, setRecentGames] = useState([]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     fetchUserData();
     fetchRecentGames();
   }, []);
@@ -131,7 +133,13 @@ function ChessStats() {
 
           <p>
             <span className="text-black font-bold">last game played on</span>:{" "}
-            {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
+            {isClient ? (
+              <span suppressHydrationWarning>
+                {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
+              </span>
+            ) : (
+              "Loading..."
+            )}
           </p>
           <p className="mt-4">
             <span className="text-black font-bold">total play time</span>:{" "}

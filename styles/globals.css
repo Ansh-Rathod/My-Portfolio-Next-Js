@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @font-face {
   font-family: "San Francisco";
@@ -17,6 +15,7 @@
   font-weight: 400;
   src: url("/fonts/Poppins-Bold.ttf");
 }
+
 *.unselectable {
   pointer-events: none;
 }

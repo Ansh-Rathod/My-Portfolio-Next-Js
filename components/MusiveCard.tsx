@@ -23,7 +23,6 @@ function MusiveCard() {
                 y: 0,
                 opacity: 1,
                 transition: { duration: 0.3 },
-                autoReverse: false,
               }}
               transition={{ staggerChildren: 0.5 }}
               className="flex justify-center items-center"
@@ -50,7 +49,6 @@ function MusiveCard() {
               y: 0,
               opacity: 1,
               transition: { duration: 0.3 },
-              autoReverse: false,
             }}
             transition={{ staggerChildren: 0.5 }}
             className="tablet:mt-10 mobile:mt-10 desktop:pr-16

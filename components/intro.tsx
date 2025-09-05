@@ -30,14 +30,14 @@ const Intro = () => (
               transition={{ staggerChildren: 0.5 }}
               className="  mt-32"
             >
-              <motion.p
-                variants={textAnimate}
+              <motion.div
+                // variants={textAnimate}
                 className="font-proxima text-[18px]  mobile:text-[18px] mobile:py-2 text-slate-500 "
               >
                 <p className="mt-1">
                   Hello 👋, This page is about someone named
                 </p>
-              </motion.p>
+              </motion.div>
               <h1 className="my-2 font-bold font-poppins text-5xl leading-snug  mini-laptop:leading-normal  tablet:leading-sung mobile:leading-[1.1]">
                 ANSH RATHOD
               </h1>

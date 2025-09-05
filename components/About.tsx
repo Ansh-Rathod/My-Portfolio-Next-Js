@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function calculateAge(year: number, month: number, day: number) {
   const today = new Date();
@@ -12,6 +13,11 @@ function calculateAge(year: number, month: number, day: number) {
 }
 
 const About = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <div
       id="about"
@@ -31,7 +37,11 @@ const About = () => {
           <span className="text-black font-bold">Born on:</span> 2 may 2003
           <br />
           <span className="text-black font-bold">Age:</span>{" "}
-          {calculateAge(2003, 5, 2)}
+          {isClient ? (
+            <span suppressHydrationWarning>{calculateAge(2003, 5, 2)}</span>
+          ) : (
+            "21"
+          )}
           <br />
           <span className="text-black font-bold">Location:</span> 127.0.0.1
           <br />
