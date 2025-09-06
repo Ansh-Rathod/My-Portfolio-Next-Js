@@ -2,7 +2,15 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import "../styles/globals.css";
-import { spaceMono } from "./fonts";
+
+import localFont from "next/font/local";
+
+// Configure SpaceMono as the only font
+export const spaceMono = localFont({
+  src: "../public/fonts/SpaceMono-Regular.ttf",
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 export const textBody = "text-[18px]    text-slate-500 ";
 
