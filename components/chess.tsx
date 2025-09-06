@@ -2,6 +2,7 @@
 import axios from "axios";
 import * as changeCase from "change-case";
 import Link from "next/link";
+import { message, smallContainer, textBody, textH1 } from "pages/_app";
 import { useEffect, useState } from "react";
 import RatingChart from "./rechart";
 function ChessStats() {
@@ -34,8 +35,10 @@ function ChessStats() {
   });
 
   const [recentGames, setRecentGames] = useState([]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     fetchUserData();
     fetchRecentGames();
   }, []);
@@ -92,20 +95,19 @@ function ChessStats() {
   };
 
   return (
-    <div className="mx-auto max-w-[600px] mt-20">
-      <div className=" px-6 ">
-        <h1 className="lowercase font-poppins text-3xl font-bold mb-4">
-          HIS Chess stats ♟️♔♕♖♘
-        </h1>
-        <p className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
+    <div className={`${smallContainer} my-20 border-t border-b py-10`}>
+      <div className=" ">
+        <h1 className={textH1}>HIS Chess stats</h1>
+        <p className={`${textBody} mt-4`}></p>
+        <p className=" text-slate-500 text-[18px]    mt-2">
           he started playing chess same year he started writing code in 2020.
-          doesnt plays daily maybe 3-4 matches onces a week. he suck at chess
+          doesnt plays daily (maybe 3-4 matches onces a week). he suck at chess
           tbh. he has wining probability of 50% in chess against same ranked
           oponent but still plays.
         </p>
       </div>
-      <div className="px-6 ">
-        <div className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
+      <div className=" ">
+        <div className="mb-10 text-[18px] text-slate-500    mt-2">
           <br />
 
           <p className="font-bold">
@@ -131,7 +133,13 @@ function ChessStats() {
 
           <p>
             <span className="text-black font-bold">last game played on</span>:{" "}
-            {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
+            {isClient ? (
+              <span suppressHydrationWarning>
+                {formatTimestamp(userData.seenAt)} ({timeAgo(userData.seenAt)})
+              </span>
+            ) : (
+              "Loading..."
+            )}
           </p>
           <p className="mt-4">
             <span className="text-black font-bold">total play time</span>:{" "}
@@ -168,12 +176,17 @@ function ChessStats() {
           </p>
         </Link>
       </div>
-      <div className="mt-10 font-proxima text-[17px] max-w-[600px]  px-6  py-2 tablet:w-full mobile:w-full  text-gray-500 mx-auto">
+      <div className="mt-10 text-[17px]    py-2   text-gray-500 mx-auto">
         <p>message from him:</p>
-        <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
+        <div className={message}>
           <p>
-            I measure my focus by playing chess. The number of blunders I make
-            shows exactly how focused I am that day.
+            I measure my level of focus by playing fast paced 1-min bullet chess
+            games.
+          </p>
+          <br />
+          <p>
+            The number of blunders I make while playing shows exactly how
+            focused/tired am i.
           </p>
         </div>
       </div>

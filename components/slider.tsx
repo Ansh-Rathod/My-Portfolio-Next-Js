@@ -18,12 +18,12 @@ const Slider = (props: SliderProps) => {
       >
         <i className="fa-sharp fa-solid fa-chevron-left"></i>
       </div>
-      <div className="h-[500px] w-[500px]  mobile:w-[300px] tablet:w-[400px] rounded-lg relative">
+      <div className="h-[500px] w-[500px]    rounded-lg relative">
         <Image
           src={`/imgs/` + images[i]}
           alt="image"
-          objectFit="contain"
-          layout="fill"
+          className="object-contain"
+          fill
           height={0}
           width={0}
           sizes="100vw"

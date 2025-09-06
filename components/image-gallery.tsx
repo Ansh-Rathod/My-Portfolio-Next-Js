@@ -60,9 +60,7 @@ const MyGallery = () => {
     <div>
       <div className=" flex flex-col justify-center max-w-[600px] mx-auto tablet:block mobile:block mobile:px-3 px-4">
         <div className=" px-6 my-20">
-          <h1 className="lowercase font-poppins text-3xl font-bold ">
-            Random Pins
-          </h1>
+          <h1 className="lowercase text-h1 ">Random Pins</h1>
           <p className="text-gray-500 mt-2">
             The random images he saved last year in boredom also some while
             building this website. Most images are from the movies, tvshows and

@@ -5,7 +5,7 @@ export default function Icon(props: any) {
   const { classes, url, i } = props;
   return (
     <motion.div
-      initial={{ scale: 0, y: 10 * 0.5 * i ?? 1 }}
+      initial={{ scale: 0, y: 10 * 0.5 * (i || 1) }}
       animate={{ scale: 1, y: 0 }}
       whileHover={{ scale: 1.2 }}
       viewport={{ once: true, amount: 0.5 }}

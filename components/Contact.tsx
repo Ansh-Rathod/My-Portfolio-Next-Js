@@ -1,19 +1,21 @@
 import Icon from "@/components/Icon";
 import Image from "next/image";
+import { message, smallContainer } from "pages/_app";
 function Contact() {
   return (
-    <div id="contact">
-      <div className="bg-white pt-[10px] pb-[60px]   border-slate-200 m-auto max-w-[600px] desktop:container">
-        <div className="px-6">
-          <h1 className="font-poppins font-bold mb-1.5 text-3xl lowercase ">
-            Contact Him:
-          </h1>
-          <p className="font-proxima text-slate-500 text-[18px]  mt-2">
+    <div
+      id="contact"
+      className={`${smallContainer} border-t border-b mb-10 py-10`}
+    >
+      <div className="bg-white pt-[10px] pb-[60px]   border-slate-200 m-auto max-w-[600px] ">
+        <div className="">
+          <h1 className="font-bold mb-1.5 text-3xl lowercase ">Contact Him:</h1>
+          <p className="text-slate-500 text-[18px]  mt-2">
             Leave a message on any of his social media, He&apos;ll reach out to
             you as soon as Possible.
           </p>
         </div>
-        <div className="px-6  pt-12 flex flex-row ">
+        <div className="  pt-12 flex flex-row ">
           <Icon
             i={1}
             url="https://github.in/Ansh-Rathod"
@@ -49,9 +51,9 @@ function Contact() {
         </div>
       </div>
 
-      <div className="my-10 font-proxima text-[17px] max-w-[600px]  px-6  py-2 tablet:w-full mobile:w-full text-gray-500  mx-auto">
+      <div className="my-10 text-[17px] max-w-[600px]   py-2   text-gray-500  mx-auto">
         <p>Message from him:</p>
-        <div className="bg-[#0B82FE] text-white p-4 rounded-3xl mt-2">
+        <div className={message}>
           <p>
             i usually share my thoughts and daily updates on X (Twitter). that’s
             the best place to reach me!
@@ -68,21 +70,19 @@ function Contact() {
               height={0}
               sizes="100vw"
               style={{ width: "100%", height: "auto" }}
-              objectFit="cover"
-              className="rounded-lg "
+              className="object-cover rounded-lg"
             />
           </div>
         </div>
       </div>
 
-      <div className="max-w-[600px] mx-auto mb-10 text-center">
-        <br />
-        <p>Thank you! for visiting.</p>
-      </div>
+      <br />
+      <p className="text-center mb-8">Thank you! for visiting.</p>
 
-      <div className="py-6 border-t-[0.6px] mobile:px-6 tablet:px-8 px-8 border-slate-200 max-w-[600px] mx-auto text-[14px] text-slate-500">
+      <div className="py-6 border-t text-center   px-8  max-w-[600px] mx-auto text-[14px] text-slate-500">
         <p>
-          © 2025 Ansh Rathod. All rights reserved. last updated: Apr 25, 2025
+          © 2025 Ansh Rathod. All rights reserved.
+          <br /> last updated: Apr 25, 2025
         </p>
       </div>
     </div>

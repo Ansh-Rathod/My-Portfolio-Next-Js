@@ -25,13 +25,13 @@ function Project({ project }: { project: any }) {
         <meta property="og:description" content={project.description} />
         <meta
           property="og:url"
-          content={`https://anshrathodfr.vercel.app/projects/${project.name.toLowerCase()}`}
+          content={`https://ansh.life/projects/${project.name.toLowerCase()}`}
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:site"
-          content={`https://anshrathodfr.vercel.app/projects/${project.name.toLowerCase()}`}
+          content={`https://ansh.life/projects/${project.name.toLowerCase()}`}
         />
         <meta name="twitter:creator" content="@anshrathodfr" />
         <meta
@@ -42,7 +42,7 @@ function Project({ project }: { project: any }) {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
+          content="https://ansh.life/intro_image_meta.png"
         />
       </Head>
 
@@ -53,7 +53,7 @@ function Project({ project }: { project: any }) {
         >
           <div
             className=" w-[700px] max-w-[700px] mx-auto
-                     tablet:rounded-none mobile:rounded-none flex flex-row tablet:w-full mobile:w-full 
+                       flex flex-row   
                justify-between items-center "
           >
             <div
@@ -76,7 +76,7 @@ function Project({ project }: { project: any }) {
           className={`items-center
                     font-proxima  flex flex-col bg-white 
                      w-[700px] max-w-[700px] mx-auto
-                     tablet:rounded-none mobile:rounded-none tablet:w-full mobile:w-full
+                        
                      `}
         >
           <div
@@ -89,7 +89,7 @@ function Project({ project }: { project: any }) {
 
             <div
               className="mb-12 flex flex-row justify-center text-center items-end 
-                w-full px-10 tablet:px-5 mobile:px-5"
+                w-full px-10  "
             >
               <div>
                 <b className="pl-1.5 font-poppins">Share on</b>
@@ -101,14 +101,14 @@ function Project({ project }: { project: any }) {
 
                   <Icon
                     classes="fa-brands fa-twitter"
-                    url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on https://anshrathodfr.vercel.app&url=${project.url}&hashtags=flutter,opensource,github`}
+                    url={`http://twitter.com/share?text=Check out this amazing app built by @AnshhRathod on github. view all projects on https://ansh.life&url=${project.url}&hashtags=flutter,opensource,github`}
                   />
                   <Icon classes="fa-regular fa-copy" />
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 flex flex-row justify-start w-full px-12 tablet:px-6 mobile:px-6">
+            <div className="mt-6 flex flex-row justify-start w-full px-12  ">
               <div>
                 <b className="font-poppins">Description</b>
                 <div
@@ -120,13 +120,13 @@ function Project({ project }: { project: any }) {
               </div>
             </div>
 
-            <div className="my-6 flex flex-row justify-start w-full px-12 tablet:px-6 mobile:px-6">
+            <div className="my-6 flex flex-row justify-start w-full px-12  ">
               <div>
                 <b className="font-poppins">Tech stack</b>
                 <p className="mt-1.5 ">{project.madeWith}</p>
               </div>
             </div>
-            <div className="my-6 flex flex-row justify-start w-full px-12 tablet:px-6 mobile:px-6">
+            <div className="my-6 flex flex-row justify-start w-full px-12  ">
               <div>
                 <b className="font-poppins">Created on</b>
                 <p className="mt-1.5 ">{project.date}</p>
@@ -148,7 +148,7 @@ function Project({ project }: { project: any }) {
                     alt="stars"
                     height={26}
                     width={100}
-                    objectFit="contain"
+                    className="object-contain"
                     unoptimized
                   />
                 </p>

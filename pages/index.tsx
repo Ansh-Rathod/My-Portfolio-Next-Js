@@ -14,15 +14,15 @@ import { useRouter } from "next/router";
 import Model from "../components/Model";
 import { allHisProjects } from "../data/projects";
 
-const Home: NextPage = ({ data }: any) => {
+const Home: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div className="font-apple tracking-tighter lowercase">
+    <div className="font-apple lowercase">
       <Head>
         <meta property="og:title" content="Ansh Rathod" />
         <meta property="og:site_name" content="Ansh Rathod" />
-        <meta property="og:url" content="https://anshrathodfr.vercel.app" />
+        <meta property="og:url" content="https://ansh.life" />
 
         <meta
           property="og:description"
@@ -32,7 +32,7 @@ const Home: NextPage = ({ data }: any) => {
         <meta
           property="og:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
+          content="https://ansh.life/intro_image_meta.png"
         />
 
         <meta property="og:type" content="article" />
@@ -47,31 +47,16 @@ const Home: NextPage = ({ data }: any) => {
         <meta
           name="twitter:image"
           itemProp="image"
-          content="https://anshrathodfr.vercel.app/intro_image_meta.png"
+          content="https://ansh.life/intro_image_meta.png"
         />
         <title>Ansh Rathod</title>
       </Head>
 
-      <div className="tracking-tighter">
+      <div>
         <Intro />
 
         <About />
-        {/* <div className=" border-t-[0.6px] border-t-slate-200"></div> */}
-        {/* <div
-          className=" pt-14 max-w-[1200px] mx-auto flex flex-col
-         items-center px-2"
-        >
-          <GithubCard data={data} />
-        </div> */}
-        {/* <div className="border-t-[1px] border-t-slate-300 "></div> */}
-        {/* <Views posts={posts} /> */}
-        {/* <div
-          className="py-14 max-w-[1200px] mx-auto flex flex-col
-         items-center px-4"
-        >
-          <MusiveCard />
-        </div> */}
-        {/* <div className="border-t-[1px] border-t-slate-300 mt-14"></div> */}
+
         <UsefulProducts />
         <AllProjects />
         <Skills />
@@ -93,38 +78,5 @@ const Home: NextPage = ({ data }: any) => {
     </div>
   );
 };
-
-export async function getStaticProps() {
-  // const files = fs.readdirSync(path.join("public", "views"));
-
-  // const posts = files.map((file) => {
-  //   const slug = slugify(file.replace(".md", ""));
-  //   const markdownMetaData = fs.readFileSync(
-  //     path.join("public", "views", file),
-  //     "utf-8"
-  //   );
-
-  //   const { data: frontmatter, content } = matter(markdownMetaData);
-  //   return {
-  //     slug,
-  //     frontmatter,
-  //     content,
-  //   };
-  // });
-  // console.log(posts);
-
-  return {
-    props: {
-      data: {
-        username: "Ansh-Rathod",
-        avatar: "https://avatars.githubusercontent.com/u/67627096?v=4",
-        repos: 32,
-        followers: 303,
-        stars: 689,
-      },
-      // posts: posts,
-    },
-  };
-}
 
 export default Home;

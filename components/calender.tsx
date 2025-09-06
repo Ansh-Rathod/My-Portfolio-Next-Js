@@ -10,6 +10,7 @@ import {
   subDays,
   subMonths,
 } from "date-fns";
+import { message, smallContainer, textBody, textH1 } from "pages/_app";
 import { useEffect, useState } from "react";
 
 const CustomActivityCalendar: React.FC = () => {
@@ -113,17 +114,15 @@ const CustomActivityCalendar: React.FC = () => {
   const nextMonth = () => setCurrentMonth(addMonths(currentMonth, 1));
 
   return (
-    <div className="px-4 max-w-[600px] mx-auto mt-10">
-      <div className="mb-10">
-        <h1 className="lowercase font-poppins text-3xl font-bold mb-4">
-          his Fitness Quests
-        </h1>
-        <p className="text-[18px] text-slate-500 mini-laptop:text-[20px] tablet:text-[18px] mobile:text-[18px] mt-2">
+    <div className={`${smallContainer} py-10 border-t border-b`}>
+      <div className="">
+        <h1 className={textH1}>his Fitness Quests</h1>
+        <p className={`${textBody} mt-4`}>
           he tracks his fitness quests using hevy/strava app, and here are the
           some stats that keeps him consistent and moving.
         </p>
       </div>
-      <div className="p-6 mobile:p-2 bg-gray-100 rounded-lg">
+      <div className="p-6 mt-10  bg-gray-100 rounded-lg">
         <div className="flex justify-between items-center mb-4">
           <button
             onClick={prevMonth}
@@ -132,9 +131,7 @@ const CustomActivityCalendar: React.FC = () => {
           >
             ←
           </button>
-          <h1 className="text-xl font-bold">
-            {format(currentMonth, "MMMM yyyy")}
-          </h1>
+          <h1 className="text-h3">{format(currentMonth, "MMMM yyyy")}</h1>
           <button
             onClick={nextMonth}
             className="p-2 text-gray-600 hover:text-gray-800"
@@ -223,7 +220,7 @@ const CustomActivityCalendar: React.FC = () => {
             <h2 className="text-lg font-semibold text-gray-800 mb-4">
               {format(currentMonth, "MMMM yyyy")} Stats
             </h2>
-            <div className="grid grid-cols-2 gap-4 mobile:grid-cols-1">
+            <div className="grid grid-cols-2 gap-4 ">
               <div className="flex items-center">
                 <span className="text-sm font-medium text-gray-600">
                   Total Activities:
@@ -267,7 +264,7 @@ const CustomActivityCalendar: React.FC = () => {
             </div>
           </div>
         )}
-        <div className="mt-4 text-sm text-gray-600 flex items-center space-x-4">
+        <div className="mt-4 text-description text-gray-600 flex items-center space-x-4">
           <div>
             <span className="mr-2">🚴</span>Cycling/running
           </div>
@@ -277,6 +274,14 @@ const CustomActivityCalendar: React.FC = () => {
         </div>
       </div>
       <br />- powered by Hevy and Strava api.
+      <div className="mt-10 text-[17px]    py-2   text-gray-500 mx-auto">
+        <p>message from him:</p>
+        <div className={message}>
+          <p>
+            how would you know if youre improving or not? simple!! messure it.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

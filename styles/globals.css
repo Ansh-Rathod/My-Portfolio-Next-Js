@@ -1,22 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("/fonts/GeistMono-Regular.ttf");
+/* SpaceMono font applied globally */
+body {
+  font-family: var(--font-space-mono), "Space Mono", monospace;
 }
-@font-face {
-  font-family: "Proxima Nova";
-  font-weight: 400;
-  src: url("/fonts/Proxima Nova.ttf");
+
+/* Consistent Typography System */
+/* .text-h1 {
+  @apply text-2xl font-bold leading-tight;
 }
-@font-face {
-  font-family: "Poppins";
-  font-weight: 400;
-  src: url("/fonts/Poppins-Bold.ttf");
+
+.text-h2 {
+  @apply text-xl font-bold leading-tight;
 }
+
+.text-h3 {
+  @apply text-lg font-bold leading-tight;
+}
+
+.text-body {
+  @apply text-base leading-relaxed;
+}
+
+.text-description {
+  @apply text-sm leading-relaxed;
+}
+
+.text-caption {
+  @apply text-xs leading-relaxed;
+} */
+
+/* .container-padding {
+  @apply px-6 max-w-2xl mx-auto;
+} */
+
+/* .small-container {
+  @apply max-w-[600px] mx-auto px-6;
+}
+
+.section-spacing {
+  @apply py-16;
+}
+
+.content-spacing {
+  @apply space-y-4;
+} */
+
+/* Remove old font class overrides */
+.font-poppins,
+.font-proxima,
+.font-apple {
+  font-family: var(--font-space-mono), "Space Mono", monospace;
+}
+
 *.unselectable {
   pointer-events: none;
 }

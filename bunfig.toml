@@ -1,0 +1,32 @@
+# Bun configuration file
+[install]
+# Optimize package installation
+cache = true
+exact = false
+production = false
+
+# Speed up installs by skipping optional dependencies
+optional = false
+
+# Use faster lockfile format
+lockfile = true
+
+[run]
+# Enable bun shell for better performance
+shell = "bun"
+
+# Hot reload configuration
+hot = true
+
+[build]
+# Optimize for production builds
+minify = true
+sourcemap = true
+
+[test]
+# Test configuration
+preload = []
+
+[install.scopes]
+# Trusted scopes for faster installs
+"@types" = { registry = "https://registry.npmjs.org/" }
